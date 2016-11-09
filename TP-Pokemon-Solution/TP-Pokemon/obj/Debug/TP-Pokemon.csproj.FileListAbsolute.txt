@@ -12,3 +12,6 @@ C:\Users\Gabriel\Documents\Visual Studio 2015\Projects\INF1035\TP-Pokemon-Soluti
 C:\Users\Gabriel\Documents\Visual Studio 2015\Projects\INF1035\TP-Pokemon-Solution\TP-Pokemon\obj\Debug\TP-Pokemon.csproj.GenerateResource.Cache
 C:\Users\Gabriel\Documents\Visual Studio 2015\Projects\INF1035\TP-Pokemon-Solution\TP-Pokemon\obj\Debug\TP-Pokemon.exe
 C:\Users\Gabriel\Documents\Visual Studio 2015\Projects\INF1035\TP-Pokemon-Solution\TP-Pokemon\obj\Debug\TP-Pokemon.pdb
+F:\Automne2016\INF1035\Work\INF1035\INF1035\TP-Pokemon-Solution\TP-Pokemon\bin\Debug\TP-Pokemon.exe.config
+F:\Automne2016\INF1035\Work\INF1035\INF1035\TP-Pokemon-Solution\TP-Pokemon\obj\Debug\TP-Pokemon.exe
+F:\Automne2016\INF1035\Work\INF1035\INF1035\TP-Pokemon-Solution\TP-Pokemon\obj\Debug\TP-Pokemon.pdb
