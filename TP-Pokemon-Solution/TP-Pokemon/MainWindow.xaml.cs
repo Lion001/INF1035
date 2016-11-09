@@ -25,4 +25,53 @@ namespace TP_Pokemon
             InitializeComponent();
         }
     }
+
+    public class Joueur
+    {
+        public string nom;
+
+
+        public void addPlayer()
+        {
+            Console.WriteLine("c'est quoi ton nom?");
+
+        }
+
+        public void deletePlayer()
+        {
+            Console.Read();
+
+        }
+
+        public void modifyPlayer()
+        {
+            Console.Read();
+
+        }
+    }
+
+    public class Monster
+    {
+        public string nameMonster;
+        public string descripMonster;
+
+
+        public void addMonster()
+        {
+            Console.WriteLine("c'est quoi le nom du monstre?");
+
+        }
+
+        public void deleteMonster()
+        {
+            Console.Read();
+
+        }
+
+        public void modifyMonster()
+        {
+            Console.Read();
+
+        }
+    }
 }
