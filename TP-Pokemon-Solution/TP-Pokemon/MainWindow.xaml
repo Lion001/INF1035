@@ -5,8 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TP_Pokemon"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
+        Title="MainWindow" Height="491.3" Width="315">
+    <Grid Margin="0,0,2,-57">
+        <Grid.Background>
+            <ImageBrush ImageSource="background.jpg"/>
+        </Grid.Background>
+        <Button x:Name="bouton_New" Content="Nouveau" HorizontalAlignment="Left" Margin="58,162,0,0" VerticalAlignment="Top" Width="200" RenderTransformOrigin="0.08,-1.409" Height="42" Background="#FF13248F" Foreground="#FFF9F9F9"/>
+        <Button x:Name="bouton_Charger" Content="Charger" HorizontalAlignment="Left" Margin="58,231,0,0" VerticalAlignment="Top" Width="200" RenderTransformOrigin="0.08,-1.409" Height="42" Background="#FF13248F" Foreground="#FFF9F9F9"/>
+        <Button x:Name="bouton_Quitter" Content="Quitter" HorizontalAlignment="Left" Margin="58,303,0,0" VerticalAlignment="Top" Width="200" RenderTransformOrigin="0.08,-1.409" Height="42" Background="#FF13248F" Foreground="#FFF9F9F9"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="226" Margin="25,-22,0,0" VerticalAlignment="Top" Width="248" Source="Images/logo.png"/>
+
     </Grid>
 </Window>

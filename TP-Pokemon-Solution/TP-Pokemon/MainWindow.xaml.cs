@@ -24,5 +24,10 @@ namespace TP_Pokemon
         {
             InitializeComponent();
         }
+
+        private void bouton_quitter_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
