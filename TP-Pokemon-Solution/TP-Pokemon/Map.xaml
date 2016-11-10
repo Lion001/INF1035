@@ -1,0 +1,49 @@
+﻿<Window x:Class="TP_Pokemon.Map"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TP_Pokemon"
+        mc:Ignorable="d"
+        Title="Map" Height="691" Width="1084">
+    <Window.Background>
+        <ImageBrush ImageSource="Images/map.png" Stretch="UniformToFill"/>
+    </Window.Background>
+    <Grid>
+        <Grid HorizontalAlignment="Left" Height="24" VerticalAlignment="Top" Width="1076" RenderTransformOrigin="1.119,1.074" Background="#FF1652A8">
+            <Button x:Name="button" Content="+" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Background="#FF0F131D" Foreground="#FFF9F6F6" FontSize="36" Height="44" Margin="0,-20,0,0" Click="button_Click"/>
+        </Grid>
+        <Grid x:Name="menu_deroulant" HorizontalAlignment="Left" Height="343" Margin="0,24,0,0" VerticalAlignment="Top" Width="76" RenderTransformOrigin="0.44,0.922" Background="#FF7E7E7E">
+            <Button x:Name="icone_profil" Content="" HorizontalAlignment="Left" Margin="8,10,0,0" VerticalAlignment="Top" Width="58" Height="50">
+                <Button.Background>
+                    <ImageBrush ImageSource="Images/icone_user.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="icone_inventaire" Content="" HorizontalAlignment="Left" Margin="8,70,0,0" VerticalAlignment="Top" Width="58" Height="50">
+                <Button.Background>
+                    <ImageBrush ImageSource="Images/backpack1.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="icone_pokemon" Content="" HorizontalAlignment="Left" Margin="10,120,0,0" VerticalAlignment="Top" Width="58" Height="50">
+                <Button.Background>
+                    <ImageBrush ImageSource="Images/pokeball.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="icone_pokedex" Content="" HorizontalAlignment="Left" Margin="10,175,0,0" VerticalAlignment="Top" Width="58" Height="50">
+                <Button.Background>
+                    <ImageBrush ImageSource="Images/pokedex.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="icone_enregistrer" Content="" HorizontalAlignment="Left" Margin="10,230,0,0" VerticalAlignment="Top" Width="58" Height="50" RenderTransformOrigin="0.501,5.734">
+                <Button.Background>
+                    <ImageBrush ImageSource="Images/Save.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="icone_quitter" Content="" HorizontalAlignment="Left" Margin="10,283,0,0" VerticalAlignment="Top" Width="58" Height="50" Click="icone_quitter_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="Images/icone_exit.png"/>
+                </Button.Background>
+            </Button>
+        </Grid>
+    </Grid>
+</Window>

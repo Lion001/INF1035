@@ -25,58 +25,65 @@ namespace TP_Pokemon
             InitializeComponent();
         }
 
-        private void bouton_quitter_Click(object sender, RoutedEventArgs e)
+        private void bouton_Quitter_Click_1(object sender, RoutedEventArgs e)
         {
+            Application.Current.Shutdown();
+        }
 
+        private void bouton_Charger_Click(object sender, RoutedEventArgs e)
+        {
+            Map newMap = new Map();
+            newMap.Show();
+            this.Close();
         }
     }
 
-    public class Joueur
-    {
-        public string nom;
+    /**   public class Joueur
+       {
+           public string nom;
 
 
-        public void addPlayer()
-        {
-            Console.WriteLine("c'est quoi ton nom?");
+           public void addPlayer()
+           {
+               Console.WriteLine("c'est quoi ton nom?");
 
-        }
+           }
 
-        public void deletePlayer()
-        {
-            Console.Read();
+           public void deletePlayer()
+           {
+               Console.Read();
 
-        }
+           }
 
-        public void modifyPlayer()
-        {
-            Console.Read();
+           public void modifyPlayer()
+           {
+               Console.Read();
 
-        }
-    }
+           }
+       }
 
-    public class Monster
-    {
-        public string nameMonster;
-        public string descripMonster;
+       public class Monster
+       {
+           public string nameMonster;
+           public string descripMonster;
 
 
-        public void addMonster()
-        {
-            Console.WriteLine("c'est quoi le nom du monstre?");
+           public void addMonster()
+           {
+               Console.WriteLine("c'est quoi le nom du monstre?");
 
-        }
+           }
 
-        public void deleteMonster()
-        {
-            Console.Read();
+           public void deleteMonster()
+           {
+               Console.Read();
 
-        }
+           }
 
-        public void modifyMonster()
-        {
-            Console.Read();
+           public void modifyMonster()
+           {
+               Console.Read();
 
-        }
-    }
+           }
+       }**/
 }
