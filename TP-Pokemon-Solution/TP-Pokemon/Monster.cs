@@ -6,28 +6,30 @@ using System.Threading.Tasks;
 
 namespace TP_Pokemon
 {
+
+    enum TypeMonster
+    {
+        Feu,
+        Magma,
+        Terre,
+        Vegetation,
+        Eau,
+        Glace,
+        Air,
+        Electricite
+    }
+
     class Monster
     {
+        public string id;
         public string nameMonster;
         public string descripMonster;
+        public string nicknameMonster;
+        public TypeMonster typeMonster;
+        public int scarcity;
+        public int levelExp;
+        public int pointExp;
 
 
-        public void addMonster()
-        {
-            Console.WriteLine("c'est quoi le nom du monstre?");
-
-        }
-
-        public void deleteMonster()
-        {
-            Console.Read();
-
-        }
-
-        public void modifyMonster()
-        {
-            Console.Read();
-
-        }
     }
 }
