@@ -46,5 +46,16 @@ namespace TP_Pokemon
         {
             Application.Current.Shutdown();
         }
+
+        //########################################################################
+        //#                     Contenu des icônes de la map                     #
+        //########################################################################
+
+        private void button_stade_Click(object sender, RoutedEventArgs e)
+        {
+            Combat newWin = new Combat();
+            newWin.Show();
+            this.Close();
+        }
     }
 }
