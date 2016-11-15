@@ -22,6 +22,22 @@ namespace TP_Pokemon
         public Combat()
         {
             InitializeComponent();
+            fenetre_difficulty.Visibility = System.Windows.Visibility.Visible;
         }
-    }
+
+
+        // Bouton temporaire servant a retourner a la map
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            Map newWin = new Map();
+            newWin.Show();
+            this.Close();
+        }
+
+        // Choix de la difficulté
+        private void pick_difficulte(object sender, RoutedEventArgs e)
+        {
+            fenetre_difficulty.Visibility = System.Windows.Visibility.Hidden;
+        }
+     }
 }

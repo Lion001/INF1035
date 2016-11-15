@@ -51,9 +51,37 @@ namespace TP_Pokemon
         //#                     Contenu des icônes de la map                     #
         //########################################################################
 
+        //Bouton Stade
         private void button_stade_Click(object sender, RoutedEventArgs e)
         {
             Combat newWin = new Combat();
+            newWin.Show();
+            this.Close();
+        }
+
+        //Bouton Port
+        private void button_port_Click(object sender, RoutedEventArgs e)
+        {
+            Combat newWin = new Combat();
+            newWin.Background = new ImageBrush( new BitmapImage(new Uri(@"pack://application:,,,/TP-Pokemon;component/Images/port.jpg")));
+            newWin.Show();
+            this.Close();
+        }
+
+        //Bouton Parc
+        private void button_parc_Click(object sender, RoutedEventArgs e)
+        {
+            Combat newWin = new Combat();
+            newWin.Background = new ImageBrush(new BitmapImage(new Uri(@"pack://application:,,,/TP-Pokemon;component/Images/parc-bg.jpg")));
+            newWin.Show();
+            this.Close();
+        }
+
+        //Bouton Central électrique
+        private void button_central_h_Click(object sender, RoutedEventArgs e)
+        {
+            Combat newWin = new Combat();
+            newWin.Background = new ImageBrush(new BitmapImage(new Uri(@"pack://application:,,,/TP-Pokemon;component/Images/electrique.jpg")));
             newWin.Show();
             this.Close();
         }
