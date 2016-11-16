@@ -1,0 +1,99 @@
+﻿<Window x:Class="TP_Pokemon.Combat"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TP_Pokemon"
+        mc:Ignorable="d"
+        Title="Combat" Height="691" Width="1168" ResizeMode="NoResize">
+    <Window.Background>
+        <ImageBrush ImageSource="Images/stadium-bg.jpg"/>
+    </Window.Background>
+    <Grid>
+        <Image x:Name="image_main_cadre" HorizontalAlignment="Left" Height="417" Margin="256,0,0,0" VerticalAlignment="Top" Width="656" Source="Images/main_cadre.png"/>
+        <TextBox x:Name="textBox_Console" HorizontalAlignment="Left" Height="234" Margin="371,80,0,0" TextWrapping="Wrap" Text="                            Bienvenu   &#xD;&#xA;Ici s'affichera le contenu des combats" VerticalAlignment="Top" Width="422" Background="#FF214AB6" Foreground="#FFF7F5F5" FontSize="18" IsReadOnlyCaretVisible="True"/>
+        <Image x:Name="image_pokemon_player_frame" HorizontalAlignment="Left" Height="417" Margin="-96,0,0,0" VerticalAlignment="Top" Width="651" Source="Images/miniframe.png"/>
+        <Image x:Name="image_pokemon_adverse_frame" HorizontalAlignment="Left" Height="417" Margin="748,0,-236,0" VerticalAlignment="Top" Width="650" Source="Images/miniframe.png"/>
+        <Image x:Name="image_pokemon_adverse" HorizontalAlignment="Left" Height="234" Margin="891,80,0,0" VerticalAlignment="Top" Width="243" Source="Images/pokemon-002.png"/>
+        <Image x:Name="image_pokemon_player" HorizontalAlignment="Left" Height="234" Margin="34,80,0,0" VerticalAlignment="Top" Width="244" Source="Images/pokemon-002.png" RenderTransformOrigin="-3.204,0.487"/>
+        <ProgressBar x:Name="barre_vie_player" HorizontalAlignment="Left" Height="28" Margin="10,340,0,0" VerticalAlignment="Top" Width="284" Foreground="#FFFF1717" Value="34"/>
+        <ProgressBar x:Name="barre_mana_player" HorizontalAlignment="Left" Height="28" Margin="10,373,0,0" VerticalAlignment="Top" Width="284" Foreground="#FF0127D3" Value="34"/>
+        <ProgressBar x:Name="barre_vie_adverse" HorizontalAlignment="Left" Height="28" Margin="868,340,0,0" VerticalAlignment="Top" Width="284" Foreground="#FFD30101" Value="34" RenderTransformOrigin="0.5,0.5">
+            <ProgressBar.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-179.497"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </ProgressBar.RenderTransform>
+        </ProgressBar>
+        <ProgressBar x:Name="barre_mana_adverse" HorizontalAlignment="Left" Height="28" Margin="868,375,0,0" VerticalAlignment="Top" Width="284" Foreground="#FF0127D3" Value="34" RenderTransformOrigin="0.5,0.5">
+            <ProgressBar.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-178.886"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </ProgressBar.RenderTransform>
+        </ProgressBar>
+        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="81,616,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
+        <Grid x:Name="fenetre_difficulty" HorizontalAlignment="Left" Height="590" Margin="13,42,0,0" VerticalAlignment="Top" Width="1100" Visibility="Hidden">
+            <Grid.Background>
+                <ImageBrush ImageSource="background.jpg"/>
+            </Grid.Background>
+            <Button x:Name="button_facile" Content="Facile" HorizontalAlignment="Left" Margin="356,146,0,0" VerticalAlignment="Top" Width="340" Height="46" FontSize="20" Foreground="#FFF1EEEE" Click="pick_difficulte">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                        <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                        <GradientStop Color="#FFEBEBEB"/>
+                        <GradientStop Color="#FFDDDDDD" Offset="0.006"/>
+                        <GradientStop Color="#FF1C7CDC" Offset="0.099"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button x:Name="button_moyen" Content="Moyen" HorizontalAlignment="Left" Margin="356,196,0,0" VerticalAlignment="Top" Width="340" Height="46" FontSize="20" Foreground="#FFF1EEEE">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                        <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                        <GradientStop Color="#FFEBEBEB"/>
+                        <GradientStop Color="#FFDDDDDD" Offset="0.006"/>
+                        <GradientStop Color="#FF1C7CDC" Offset="0.099"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button x:Name="button_Difficile" Content="Difficile" HorizontalAlignment="Left" Margin="356,260,0,0" VerticalAlignment="Top" Width="340" Height="46" FontSize="20" Foreground="#FFF1EEEE">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                        <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                        <GradientStop Color="#FFEBEBEB"/>
+                        <GradientStop Color="#FFDDDDDD" Offset="0.006"/>
+                        <GradientStop Color="#FF1C7CDC" Offset="0.099"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button x:Name="button_expert" Content="Expert" HorizontalAlignment="Left" Margin="356,324,0,0" VerticalAlignment="Top" Width="340" Height="46" FontSize="20" Foreground="#FFF1EEEE">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                        <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                        <GradientStop Color="#FFEBEBEB"/>
+                        <GradientStop Color="#FFDDDDDD" Offset="0.006"/>
+                        <GradientStop Color="#FF1C7CDC" Offset="0.099"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button x:Name="button_Legende" Content="Légendaire" HorizontalAlignment="Left" Margin="356,390,0,0" VerticalAlignment="Top" Width="340" Height="46" FontSize="20" Foreground="#FFF1EEEE">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                        <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                        <GradientStop Color="#FFEBEBEB"/>
+                        <GradientStop Color="#FFDDDDDD" Offset="0.006"/>
+                        <GradientStop Color="#FF1C7CDC" Offset="0.099"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+        </Grid>
+
+    </Grid>
+</Window>

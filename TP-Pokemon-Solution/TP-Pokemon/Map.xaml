@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TP_Pokemon"
         mc:Ignorable="d"
-        Title="Map" Height="691" Width="1084">
+        Title="Map" Height="691" Width="1084" ResizeMode="NoResize">
 
     <Window.Background>
         <ImageBrush ImageSource="Images/map.png" Stretch="UniformToFill"/>
@@ -39,19 +39,19 @@
                 <Image x:Name="image_bouton_profil" Height="40" Width="48" Source="Images/icone_user.png"/>
             </Button>
         </Grid>
-        <Button x:Name="button_port" HorizontalAlignment="Left" Margin="607,286,0,0" VerticalAlignment="Top" Width="124" Height="124" Background="{x:Null}">
+        <Button x:Name="button_port" HorizontalAlignment="Left" Margin="607,286,0,0" VerticalAlignment="Top" Width="124" Height="124" Background="{x:Null}" Click="button_port_Click">
             <Image x:Name="image_ancre" Height="100" Width="100" Source="Images/ancre.png"/>
         </Button>
         <Button x:Name="button_shop" HorizontalAlignment="Left" Margin="774,458,0,0" VerticalAlignment="Top" Width="124" Height="124" Background="{x:Null}">
             <Image x:Name="image_shop" Height="100" Width="100" Source="Images/magasin.png"/>
         </Button>
-        <Button x:Name="button_central_h" HorizontalAlignment="Left" Margin="254,458,0,0" VerticalAlignment="Top" Width="124" Height="124" Background="{x:Null}">
+        <Button x:Name="button_central_h" HorizontalAlignment="Left" Margin="254,458,0,0" VerticalAlignment="Top" Width="124" Height="124" Background="{x:Null}" Click="button_central_h_Click">
             <Image x:Name="image_ancre2" Height="100" Width="100" Source="Images/central.png"/>
         </Button>
-        <Button x:Name="button_port_Copy2" HorizontalAlignment="Left" Margin="538,96,0,0" VerticalAlignment="Top" Width="124" Height="124" Background="{x:Null}">
+        <Button x:Name="button_stade" HorizontalAlignment="Left" Margin="538,96,0,0" VerticalAlignment="Top" Width="124" Height="124" Background="{x:Null}" Click="button_stade_Click">
             <Image x:Name="image_stade" Height="124" Width="121" Source="Images/stadium.png"/>
         </Button>
-        <Button x:Name="button_parc" HorizontalAlignment="Left" Margin="116,220,0,0" VerticalAlignment="Top" Width="124" Height="124" Background="{x:Null}">
+        <Button x:Name="button_parc" HorizontalAlignment="Left" Margin="116,220,0,0" VerticalAlignment="Top" Width="124" Height="124" Background="{x:Null}" Click="button_parc_Click">
             <Image x:Name="image_parc" Height="100" Width="100" Source="Images/parc.png"/>
         </Button>
     </Grid>
