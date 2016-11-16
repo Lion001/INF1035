@@ -10,12 +10,8 @@ namespace TP_Pokemon
     enum TypeMonster
     {
         Feu,
-        Magma,
-        Terre,
         Vegetation,
         Eau,
-        Glace,
-        Air,
         Electricite
     }
     /// <summary>
