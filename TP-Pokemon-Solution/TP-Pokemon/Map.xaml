@@ -11,15 +11,15 @@
         <ImageBrush ImageSource="Images/map.png" Stretch="UniformToFill"/>
     </Window.Background>
     <Grid>
-        <Grid HorizontalAlignment="Left" Height="24" VerticalAlignment="Top" Width="1076" RenderTransformOrigin="1.119,1.074" Background="#FF1652A8">
-            <Button x:Name="button" Content="+" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Background="#FF0F131D" Foreground="#FFF9F6F6" FontSize="36" Height="44" Margin="0,-20,0,0" Click="button_Click"/>
-            <Button x:Name="bouton_secret" Content="" HorizontalAlignment="Left" Margin="1031,0,0,0" VerticalAlignment="Top" Width="35">
-                <Button.Background>
-                    <ImageBrush ImageSource="Images/cle1.png"/>
-                </Button.Background>
-            </Button>
-        </Grid>
-        <Grid x:Name="menu_deroulant" HorizontalAlignment="Left" Height="343" Margin="0,24,0,0" VerticalAlignment="Top" Width="76" RenderTransformOrigin="0.44,0.922" Background="#FF7E7E7E">
+            <Grid HorizontalAlignment="Left" Height="24" VerticalAlignment="Top" Width="1076" RenderTransformOrigin="1.119,1.074" Background="#FF1652A8">
+                <Button x:Name="button" Content="+" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Background="#FF0F131D" Foreground="#FFF9F6F6" FontSize="36" Height="44" Margin="0,-20,0,0" Click="button_Click"/>
+                <Button x:Name="bouton_secret" Content="" HorizontalAlignment="Left" Margin="1031,0,0,0" VerticalAlignment="Top" Width="35">
+                    <Button.Background>
+                        <ImageBrush ImageSource="Images/cle1.png"/>
+                    </Button.Background>
+                </Button>
+            </Grid>
+            <Grid x:Name="menu_deroulant" HorizontalAlignment="Left" Height="343" Margin="0,24,0,0" VerticalAlignment="Top" Width="76" RenderTransformOrigin="0.44,0.922" Background="#FF7E7E7E">
             <Button x:Name="icone_enregistrer" HorizontalAlignment="Left" Margin="10,230,0,0" VerticalAlignment="Top" Width="58" Height="50" RenderTransformOrigin="0.501,5.734" Background="{x:Null}">
                 <Image x:Name="image_bouton_save" Height="40" Width="48" Source="Images/Save.png"/>
             </Button>
@@ -35,7 +35,7 @@
             <Button x:Name="bouton_inventaire" HorizontalAlignment="Left" Margin="10,65,0,0" VerticalAlignment="Top" Width="58" Height="50" RenderTransformOrigin="0.501,5.734" Background="{x:Null}">
                 <Image x:Name="image_bouton_save3" Height="40" Width="48" Source="Images/backpack1.png"/>
             </Button>
-            <Button x:Name="bouton_profil" HorizontalAlignment="Left" Margin="8,10,0,0" VerticalAlignment="Top" Width="58" Height="50" RenderTransformOrigin="0.501,5.734" Background="{x:Null}">
+            <Button x:Name="bouton_profil" HorizontalAlignment="Left" Margin="8,10,0,0" VerticalAlignment="Top" Width="58" Height="50" RenderTransformOrigin="0.501,5.734" Background="{x:Null}" Click="bouton_profil_Click">
                 <Image x:Name="image_bouton_profil" Height="40" Width="48" Source="Images/icone_user.png"/>
             </Button>
         </Grid>
@@ -54,5 +54,10 @@
         <Button x:Name="button_parc" HorizontalAlignment="Left" Margin="116,220,0,0" VerticalAlignment="Top" Width="124" Height="124" Background="{x:Null}" Click="button_parc_Click">
             <Image x:Name="image_parc" Height="100" Width="100" Source="Images/parc.png"/>
         </Button>
+        <Grid x:Name="panel_utilisateur" HorizontalAlignment="Left" Height="429" Margin="81,29,0,0" VerticalAlignment="Top" Width="418">
+            <Grid.Background>
+                <ImageBrush ImageSource="background.jpg"/>
+            </Grid.Background>
+        </Grid>
     </Grid>
 </Window>

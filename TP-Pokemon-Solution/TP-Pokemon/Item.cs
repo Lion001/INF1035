@@ -11,7 +11,7 @@ namespace TP_Pokemon
 
         public string nameItem;
         public string desItem;
-        public TypeMonster typeItem;
+        public TypeElement typeItem;
         public string valueItem;
         public float costItem;
 
