@@ -9,6 +9,6 @@ namespace TP_Pokemon
 {
     class Inventory
     {
-        private ArrayList<>
+        private List<>
     }
 }

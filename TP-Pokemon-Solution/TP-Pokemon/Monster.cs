@@ -18,6 +18,9 @@ namespace TP_Pokemon
         Air,
         Electricite
     }
+    /// <summary>
+    /// un enum pour la rareté, un pour la santé, pour l'energie, pour la force, pour monsterShield 
+    /// </summary>
 
     class Monster
     {

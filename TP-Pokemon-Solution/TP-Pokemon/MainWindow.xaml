@@ -11,9 +11,9 @@
             <ImageBrush ImageSource="background.jpg"/>
         </Grid.Background>
         <Button x:Name="bouton_New" Content="Nouveau" HorizontalAlignment="Left" Margin="58,162,0,0" VerticalAlignment="Top" Width="200" RenderTransformOrigin="0.08,-1.409" Height="42" Background="#FF13248F" Foreground="#FFF9F9F9"/>
-        <Button x:Name="bouton_Charger" Content="Charger" HorizontalAlignment="Left" Margin="58,231,0,0" VerticalAlignment="Top" Width="200" RenderTransformOrigin="0.08,-1.409" Height="42" Background="#FF13248F" Foreground="#FFF9F9F9"/>
-        <Button x:Name="bouton_Quitter" Content="Quitter" HorizontalAlignment="Left" Margin="58,303,0,0" VerticalAlignment="Top" Width="200" RenderTransformOrigin="0.08,-1.409" Height="42" Background="#FF13248F" Foreground="#FFF9F9F9"/>
-        <Image x:Name="image" HorizontalAlignment="Left" Height="226" Margin="25,-22,0,0" VerticalAlignment="Top" Width="248" Source="Images/logo.png"/>
+        <Button x:Name="bouton_Charger" Content="Charger" HorizontalAlignment="Left" Margin="58,231,0,0" VerticalAlignment="Top" Width="200" RenderTransformOrigin="0.08,-1.409" Height="42" Background="#FF13248F" Foreground="#FFF9F9F9" Click="bouton_Charger_Click"/>
+        <Button x:Name="bouton_Quitter" Content="Quitter" HorizontalAlignment="Left" Margin="58,303,0,0" VerticalAlignment="Top" Width="200" RenderTransformOrigin="0.08,-1.409" Height="42" Background="#FF13248F" Foreground="#FFF9F9F9" Click="bouton_Quitter_Click_1"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="179" Margin="25,-22,0,0" VerticalAlignment="Top" Width="248" Source="Images/logo.png"/>
 
     </Grid>
 </Window>

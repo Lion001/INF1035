@@ -1,0 +1,58 @@
+﻿<Window x:Class="TP_Pokemon.Map"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TP_Pokemon"
+        mc:Ignorable="d"
+        Title="Map" Height="691" Width="1084">
+
+    <Window.Background>
+        <ImageBrush ImageSource="Images/map.png" Stretch="UniformToFill"/>
+    </Window.Background>
+    <Grid>
+        <Grid HorizontalAlignment="Left" Height="24" VerticalAlignment="Top" Width="1076" RenderTransformOrigin="1.119,1.074" Background="#FF1652A8">
+            <Button x:Name="button" Content="+" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Background="#FF0F131D" Foreground="#FFF9F6F6" FontSize="36" Height="44" Margin="0,-20,0,0" Click="button_Click"/>
+            <Button x:Name="bouton_secret" Content="" HorizontalAlignment="Left" Margin="1031,0,0,0" VerticalAlignment="Top" Width="35">
+                <Button.Background>
+                    <ImageBrush ImageSource="Images/cle1.png"/>
+                </Button.Background>
+            </Button>
+        </Grid>
+        <Grid x:Name="menu_deroulant" HorizontalAlignment="Left" Height="343" Margin="0,24,0,0" VerticalAlignment="Top" Width="76" RenderTransformOrigin="0.44,0.922" Background="#FF7E7E7E">
+            <Button x:Name="icone_enregistrer" HorizontalAlignment="Left" Margin="10,230,0,0" VerticalAlignment="Top" Width="58" Height="50" RenderTransformOrigin="0.501,5.734" Background="{x:Null}">
+                <Image x:Name="image_bouton_save" Height="40" Width="48" Source="Images/Save.png"/>
+            </Button>
+            <Button x:Name="icone_quitter" HorizontalAlignment="Left" Margin="10,283,0,0" VerticalAlignment="Top" Width="58" Height="50" Click="icone_quitter_Click" Background="{x:Null}">
+                <Image x:Name="image_bouton_quitter" Height="40" Width="70" Source="Images/icone_exit.png"/>
+            </Button>
+            <Button x:Name="bouton_pokedex" HorizontalAlignment="Left" Margin="10,175,0,0" VerticalAlignment="Top" Width="58" Height="50" RenderTransformOrigin="0.501,5.734" Background="{x:Null}">
+                <Image x:Name="image_bouton_pokedex" Height="40" Width="48" Source="Images/pokedex.png"/>
+            </Button>
+            <Button x:Name="bouton_pokemon" HorizontalAlignment="Left" Margin="10,120,0,0" VerticalAlignment="Top" Width="58" Height="50" RenderTransformOrigin="0.501,5.734" Background="{x:Null}">
+                <Image x:Name="image_bouton_pokemon" Height="40" Width="48" Source="Images/pokeball.png"/>
+            </Button>
+            <Button x:Name="bouton_inventaire" HorizontalAlignment="Left" Margin="10,65,0,0" VerticalAlignment="Top" Width="58" Height="50" RenderTransformOrigin="0.501,5.734" Background="{x:Null}">
+                <Image x:Name="image_bouton_save3" Height="40" Width="48" Source="Images/backpack1.png"/>
+            </Button>
+            <Button x:Name="bouton_profil" HorizontalAlignment="Left" Margin="8,10,0,0" VerticalAlignment="Top" Width="58" Height="50" RenderTransformOrigin="0.501,5.734" Background="{x:Null}">
+                <Image x:Name="image_bouton_profil" Height="40" Width="48" Source="Images/icone_user.png"/>
+            </Button>
+        </Grid>
+        <Button x:Name="button_port" HorizontalAlignment="Left" Margin="607,286,0,0" VerticalAlignment="Top" Width="124" Height="124" Background="{x:Null}">
+            <Image x:Name="image_ancre" Height="100" Width="100" Source="Images/ancre.png"/>
+        </Button>
+        <Button x:Name="button_shop" HorizontalAlignment="Left" Margin="774,458,0,0" VerticalAlignment="Top" Width="124" Height="124" Background="{x:Null}">
+            <Image x:Name="image_shop" Height="100" Width="100" Source="Images/magasin.png"/>
+        </Button>
+        <Button x:Name="button_central_h" HorizontalAlignment="Left" Margin="254,458,0,0" VerticalAlignment="Top" Width="124" Height="124" Background="{x:Null}">
+            <Image x:Name="image_ancre2" Height="100" Width="100" Source="Images/central.png"/>
+        </Button>
+        <Button x:Name="button_port_Copy2" HorizontalAlignment="Left" Margin="538,96,0,0" VerticalAlignment="Top" Width="124" Height="124" Background="{x:Null}">
+            <Image x:Name="image_stade" Height="124" Width="121" Source="Images/stadium.png"/>
+        </Button>
+        <Button x:Name="button_parc" HorizontalAlignment="Left" Margin="116,220,0,0" VerticalAlignment="Top" Width="124" Height="124" Background="{x:Null}">
+            <Image x:Name="image_parc" Height="100" Width="100" Source="Images/parc.png"/>
+        </Button>
+    </Grid>
+</Window>
