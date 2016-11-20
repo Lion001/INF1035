@@ -34,14 +34,15 @@ namespace TP_Pokemon
     class Skill
     {
         //Initialisation des variables
-        string nom, description;
-        int cout;
-        TypeElement element;
-        Cible cible;
-        Effet effet;
-        int magnitude;
-        int duree;
-        
+        public string nom { get; set; }
+        public string description { get; set; }
+        public int cout { get; set; }
+        public TypeElement element { get; set; }
+        public Cible cible { get; set; }
+        public Effet effet { get; set; }
+        public int magnitude { get; set; }
+        public int duree { get; set; }
+
         //Constructeur
         public Skill (string nom, string description, int cout, TypeElement element, Cible cible, Effet effet, int magnitude, int duree)
         {
@@ -54,24 +55,6 @@ namespace TP_Pokemon
             this.magnitude = magnitude;
             this.duree = duree;
         }
-
-        // Get - Set
-        public string nom { get; set; }
-
-        public string description { get; set; }
-        
-        public int cout { get; set; }
-        
-        public TypeElement element { get; set; }
-        
-        public Cible cible { get; set; }
-
-        public Effet effet { get; set; }
-
-        public int magnitude { get; set; }
-
-        public int duree { get; set; }
-
 
     }
 }

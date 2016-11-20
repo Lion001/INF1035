@@ -41,6 +41,10 @@ namespace TP_Pokemon
         //########################################################################
         //#                     Contenu du menu déroulant                        #
         //########################################################################
+        private void bouton_profil_Click(object sender, RoutedEventArgs e)
+        {
+            panel_utilisateur.Visibility = System.Windows.Visibility.Visible;
+        }
 
         private void icone_quitter_Click(object sender, RoutedEventArgs e)
         {
@@ -85,5 +89,6 @@ namespace TP_Pokemon
             newWin.Show();
             this.Close();
         }
+
     }
 }

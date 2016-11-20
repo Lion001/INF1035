@@ -6,14 +6,6 @@ using System.Threading.Tasks;
 
 namespace TP_Pokemon
 {
-
-    enum TypeMonster
-    {
-        Feu,
-        Vegetation,
-        Eau,
-        Electricite
-    }
     /// <summary>
     /// un enum pour la rareté, un pour la santé, pour l'energie, pour la force, pour monsterShield 
     /// </summary>
@@ -24,7 +16,8 @@ namespace TP_Pokemon
         public string nameMonster;
         public string descripMonster;
         public string nicknameMonster;
-        public TypeMonster typeMonster;
+        public TypeElement typeMonster;
+        public byte rarete;
         public int scarcity;
         public int levelExp;
         public int pointExp;
