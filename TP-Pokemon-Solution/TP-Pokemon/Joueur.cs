@@ -22,7 +22,7 @@ namespace TP_Pokemon
             nomJoueur = "rémi";
             deviseArgent = "dollars";
             argent = 100;
-            inventaire = 
+            inventaire =  
         }
     }
 }
