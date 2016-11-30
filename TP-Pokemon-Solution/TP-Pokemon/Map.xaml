@@ -11,28 +11,25 @@
         <ImageBrush ImageSource="Images/map.png" Stretch="UniformToFill"/>
     </Window.Background>
     <Grid>
-            <Grid HorizontalAlignment="Left" Height="24" VerticalAlignment="Top" Width="1076" RenderTransformOrigin="1.119,1.074" Background="#FF1652A8">
-                <Button x:Name="button" Content="+" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Background="#FF0F131D" Foreground="#FFF9F6F6" FontSize="36" Height="44" Margin="0,-20,0,0" Click="button_Click"/>
-                <Button x:Name="bouton_secret" Content="" HorizontalAlignment="Left" Margin="1031,0,0,0" VerticalAlignment="Top" Width="35">
-                    <Button.Background>
-                        <ImageBrush ImageSource="Images/cle1.png"/>
-                    </Button.Background>
-                </Button>
-            </Grid>
-            <Grid x:Name="menu_deroulant" HorizontalAlignment="Left" Height="343" Margin="0,24,0,0" VerticalAlignment="Top" Width="76" RenderTransformOrigin="0.44,0.922" Background="#FF7E7E7E">
-            <Button x:Name="icone_enregistrer" HorizontalAlignment="Left" Margin="10,230,0,0" VerticalAlignment="Top" Width="58" Height="50" RenderTransformOrigin="0.501,5.734" Background="{x:Null}">
+        <Grid HorizontalAlignment="Left" Height="24" VerticalAlignment="Top" Width="1076" RenderTransformOrigin="1.119,1.074" Background="#FF1652A8">
+            <Button x:Name="button" Content="+" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Background="#FF0F131D" Foreground="#FFF9F6F6" FontSize="36" Height="44" Margin="0,-20,0,0" Click="button_Click"/>
+            <Button x:Name="bouton_secret" Content="" HorizontalAlignment="Left" Margin="1031,0,0,0" VerticalAlignment="Top" Width="35">
+                <Button.Background>
+                    <ImageBrush ImageSource="Images/cle1.png"/>
+                </Button.Background>
+            </Button>
+        </Grid>
+        <Grid x:Name="menu_deroulant" HorizontalAlignment="Left" Height="289" Margin="0,24,0,0" VerticalAlignment="Top" Width="76" RenderTransformOrigin="0.44,0.922" Background="#FF7E7E7E">
+            <Button x:Name="icone_enregistrer" HorizontalAlignment="Left" Margin="10,175,0,0" VerticalAlignment="Top" Width="58" Height="50" RenderTransformOrigin="0.501,5.734" Background="{x:Null}">
                 <Image x:Name="image_bouton_save" Height="40" Width="48" Source="Images/Save.png"/>
             </Button>
-            <Button x:Name="icone_quitter" HorizontalAlignment="Left" Margin="10,283,0,0" VerticalAlignment="Top" Width="58" Height="50" Click="icone_quitter_Click" Background="{x:Null}">
+            <Button x:Name="icone_quitter" HorizontalAlignment="Left" Margin="8,230,0,0" VerticalAlignment="Top" Width="58" Height="50" Click="icone_quitter_Click" Background="{x:Null}">
                 <Image x:Name="image_bouton_quitter" Height="40" Width="70" Source="Images/icone_exit.png"/>
             </Button>
-            <Button x:Name="bouton_pokedex" HorizontalAlignment="Left" Margin="10,175,0,0" VerticalAlignment="Top" Width="58" Height="50" RenderTransformOrigin="0.501,5.734" Background="{x:Null}">
-                <Image x:Name="image_bouton_pokedex" Height="40" Width="48" Source="Images/pokedex.png"/>
-            </Button>
-            <Button x:Name="bouton_pokemon" HorizontalAlignment="Left" Margin="10,120,0,0" VerticalAlignment="Top" Width="58" Height="50" RenderTransformOrigin="0.501,5.734" Background="{x:Null}">
+            <Button x:Name="bouton_pokemon" HorizontalAlignment="Left" Margin="10,120,0,0" VerticalAlignment="Top" Width="58" Height="50" RenderTransformOrigin="0.501,5.734" Background="{x:Null}" Click="bouton_pokemon_Click">
                 <Image x:Name="image_bouton_pokemon" Height="40" Width="48" Source="Images/pokeball.png"/>
             </Button>
-            <Button x:Name="bouton_inventaire" HorizontalAlignment="Left" Margin="10,65,0,0" VerticalAlignment="Top" Width="58" Height="50" RenderTransformOrigin="0.501,5.734" Background="{x:Null}">
+            <Button x:Name="bouton_inventaire" HorizontalAlignment="Left" Margin="10,65,0,0" VerticalAlignment="Top" Width="58" Height="50" RenderTransformOrigin="0.501,5.734" Background="{x:Null}" Click="bouton_inventaire_Click">
                 <Image x:Name="image_bouton_save3" Height="40" Width="48" Source="Images/backpack1.png"/>
             </Button>
             <Button x:Name="bouton_profil" HorizontalAlignment="Left" Margin="8,10,0,0" VerticalAlignment="Top" Width="58" Height="50" RenderTransformOrigin="0.501,5.734" Background="{x:Null}" Click="bouton_profil_Click">
@@ -54,10 +51,144 @@
         <Button x:Name="button_parc" HorizontalAlignment="Left" Margin="116,220,0,0" VerticalAlignment="Top" Width="124" Height="124" Background="{x:Null}" Click="button_parc_Click">
             <Image x:Name="image_parc" Height="100" Width="100" Source="Images/parc.png"/>
         </Button>
-        <Grid x:Name="panel_utilisateur" HorizontalAlignment="Left" Height="429" Margin="81,29,0,0" VerticalAlignment="Top" Width="418">
+        <Grid x:Name="panel_utilisateur" HorizontalAlignment="Left" Height="429" Margin="81,29,0,0" VerticalAlignment="Top" Width="418" Visibility="Hidden">
             <Grid.Background>
-                <ImageBrush ImageSource="background.jpg"/>
+                <ImageBrush ImageSource="Images/background-menu.jpg"/>
             </Grid.Background>
+            <Image x:Name="image" HorizontalAlignment="Left" Height="166" Margin="133,50,0,0" VerticalAlignment="Top" Width="145" Source="Images/icone_user.png"/>
+            <Label x:Name="label_nom_user" Content="Nom du joueur" HorizontalAlignment="Left" Margin="72,216,0,0" VerticalAlignment="Top" Width="298" Height="58" Foreground="#FFF3EDED" BorderBrush="Black" FontSize="36"/>
+            <Button x:Name="button_change_name" Content="Changer" HorizontalAlignment="Left" Margin="276,330,0,0" VerticalAlignment="Top" Width="75" Height="24"/>
+            <TextBox x:Name="textBox_change_name" HorizontalAlignment="Left" Height="23" Margin="81,330,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="180"/>
+        </Grid>
+        <Grid x:Name="panel_inventaire" HorizontalAlignment="Left" Height="486" Margin="81,29,0,0" VerticalAlignment="Top" Width="249" Visibility="Hidden">
+            <Grid.Background>
+                <ImageBrush ImageSource="Images/background-menu.jpg"/>
+            </Grid.Background>
+            <Image x:Name="image_potion_mauve" HorizontalAlignment="Left" Height="84" Margin="39,187,0,0" VerticalAlignment="Top" Width="81" Source="Images/potion-mauve.png"/>
+            <Image x:Name="image_potion_or" HorizontalAlignment="Left" Height="84" Margin="39,276,0,0" VerticalAlignment="Top" Width="81" Source="Images/potion-or.png"/>
+            <Image x:Name="image_potion_max" HorizontalAlignment="Left" Height="84" Margin="39,375,0,0" VerticalAlignment="Top" Width="81" Source="Images/potion-max.png" RenderTransformOrigin="0.654,1.988"/>
+            <Image x:Name="image_pokeball" HorizontalAlignment="Left" Height="84" Margin="39,98,0,0" VerticalAlignment="Top" Width="81" Source="Images/pokeball-inventaire.png"/>
+            <Label x:Name="label_nb_potMauve" Content="x 0" HorizontalAlignment="Left" Margin="135,199,0,0" VerticalAlignment="Top" Height="59" Width="74" RenderTransformOrigin="0.284,0.245" Foreground="#FFF3F1F1" FontSize="36"/>
+            <Label x:Name="label_nb_potOr" Content="x 0" HorizontalAlignment="Left" Margin="135,288,0,0" VerticalAlignment="Top" Height="59" Width="74" RenderTransformOrigin="0.284,0.245" Foreground="#FFF3F1F1" FontSize="36"/>
+            <Label x:Name="label_nb_potMax" Content="x 0" HorizontalAlignment="Left" Margin="135,386,0,0" VerticalAlignment="Top" Height="59" Width="74" RenderTransformOrigin="0.284,0.245" Foreground="#FFF3F1F1" FontSize="36"/>
+            <Label x:Name="label_nb_pokeball" Content="x 0" HorizontalAlignment="Left" Margin="135,110,0,0" VerticalAlignment="Top" Height="59" Width="74" RenderTransformOrigin="0.284,0.245" Foreground="#FFF3F1F1" FontSize="36"/>
+            <Image x:Name="image_argent" HorizontalAlignment="Left" Height="84" Margin="39,14,0,0" VerticalAlignment="Top" Width="81" Source="Images/coin.png" RenderTransformOrigin="0.469,-0.5"/>
+            <Label x:Name="label_argent" Content="1 000 000" HorizontalAlignment="Left" Margin="135,42,0,0" VerticalAlignment="Top" Height="30" Width="74" RenderTransformOrigin="0.284,0.245" Foreground="#FFF3F1F1" FontSize="14"/>
+        </Grid>
+        <Grid x:Name="panel_pokemons" HorizontalAlignment="Left" Height="486" Margin="81,29,0,0" VerticalAlignment="Top" Width="987" Visibility="Visible">
+            <Grid.Background>
+                <ImageBrush ImageSource="Images/background-menu.jpg"/>
+            </Grid.Background>
+            <GridSplitter x:Name="gridSplitter_2" HorizontalAlignment="Left" Height="476" Margin="441,10,0,0" VerticalAlignment="Top" Width="4" Background="#FF0F0F0F"/>
+            <Button x:Name="button_pokemon15" HorizontalAlignment="Left" Margin="345,373,0,0" VerticalAlignment="Top" Width="75" Height="70" Background="{x:Null}">
+                <Image x:Name="image_pokemon15" Height="60" Width="65" Source="Images/inconnu.png"/>
+            </Button>
+            <Button x:Name="button_pokemon5" HorizontalAlignment="Left" Margin="345,223,0,0" VerticalAlignment="Top" Width="75" Height="70" Background="{x:Null}">
+                <Image x:Name="image_pokemon5" Height="60" Width="65" Source="Images/inconnu.png"/>
+            </Button>
+            <Button x:Name="button_pokemon10" HorizontalAlignment="Left" Margin="345,298,0,0" VerticalAlignment="Top" Width="75" Height="70" Background="{x:Null}">
+                <Image x:Name="image_pokemon10" Height="60" Width="65" Source="Images/inconnu.png"/>
+            </Button>
+            <Button x:Name="button_pokemon1" HorizontalAlignment="Left" Margin="25,223,0,0" VerticalAlignment="Top" Width="75" Height="70" Background="{x:Null}">
+                <Image x:Name="image_pokemon1" Height="60" Width="65" Source="Images/inconnu.png"/>
+            </Button>
+            <Button x:Name="button_pokemon2" HorizontalAlignment="Left" Margin="105,223,0,0" VerticalAlignment="Top" Width="75" Height="70" Background="{x:Null}">
+                <Image x:Name="image_pokemon2" Height="60" Width="65" Source="Images/inconnu.png"/>
+            </Button>
+            <Button x:Name="button_pokemon3" HorizontalAlignment="Left" Margin="185,223,0,0" VerticalAlignment="Top" Width="75" Height="70" Background="{x:Null}">
+                <Image x:Name="image_pokemon3" Height="60" Width="65" Source="Images/inconnu.png"/>
+            </Button>
+            <Button x:Name="button_pokemon4" HorizontalAlignment="Left" Margin="265,223,0,0" VerticalAlignment="Top" Width="75" Height="70" Background="{x:Null}">
+                <Image x:Name="image_pokemon4" Height="60" Width="65" Source="Images/inconnu.png"/>
+            </Button>
+            <Button x:Name="button_pokemon6" HorizontalAlignment="Left" Margin="25,298,0,0" VerticalAlignment="Top" Width="75" Height="70" Background="{x:Null}">
+                <Image x:Name="image_pokemon6" Height="60" Width="65" Source="Images/inconnu.png"/>
+            </Button>
+            <Button x:Name="button_pokemon7" HorizontalAlignment="Left" Margin="105,298,0,0" VerticalAlignment="Top" Width="75" Height="70" Background="{x:Null}">
+                <Image x:Name="image_pokemon7" Height="60" Width="65" Source="Images/inconnu.png"/>
+            </Button>
+            <Button x:Name="button_pokemon8" HorizontalAlignment="Left" Margin="185,298,0,0" VerticalAlignment="Top" Width="75" Height="70" Background="{x:Null}">
+                <Image x:Name="image_pokemon8" Height="60" Width="65" Source="Images/inconnu.png"/>
+            </Button>
+            <Button x:Name="button_pokemon9" HorizontalAlignment="Left" Margin="265,298,0,0" VerticalAlignment="Top" Width="75" Height="70" Background="{x:Null}">
+                <Image x:Name="image_pokemon9" Height="60" Width="65" Source="Images/inconnu.png"/>
+            </Button>
+            <Button x:Name="button_pokemon11" HorizontalAlignment="Left" Margin="25,373,0,0" VerticalAlignment="Top" Width="75" Height="70" Background="{x:Null}">
+                <Image x:Name="image_pokemon11" Height="60" Width="65" Source="Images/inconnu.png"/>
+            </Button>
+            <Button x:Name="button_pokemon12" HorizontalAlignment="Left" Margin="105,373,0,0" VerticalAlignment="Top" Width="75" Height="70" Background="{x:Null}">
+                <Image x:Name="image_pokemon12" Height="60" Width="65" Source="Images/inconnu.png"/>
+            </Button>
+            <Button x:Name="button_pokemon13" HorizontalAlignment="Left" Margin="185,373,0,0" VerticalAlignment="Top" Width="75" Height="70" Background="{x:Null}">
+                <Image x:Name="image_pokemon13" Height="60" Width="65" Source="Images/inconnu.png"/>
+            </Button>
+            <Button x:Name="button_pokemon14" HorizontalAlignment="Left" Margin="265,373,0,0" VerticalAlignment="Top" Width="75" Height="70" Background="{x:Null}">
+                <Image x:Name="image_pokemon14" Height="60" Width="65" Source="Images/inconnu.png"/>
+            </Button>
+            <Image x:Name="image_pokemon_choix_1" HorizontalAlignment="Left" Height="86" Margin="38,19,0,0" VerticalAlignment="Top" Width="85" Source="Images/inconnu.png"/>
+            <Image x:Name="image_pokemon_choix_2" HorizontalAlignment="Left" Height="86" Margin="175,19,0,0" VerticalAlignment="Top" Width="85" Source="Images/inconnu.png"/>
+            <Image x:Name="image_pokemon_choix_1_Copy" HorizontalAlignment="Left" Height="86" Margin="335,19,0,0" VerticalAlignment="Top" Width="85" Source="Images/inconnu.png"/>
+            <Image x:Name="image_pokemon_choix_1_Copy1" HorizontalAlignment="Left" Height="86" Margin="105,110,0,0" VerticalAlignment="Top" Width="85" Source="Images/inconnu.png"/>
+            <Image x:Name="image_pokemon_choix_1_Copy2" HorizontalAlignment="Left" Height="86" Margin="255,110,0,0" VerticalAlignment="Top" Width="85" Source="Images/inconnu.png"/>
+            <Label x:Name="label_choix1" Content="Choix 1" HorizontalAlignment="Left" Margin="51,105,0,0" VerticalAlignment="Top" Foreground="#FFF1E7E7"/>
+            <Label x:Name="label_choix1_Copy" Content="Choix 2" HorizontalAlignment="Left" Margin="195,110,0,0" VerticalAlignment="Top" Foreground="#FFF1E7E7"/>
+            <Label x:Name="label_choix1_Copy1" Content="Choix 3" HorizontalAlignment="Left" Margin="356,110,0,0" VerticalAlignment="Top" Foreground="#FFF1E7E7"/>
+            <Label x:Name="label_choix1_Copy2" Content="Choix 4" HorizontalAlignment="Left" Margin="119,192,0,0" VerticalAlignment="Top" Foreground="#FFF1E7E7"/>
+            <Label x:Name="label_choix1_Copy3" Content="Choix 5" HorizontalAlignment="Left" Margin="265,192,0,0" VerticalAlignment="Top" Foreground="#FFF1E7E7" RenderTransformOrigin="3.449,2.962"/>
+            <Image x:Name="image_pokemon_afficher" HorizontalAlignment="Left" Height="197" Margin="462,19,0,0" VerticalAlignment="Top" Width="204" Source="Images/inconnu.png"/>
+            <Label x:Name="label_nom" Content="Nom Inconnu" HorizontalAlignment="Left" Margin="677,19,0,0" VerticalAlignment="Top" FontSize="24" Foreground="#FFE8D9D9"/>
+            <Label x:Name="label_level" Content="Level 0" HorizontalAlignment="Left" Margin="857,19,0,0" VerticalAlignment="Top" FontSize="24" Foreground="#FFE8D9D9"/>
+            <Label x:Name="label_id" Content="#id" HorizontalAlignment="Left" Margin="740,61,0,0" VerticalAlignment="Top" FontSize="20" Foreground="#FFE8D9D9"/>
+            <Label x:Name="label_element" Content="Feu" HorizontalAlignment="Left" Margin="842,61,0,0" VerticalAlignment="Top" FontSize="20" Foreground="#FFE8D9D9"/>
+            <Label x:Name="label_xp" Content="XP : 0/10000" HorizontalAlignment="Left" Margin="690,96,0,0" VerticalAlignment="Top" FontSize="20" Foreground="#FFE8D9D9"/>
+            <Label x:Name="label_vie" Content="Vie : 10000" HorizontalAlignment="Left" Margin="833,96,0,0" VerticalAlignment="Top" FontSize="20" Foreground="#FFE8D9D9"/>
+            <Label x:Name="label_mana" Content="Mana : 10000" HorizontalAlignment="Left" Margin="690,133,0,0" VerticalAlignment="Top" FontSize="20" Foreground="#FFE8D9D9"/>
+            <Label x:Name="label_mana_Copy" Content="Regen : +10" HorizontalAlignment="Left" Margin="833,133,0,0" VerticalAlignment="Top" FontSize="20" Foreground="#FFE8D9D9"/>
+            <Label x:Name="label_attaque" Content="Attaque : x 0" HorizontalAlignment="Left" Margin="690,165,0,0" VerticalAlignment="Top" FontSize="20" Foreground="#FFE8D9D9"/>
+            <Label x:Name="label_défense" Content="Défense : x 0" HorizontalAlignment="Left" Margin="833,165,0,0" VerticalAlignment="Top" FontSize="20" Foreground="#FFE8D9D9"/>
+            <Label x:Name="label_attaque_titre1" Content="Habilete # 1 " HorizontalAlignment="Left" Margin="480,243,0,0" VerticalAlignment="Top" FontSize="20" Foreground="#FFDCD9D9"/>
+            <Label x:Name="label_attaque_titre2" Content="Habilete # 2" HorizontalAlignment="Left" Margin="480,298,0,0" VerticalAlignment="Top" FontSize="20" Foreground="#FFDCD9D9"/>
+            <ComboBox x:Name="comboBox_habilete_1" HorizontalAlignment="Left" Margin="638,253,0,0" VerticalAlignment="Top" Width="265" Height="27" BorderBrush="#FF1538B0" Foreground="White">
+                <ComboBox.Background>
+                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                        <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                        <GradientStop Color="#FFEBEBEB"/>
+                        <GradientStop Color="#FFDDDDDD" Offset="0.003"/>
+                        <GradientStop Color="#FF2B4FAE" Offset="0.05"/>
+                    </LinearGradientBrush>
+                </ComboBox.Background>
+            </ComboBox>
+            <Button x:Name="button1" Content="Changer" HorizontalAlignment="Left" Margin="857,421,0,0" VerticalAlignment="Top" Width="75" Foreground="#FFF3EEEE">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                        <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                        <GradientStop Color="#FFEBEBEB" Offset="0.007"/>
+                        <GradientStop Color="#FFDDDDDD"/>
+                        <GradientStop Color="#FF22389C" Offset="0.113"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <ComboBox x:Name="comboBox_habilete_2" HorizontalAlignment="Left" Margin="638,308,0,0" VerticalAlignment="Top" Width="265" Height="27" BorderBrush="#FF1538B0" Foreground="White">
+                <ComboBox.Background>
+                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                        <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                        <GradientStop Color="#FFEBEBEB"/>
+                        <GradientStop Color="#FFDDDDDD" Offset="0.003"/>
+                        <GradientStop Color="#FF2B4FAE" Offset="0.05"/>
+                    </LinearGradientBrush>
+                </ComboBox.Background>
+            </ComboBox>
+            <Label x:Name="label_faire_choix" Content="État" HorizontalAlignment="Left" Margin="553,356,0,0" VerticalAlignment="Top" FontSize="20" Foreground="#FFDCD9D9"/>
+            <ComboBox x:Name="comboBox_faire_choix" HorizontalAlignment="Left" Margin="638,356,0,0" VerticalAlignment="Top" Width="265" Height="27" BorderBrush="#FF1538B0" Foreground="White">
+                <ComboBox.Background>
+                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                        <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                        <GradientStop Color="#FFEBEBEB"/>
+                        <GradientStop Color="#FFDDDDDD" Offset="0.003"/>
+                        <GradientStop Color="#FF2B4FAE" Offset="0.05"/>
+                    </LinearGradientBrush>
+                </ComboBox.Background>
+            </ComboBox>
         </Grid>
     </Grid>
 </Window>

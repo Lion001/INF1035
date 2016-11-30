@@ -43,7 +43,52 @@ namespace TP_Pokemon
         //########################################################################
         private void bouton_profil_Click(object sender, RoutedEventArgs e)
         {
-            panel_utilisateur.Visibility = System.Windows.Visibility.Visible;
+            if(panel_utilisateur.Visibility != System.Windows.Visibility.Visible)
+            {
+                panel_utilisateur.Visibility = System.Windows.Visibility.Visible;
+                panel_inventaire.Visibility = System.Windows.Visibility.Hidden;
+                panel_pokemons.Visibility = System.Windows.Visibility.Hidden;
+                //Afficher le nom du joueur
+            }
+            else
+            {
+                panel_utilisateur.Visibility = System.Windows.Visibility.Hidden;
+            }
+        }
+
+        private void bouton_inventaire_Click(object sender, RoutedEventArgs e)
+        {
+            if (panel_inventaire.Visibility != System.Windows.Visibility.Visible)
+            {
+                panel_inventaire.Visibility = System.Windows.Visibility.Visible;
+                panel_utilisateur.Visibility = System.Windows.Visibility.Hidden;
+                panel_pokemons.Visibility = System.Windows.Visibility.Hidden;
+                //Afficher l'argent
+                //Afficher nombre de pokeball
+                //Afficher nombre de potion mauve
+                //Afficher nombre de potion or
+                //Afficher nombre de potion max
+            }
+            else
+            {
+                panel_inventaire.Visibility = System.Windows.Visibility.Hidden;
+            }
+        }
+
+        private void bouton_pokemon_Click(object sender, RoutedEventArgs e)
+        {
+            if (panel_pokemons.Visibility != System.Windows.Visibility.Visible)
+            {
+                panel_pokemons.Visibility = System.Windows.Visibility.Visible;
+                panel_utilisateur.Visibility = System.Windows.Visibility.Hidden;
+                panel_inventaire.Visibility = System.Windows.Visibility.Hidden;
+               //Afficher les 5 choix de départ
+               //Afficher la listes des pokemons capturés
+            }
+            else
+            {
+                panel_pokemons.Visibility = System.Windows.Visibility.Hidden;
+            }
         }
 
         private void icone_quitter_Click(object sender, RoutedEventArgs e)

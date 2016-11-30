@@ -122,6 +122,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -173,6 +174,26 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\background-menu.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\potion-mauve.png" />
+    <Resource Include="Images\potion-max.png" />
+    <Resource Include="Images\potion-or.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\pokeball-inventaire.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\coin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\moltres.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\inconnu.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
