@@ -71,6 +71,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Caracteristique.cs" />
+    <Compile Include="Donnee-Globale.cs" />
     <Compile Include="Habilete.cs" />
     <Page Include="Combat.xaml">
       <SubType>Designer</SubType>

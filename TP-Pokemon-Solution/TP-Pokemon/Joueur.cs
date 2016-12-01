@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace TP_Pokemon
 {
+    [Serializable]
     class Joueur
     {
         public string nomJoueur;

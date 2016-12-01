@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 namespace TP_Pokemon
 {
     //elle permet de gerer à la fois l'inventaire du joueur et celui de la boutique
+    [Serializable]
     class Inventaire
     {
         public List<Item> listeItem;

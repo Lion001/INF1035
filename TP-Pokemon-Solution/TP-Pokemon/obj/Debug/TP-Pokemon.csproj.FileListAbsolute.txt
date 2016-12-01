@@ -52,3 +52,5 @@ E:\Université\Automne-2016\Concept Avance en Objet\INF1035\TP-Pokemon-Solution\
 E:\Université\Automne-2016\Concept Avance en Objet\INF1035\TP-Pokemon-Solution\TP-Pokemon\obj\Debug\TP-Pokemon.g.resources
 E:\Université\Automne-2016\Concept Avance en Objet\INF1035\TP-Pokemon-Solution\TP-Pokemon\obj\Debug\TP_Pokemon.Properties.Resources.resources
 E:\Université\Automne-2016\Concept Avance en Objet\INF1035\TP-Pokemon-Solution\TP-Pokemon\obj\Debug\TP-Pokemon.csproj.GenerateResource.Cache
+E:\Université\Automne-2016\Concept Avance en Objet\INF1035\TP-Pokemon-Solution\TP-Pokemon\obj\Debug\Nouveau.g.cs
+E:\Université\Automne-2016\Concept Avance en Objet\INF1035\TP-Pokemon-Solution\TP-Pokemon\obj\Debug\Nouveau.baml

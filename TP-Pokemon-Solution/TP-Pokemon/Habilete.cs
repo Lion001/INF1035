@@ -1,12 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace TP_Pokemon
 {
-    enum TypeElement
+    public enum TypeElement
     {
         Feu,
         Vegetation,
@@ -14,13 +17,13 @@ namespace TP_Pokemon
         Electricite
     }
 
-    enum Cible
+    public enum Cible
     {
         soi,
         ennemi
     }
 
-    enum Effet
+    public enum Effet
     {
         degat,
         guerison,
@@ -30,7 +33,7 @@ namespace TP_Pokemon
         force,
         faiblesse
     }
-
+    [Serializable]
    public class Habilete
     {
         //Initialisation des variables
@@ -43,6 +46,7 @@ namespace TP_Pokemon
         public int magnitude { get; set; }
         public int duree { get; set; }
 
+        public Habilete() { }
         //Constructeur
         public Habilete (string nom, string description, int cout, TypeElement element, Cible cible, Effet effet, int magnitude, int duree)
         {
@@ -56,5 +60,22 @@ namespace TP_Pokemon
             this.duree = duree;
         }
 
+        // Enregistrer une liste d'habilete en XML
+        public static void Enregistrer_Liste_Habilete(Habilete[] liste)
+        {
+            XmlSerializer format = new XmlSerializer(typeof(Habilete[]));
+            using (Stream stream = new FileStream(@".\liste_habilete.xml", FileMode.Create, FileAccess.Write, FileShare.None))format.Serialize(stream, liste) ;
+
+        }
+
+        // Charger une liste d'habilete en XML
+        public static Habilete[] Charger_Liste_Habilete()
+        {
+            Habilete[] nouveau;
+
+            XmlSerializer format = new XmlSerializer(typeof(Habilete[]));
+            using (Stream stream = new FileStream(@"liste_habilete.xml", FileMode.Open, FileAccess.Read, FileShare.None)) nouveau = (Habilete[])format.Deserialize(stream);
+            return nouveau;
+        }
     }
 }

@@ -15,9 +15,6 @@ using System.Windows.Shapes;
 
 namespace TP_Pokemon
 {
-    /// <summary>
-    /// Logique d'interaction pour MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
@@ -25,9 +22,11 @@ namespace TP_Pokemon
             InitializeComponent();
         }
 
-        private void bouton_Quitter_Click_1(object sender, RoutedEventArgs e)
+        private void bouton_New_Click(object sender, RoutedEventArgs e)
         {
-            Application.Current.Shutdown();
+            Nouveau newNouveau = new Nouveau();
+            newNouveau.Show();
+            this.Close();
         }
 
         private void bouton_Charger_Click(object sender, RoutedEventArgs e)
@@ -36,6 +35,13 @@ namespace TP_Pokemon
             newMap.Show();
             this.Close();
         }
+
+
+        private void bouton_Quitter_Click_1(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
+
     }
 
 }
