@@ -1,0 +1,49 @@
+string nom, string description, int cout, TypeElement element, Cible cible, Effet effet, int magnitude, int duree
+
+Végétal
+
+1- Lance-Soleil, absorbe la lumière et l'envoie sur l'ennemi, 40%, Végétation, ennemi, degat, 20, 1;
+
+2- Poudre Toxique, répand une poudre toxique pendent 3 tour, 15%, Végétation,  ennemi, degat, 10, 3;
+
+3- Photosynthèse, regénère sa vie grâce au soleil, 40%, Végétation, soi, regeneration, 20, 1;
+
+4- Graine Canon, propulse des graines sur l'ennemi, 75%, Végétation, ennemi, degat, 70, 1;
+
+5- Cocon, s'enveloppe d'une barrière qui bloque l'ennemi pour un tour, 75%, Végétation, ennemi, force, 100, 1;
+
+Électrique
+
+1- Éclair, choc électrique, 30%, Électrique, ennemi, degat, 20, 1;
+
+2- Cage-Éclair, choc électrique qui paralyse l'ennemi pour 3 tours, 50%, Électrique, ennemi, paralysie, 3;
+
+3- Mange-tonnerre, absorbe l'énergie du tonnerre pour régénéré, 20%, Électrique, soi, regeneration, 30, 1;
+
+4- Coup foudroyant, lance un éclair sur l'ennemi, 40%, Électrique, ennemim, dégat, 80,1;
+
+5- Champ magnétique, créer un bouclier qui donne de la force pour 2 tour, 20%, Électrique, soi, 80, 2;  
+
+Eau
+
+1- HydroCannon, envoie un puissant jet d'eau, 30%, ennemi, degat, 20, 1;
+
+2- Siphon, piège l'ennemi pendent 2 tours, 50%, ennemi, paralysie, 50, 2;
+
+3- Sauna, s'enveloppe d'eau chaude pour régénérer 2 tours, 40%, soi, régénération, 50, 2;
+
+4- Carapace D'eau, s'enveloppe d'eau pour se défendre 2 tours, 10%, soi, défense, 40, 2;
+
+5- Tsunami, propulse un Tsunami sur l'ennemi, 90 %, ennemi, dégat, 90, 1;
+
+Feu
+
+1- Flammeche, faible attaque de feu, 15%, ennemi, dégat, 20, 1;
+
+2- Prison de feu, entour l'ennemi d'un cercle de feu pour pour un tour, 35%, ennemi, paralysie, 35, 1;
+
+3- Canicule, souffle ardent qui réduit les défenses de l'ennemi, 35%, ennemi, défense, 35, 1;
+
+4- Flamme bleu, s'entour d'un cercle de feu bleu qui protège, 35%, soi, défense, 70, 1;
+
+5- Magma, propulse du magma sur l'ennemi, 75%, ennemi, dégat, 95%, 1;

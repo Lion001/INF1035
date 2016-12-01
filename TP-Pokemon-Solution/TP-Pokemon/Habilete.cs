@@ -31,7 +31,7 @@ namespace TP_Pokemon
         faiblesse
     }
 
-    class Habilete
+   public class Habilete
     {
         //Initialisation des variables
         public string nom { get; set; }

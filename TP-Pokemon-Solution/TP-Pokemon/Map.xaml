@@ -19,7 +19,7 @@
                 </Button.Background>
             </Button>
         </Grid>
-        <Grid x:Name="menu_deroulant" HorizontalAlignment="Left" Height="289" Margin="0,24,0,0" VerticalAlignment="Top" Width="76" RenderTransformOrigin="0.44,0.922" Background="#FF7E7E7E">
+        <Grid x:Name="menu_deroulant" HorizontalAlignment="Left" Height="289" Margin="0,24,0,0" VerticalAlignment="Top" Width="76" RenderTransformOrigin="0.44,0.922" Background="#FF7E7E7E" Visibility="Hidden">
             <Button x:Name="icone_enregistrer" HorizontalAlignment="Left" Margin="10,175,0,0" VerticalAlignment="Top" Width="58" Height="50" RenderTransformOrigin="0.501,5.734" Background="{x:Null}">
                 <Image x:Name="image_bouton_save" Height="40" Width="48" Source="Images/Save.png"/>
             </Button>
@@ -75,7 +75,7 @@
             <Image x:Name="image_argent" HorizontalAlignment="Left" Height="84" Margin="39,14,0,0" VerticalAlignment="Top" Width="81" Source="Images/coin.png" RenderTransformOrigin="0.469,-0.5"/>
             <Label x:Name="label_argent" Content="1 000 000" HorizontalAlignment="Left" Margin="135,42,0,0" VerticalAlignment="Top" Height="30" Width="74" RenderTransformOrigin="0.284,0.245" Foreground="#FFF3F1F1" FontSize="14"/>
         </Grid>
-        <Grid x:Name="panel_pokemons" HorizontalAlignment="Left" Height="486" Margin="81,29,0,0" VerticalAlignment="Top" Width="987" Visibility="Visible">
+        <Grid x:Name="panel_pokemons" HorizontalAlignment="Left" Height="486" Margin="81,29,0,0" VerticalAlignment="Top" Width="987" Visibility="Hidden">
             <Grid.Background>
                 <ImageBrush ImageSource="Images/background-menu.jpg"/>
             </Grid.Background>
