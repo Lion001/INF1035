@@ -203,6 +203,23 @@
   <ItemGroup>
     <Resource Include="Images\inconnu.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\bulbasaur.png" />
+    <Resource Include="Images\charmander.png" />
+    <Resource Include="Images\elektek.png" />
+    <Resource Include="Images\exeggutor.png" />
+    <Resource Include="Images\golduck.png" />
+    <Resource Include="Images\magneton.png" />
+    <Resource Include="Images\milotic.png" />
+    <Resource Include="Images\ninetales.png" />
+    <Resource Include="Images\pikachu.png" />
+    <Resource Include="Images\rapidash.png" />
+    <Resource Include="Images\squirtle.png" />
+    <Resource Include="Images\vaporeon.png" />
+    <Resource Include="Images\venusaur.png" />
+    <Resource Include="Images\vileplume.png" />
+    <Resource Include="Images\zapdos.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

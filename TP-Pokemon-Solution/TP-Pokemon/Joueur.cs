@@ -3,26 +3,26 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace TP_Pokemon
 {
-    [Serializable]
+    [Serializable, XmlRoot(Namespace = "Monstre")]
     class Joueur
     {
         public string nomJoueur;
-        public string deviseArgent;
+        //public string deviseArgent; --> Sera afficher par l'interface
         public double argent;
-        Boutique inventaire;
+        Inventaire inventaire;
         Monstre monstreDepart;
-        List<Monstre> monstreCapture;
-        List<Monstre> equipe;
+        Monstre[] monstreCapture;
+        Monstre[] equipe;
 
         //constructeur par defaut
-        public Joueur()
+        public Joueur(string nom, Monstre monstre_dep )
         {
-            nomJoueur = "rémi";
-            deviseArgent = "dollars";
-            argent = 100;
+            nomJoueur = nom;
+            argent =100.00;
             //inventaire = ?
         }
     }

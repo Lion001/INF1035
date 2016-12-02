@@ -17,7 +17,7 @@ namespace TP_Pokemon
         public int quantite { get; set;}
 
 
-        //onstructeur par defaut
+        //Constructeur par defaut
         public Item()
         {
             nomItem = "pogo";
