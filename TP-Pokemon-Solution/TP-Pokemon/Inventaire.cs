@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 namespace TP_Pokemon
 {
     //elle permet de gerer à la fois l'inventaire du joueur et celui de la boutique
+    // Gab : La boutique sera simplement un interface graphique ou que tu pourras acheter des items
+    // en cliquant sur un bouton. Un bouton "Acheter Pokeball" incrémentera tout simplement le nombre de pokeball
+    // dans l'inventaire si le joueur possède assez d'argent et ainsi de suite pour les autres items
     [Serializable]
     class Inventaire
     {
@@ -18,12 +21,12 @@ namespace TP_Pokemon
             this.listeItem = new List<Item>();
         }
 
-        //afficher tous les items de l'inventaire selon qu'ils soient du joueur ou de la boutique
+        //afficher tous les items de l'inventaire selon qu'ils soient du joueur ou de la boutique //
         public void afficherItem()
         {
             foreach (Item item in listeItem)
             {
-                Console.WriteLine(item);
+                Console.WriteLine(item);    // Il n'y aura pas de console  !!!! 
             }
         }
 

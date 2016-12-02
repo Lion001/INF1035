@@ -71,7 +71,6 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Caracteristique.cs" />
-    <Compile Include="Donnee-Globale.cs" />
     <Compile Include="Habilete.cs" />
     <Page Include="Combat.xaml">
       <SubType>Designer</SubType>
@@ -88,7 +87,6 @@
     <Compile Include="Combat.xaml.cs">
       <DependentUpon>Combat.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Boutique.cs" />
     <Compile Include="Inventaire.cs" />
     <Compile Include="Item.cs" />
     <Compile Include="MainWindow.xaml.cs">
@@ -113,6 +111,7 @@
     <Compile Include="Nouveau.xaml.cs">
       <DependentUpon>Nouveau.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pokeball.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

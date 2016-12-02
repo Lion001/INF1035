@@ -33,7 +33,7 @@ namespace TP_Pokemon
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-
+            Item nouveau = new Item()
         }
     }
 }
