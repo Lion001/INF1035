@@ -13,7 +13,7 @@ namespace TP_Pokemon
     /// </summary>
 
     [Serializable, XmlRoot(Namespace="Habilete")]
-    class Monstre
+    public class Monstre
     {
         public enum etat_actif
         {
@@ -30,7 +30,7 @@ namespace TP_Pokemon
         }
 
 
-        public string id { get; set;}
+        public int id { get; set;}
         public string nomMonstre { get; set;}
         public string descripMonstre { get; set;}
         public string aliasMonstre { get; set;}
@@ -38,13 +38,17 @@ namespace TP_Pokemon
         public int rarete { get; set;}
         public int niveauExp { get; set;}
         public int pointExp { get; set;}
-        caracteristique deBase, progression, total, actuel;
-        etat_actif etat_actuel = new etat_actif();
-        Habilete[] listeHabilete { get; set; }
-        Habilete[] listeHabileteActive { get; set; }
+        public caracteristique deBase, progression, total, actuel;
+        public etat_actif etat_actuel = new etat_actif();
+        public Habilete[] listeHabilete { get; set; }
+        public Habilete[] listeHabileteActive { get; set; }
+        public string nom_Image { get; set; }
+
+        //Constructeur sans paramètre utilisé dans la Serialization
+        public Monstre() { }
 
         //constructeur
-        public Monstre(string id, string nomMonstre, string descripMonstre, string aliasMonstre, TypeElement typeMonstre)
+        public Monstre(int id, string nomMonstre, string descripMonstre, string aliasMonstre, TypeElement typeMonstre, string nom_Image)
         {
             this.id = id;
             this.nomMonstre = nomMonstre;
@@ -57,12 +61,13 @@ namespace TP_Pokemon
             //-- Caracteristique ---
             deBase = new caracteristique();
             progression = new caracteristique();
-            total = new caracteristique();
-            actuel = new caracteristique();
+            total = calcul_caract(deBase, progression);
+            actuel = total;  // Actuel sera modifier au cours des combats
             //-----------------------
             etat_actuel= etat_actif.Vivant;
             listeHabilete = new Habilete[6]; // Cette liste contiendra seulement 5 habilete possible mais j'ai créer un tableau plus gros au cas ou
             listeHabileteActive = new Habilete[2]; // Cette liste contiendra seulement 2 habilete possible mais ^
+            this.nom_Image = nom_Image;
     
         }
        
@@ -72,6 +77,18 @@ namespace TP_Pokemon
             int rarete_1 = rand.Next(0, 101);
 
             return rarete_1;
+        }
+
+        // Fonction qui calcul les caractèristiques totales (Total = Base + prog*lvl)
+        public caracteristique calcul_caract(caracteristique deBase, caracteristique prog)
+        {
+            caracteristique total = new caracteristique();
+            total.point_vie = deBase.point_vie + prog.point_vie * this.niveauExp;
+            total.point_energie = deBase.point_energie + prog.point_energie * this.niveauExp;
+            total.regen_energie = deBase.regen_energie + prog.regen_energie * this.niveauExp;
+            total.attaque = deBase.attaque + prog.attaque * this.niveauExp;
+            total.defense = deBase.defense + prog.defense*this.niveauExp;
+            return total;
         }
 
         //le but est de prendre les informations sur le fichier xml pour le remplir 
@@ -86,7 +103,7 @@ namespace TP_Pokemon
         public static void Enregistrer_Liste_Monstre(Monstre[] liste)
         {
             XmlSerializer format = new XmlSerializer(typeof(Monstre[]));
-            using (Stream stream = new FileStream(@".\liste_habilete.xml", FileMode.Create, FileAccess.Write, FileShare.None)) format.Serialize(stream, liste);
+            using (Stream stream = new FileStream(@".\liste_monstres.xml", FileMode.Create, FileAccess.Write, FileShare.None)) format.Serialize(stream, liste);
         }
 
         // Charger une liste de Monstre en XML
@@ -94,7 +111,7 @@ namespace TP_Pokemon
         {
             Monstre[] nouveau;
             XmlSerializer format = new XmlSerializer(typeof(Monstre[]));
-            using (Stream stream = new FileStream(@"liste_habilete.xml", FileMode.Open, FileAccess.Read, FileShare.None)) nouveau = (Monstre[])format.Deserialize(stream);
+            using (Stream stream = new FileStream(@"liste_monstres.xml", FileMode.Open, FileAccess.Read, FileShare.None)) nouveau = (Monstre[])format.Deserialize(stream);
             return nouveau;
         }
 

@@ -77,5 +77,25 @@ namespace TP_Pokemon
             using (Stream stream = new FileStream(@"liste_habilete.xml", FileMode.Open, FileAccess.Read, FileShare.None)) nouveau = (Habilete[])format.Deserialize(stream);
             return nouveau;
         }
+
+        // Charger une liste d'habilete du même element 
+        public static Habilete[] Charger_Liste_Habilete_Element(TypeElement element)
+        {
+            Habilete[] nouveau = new Habilete[5];
+            Habilete[] liste_com = Charger_Liste_Habilete();
+            int loop = 0;
+            foreach (Habilete x in liste_com )
+            {
+                if (x != null)
+                {
+                    if (x.element == element)
+                    {
+                        nouveau[loop] = x;
+                        loop++;
+                    }
+                }
+            }
+            return nouveau;
+        }
     }
 }

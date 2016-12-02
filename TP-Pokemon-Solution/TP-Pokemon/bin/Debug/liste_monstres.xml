@@ -1,0 +1,1687 @@
+<?xml version="1.0"?>
+<ArrayOfMonstre xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Monstre>
+    <deBase xmlns="Habilete">
+      <point_vie>100</point_vie>
+      <point_energie>100</point_energie>
+      <regen_energie>10</regen_energie>
+      <attaque>20</attaque>
+      <defense>5</defense>
+    </deBase>
+    <progression xmlns="Habilete">
+      <point_vie>5</point_vie>
+      <point_energie>10</point_energie>
+      <regen_energie>2</regen_energie>
+      <attaque>10</attaque>
+      <defense>1</defense>
+    </progression>
+    <total xmlns="Habilete">
+      <point_vie>0</point_vie>
+      <point_energie>0</point_energie>
+      <regen_energie>0</regen_energie>
+      <attaque>0</attaque>
+      <defense>0</defense>
+    </total>
+    <actuel xmlns="Habilete">
+      <point_vie>0</point_vie>
+      <point_energie>0</point_energie>
+      <regen_energie>0</regen_energie>
+      <attaque>0</attaque>
+      <defense>0</defense>
+    </actuel>
+    <etat_actuel xmlns="Habilete">Vivant</etat_actuel>
+    <id xmlns="Habilete">1</id>
+    <nomMonstre xmlns="Habilete">Pikachu</nomMonstre>
+    <descripMonstre xmlns="Habilete">Souris électrique</descripMonstre>
+    <aliasMonstre xmlns="Habilete">aucun</aliasMonstre>
+    <typeMonstre xmlns="Habilete">Electricite</typeMonstre>
+    <rarete xmlns="Habilete">84</rarete>
+    <niveauExp xmlns="Habilete">1</niveauExp>
+    <pointExp xmlns="Habilete">100</pointExp>
+    <listeHabilete xmlns="Habilete">
+      <Habilete>
+        <nom>Éclair</nom>
+        <description>Choc électrique</description>
+        <cout>30</cout>
+        <element>Electricite</element>
+        <cible>ennemi</cible>
+        <effet>degat</effet>
+        <magnitude>20</magnitude>
+        <duree>1</duree>
+      </Habilete>
+      <Habilete>
+        <nom>Cage</nom>
+        <description>Choc électrique qui paralyse l'ennemi pour 3 tours</description>
+        <cout>50</cout>
+        <element>Electricite</element>
+        <cible>ennemi</cible>
+        <effet>paralysie</effet>
+        <magnitude>40</magnitude>
+        <duree>3</duree>
+      </Habilete>
+      <Habilete>
+        <nom>Mange-tonnerre</nom>
+        <description>Absorbe l'énergie du tonnerre pour régénéré</description>
+        <cout>20</cout>
+        <element>Electricite</element>
+        <cible>soi</cible>
+        <effet>regeneration</effet>
+        <magnitude>30</magnitude>
+        <duree>1</duree>
+      </Habilete>
+      <Habilete>
+        <nom>Coup foudroyant</nom>
+        <description>Lance un éclair sur l'ennemi</description>
+        <cout>40</cout>
+        <element>Electricite</element>
+        <cible>ennemi</cible>
+        <effet>degat</effet>
+        <magnitude>80</magnitude>
+        <duree>1</duree>
+      </Habilete>
+      <Habilete>
+        <nom>Champ magnétique</nom>
+        <description>Créer un bouclier qui donne de la force pour 2 tour</description>
+        <cout>20</cout>
+        <element>Electricite</element>
+        <cible>soi</cible>
+        <effet>force</effet>
+        <magnitude>80</magnitude>
+        <duree>2</duree>
+      </Habilete>
+    </listeHabilete>
+    <listeHabileteActive xmlns="Habilete">
+      <Habilete>
+        <nom>Éclair</nom>
+        <description>Choc électrique</description>
+        <cout>30</cout>
+        <element>Electricite</element>
+        <cible>ennemi</cible>
+        <effet>degat</effet>
+        <magnitude>20</magnitude>
+        <duree>1</duree>
+      </Habilete>
+      <Habilete xsi:nil="true" />
+    </listeHabileteActive>
+    <nom_Image xmlns="Habilete">pikachu.png</nom_Image>
+  </Monstre>
+  <Monstre>
+    <deBase xmlns="Habilete">
+      <point_vie>100</point_vie>
+      <point_energie>100</point_energie>
+      <regen_energie>10</regen_energie>
+      <attaque>20</attaque>
+      <defense>5</defense>
+    </deBase>
+    <progression xmlns="Habilete">
+      <point_vie>5</point_vie>
+      <point_energie>20</point_energie>
+      <regen_energie>2</regen_energie>
+      <attaque>10</attaque>
+      <defense>10</defense>
+    </progression>
+    <total xmlns="Habilete">
+      <point_vie>0</point_vie>
+      <point_energie>0</point_energie>
+      <regen_energie>0</regen_energie>
+      <attaque>0</attaque>
+      <defense>0</defense>
+    </total>
+    <actuel xmlns="Habilete">
+      <point_vie>0</point_vie>
+      <point_energie>0</point_energie>
+      <regen_energie>0</regen_energie>
+      <attaque>0</attaque>
+      <defense>0</defense>
+    </actuel>
+    <etat_actuel xmlns="Habilete">Vivant</etat_actuel>
+    <id xmlns="Habilete">2</id>
+    <nomMonstre xmlns="Habilete">Magneton</nomMonstre>
+    <descripMonstre xmlns="Habilete">Creature a trois oeil</descripMonstre>
+    <aliasMonstre xmlns="Habilete">aucun</aliasMonstre>
+    <typeMonstre xmlns="Habilete">Electricite</typeMonstre>
+    <rarete xmlns="Habilete">68</rarete>
+    <niveauExp xmlns="Habilete">1</niveauExp>
+    <pointExp xmlns="Habilete">100</pointExp>
+    <listeHabilete xmlns="Habilete">
+      <Habilete>
+        <nom>Éclair</nom>
+        <description>Choc électrique</description>
+        <cout>30</cout>
+        <element>Electricite</element>
+        <cible>ennemi</cible>
+        <effet>degat</effet>
+        <magnitude>20</magnitude>
+        <duree>1</duree>
+      </Habilete>
+      <Habilete>
+        <nom>Cage</nom>
+        <description>Choc électrique qui paralyse l'ennemi pour 3 tours</description>
+        <cout>50</cout>
+        <element>Electricite</element>
+        <cible>ennemi</cible>
+        <effet>paralysie</effet>
+        <magnitude>40</magnitude>
+        <duree>3</duree>
+      </Habilete>
+      <Habilete>
+        <nom>Mange-tonnerre</nom>
+        <description>Absorbe l'énergie du tonnerre pour régénéré</description>
+        <cout>20</cout>
+        <element>Electricite</element>
+        <cible>soi</cible>
+        <effet>regeneration</effet>
+        <magnitude>30</magnitude>
+        <duree>1</duree>
+      </Habilete>
+      <Habilete>
+        <nom>Coup foudroyant</nom>
+        <description>Lance un éclair sur l'ennemi</description>
+        <cout>40</cout>
+        <element>Electricite</element>
+        <cible>ennemi</cible>
+        <effet>degat</effet>
+        <magnitude>80</magnitude>
+        <duree>1</duree>
+      </Habilete>
+      <Habilete>
+        <nom>Champ magnétique</nom>
+        <description>Créer un bouclier qui donne de la force pour 2 tour</description>
+        <cout>20</cout>
+        <element>Electricite</element>
+        <cible>soi</cible>
+        <effet>force</effet>
+        <magnitude>80</magnitude>
+        <duree>2</duree>
+      </Habilete>
+    </listeHabilete>
+    <listeHabileteActive xmlns="Habilete">
+      <Habilete>
+        <nom>Éclair</nom>
+        <description>Choc électrique</description>
+        <cout>30</cout>
+        <element>Electricite</element>
+        <cible>ennemi</cible>
+        <effet>degat</effet>
+        <magnitude>20</magnitude>
+        <duree>1</duree>
+      </Habilete>
+      <Habilete xsi:nil="true" />
+    </listeHabileteActive>
+    <nom_Image xmlns="Habilete">Magneton.png</nom_Image>
+  </Monstre>
+  <Monstre>
+    <deBase xmlns="Habilete">
+      <point_vie>100</point_vie>
+      <point_energie>100</point_energie>
+      <regen_energie>10</regen_energie>
+      <attaque>20</attaque>
+      <defense>5</defense>
+    </deBase>
+    <progression xmlns="Habilete">
+      <point_vie>10</point_vie>
+      <point_energie>10</point_energie>
+      <regen_energie>10</regen_energie>
+      <attaque>15</attaque>
+      <defense>5</defense>
+    </progression>
+    <total xmlns="Habilete">
+      <point_vie>0</point_vie>
+      <point_energie>0</point_energie>
+      <regen_energie>0</regen_energie>
+      <attaque>0</attaque>
+      <defense>0</defense>
+    </total>
+    <actuel xmlns="Habilete">
+      <point_vie>0</point_vie>
+      <point_energie>0</point_energie>
+      <regen_energie>0</regen_energie>
+      <attaque>0</attaque>
+      <defense>0</defense>
+    </actuel>
+    <etat_actuel xmlns="Habilete">Vivant</etat_actuel>
+    <id xmlns="Habilete">3</id>
+    <nomMonstre xmlns="Habilete">Zapdos</nomMonstre>
+    <descripMonstre xmlns="Habilete">Oiseau électrique</descripMonstre>
+    <aliasMonstre xmlns="Habilete">aucun</aliasMonstre>
+    <typeMonstre xmlns="Habilete">Electricite</typeMonstre>
+    <rarete xmlns="Habilete">68</rarete>
+    <niveauExp xmlns="Habilete">1</niveauExp>
+    <pointExp xmlns="Habilete">100</pointExp>
+    <listeHabilete xmlns="Habilete">
+      <Habilete>
+        <nom>Éclair</nom>
+        <description>Choc électrique</description>
+        <cout>30</cout>
+        <element>Electricite</element>
+        <cible>ennemi</cible>
+        <effet>degat</effet>
+        <magnitude>20</magnitude>
+        <duree>1</duree>
+      </Habilete>
+      <Habilete>
+        <nom>Cage</nom>
+        <description>Choc électrique qui paralyse l'ennemi pour 3 tours</description>
+        <cout>50</cout>
+        <element>Electricite</element>
+        <cible>ennemi</cible>
+        <effet>paralysie</effet>
+        <magnitude>40</magnitude>
+        <duree>3</duree>
+      </Habilete>
+      <Habilete>
+        <nom>Mange-tonnerre</nom>
+        <description>Absorbe l'énergie du tonnerre pour régénéré</description>
+        <cout>20</cout>
+        <element>Electricite</element>
+        <cible>soi</cible>
+        <effet>regeneration</effet>
+        <magnitude>30</magnitude>
+        <duree>1</duree>
+      </Habilete>
+      <Habilete>
+        <nom>Coup foudroyant</nom>
+        <description>Lance un éclair sur l'ennemi</description>
+        <cout>40</cout>
+        <element>Electricite</element>
+        <cible>ennemi</cible>
+        <effet>degat</effet>
+        <magnitude>80</magnitude>
+        <duree>1</duree>
+      </Habilete>
+      <Habilete>
+        <nom>Champ magnétique</nom>
+        <description>Créer un bouclier qui donne de la force pour 2 tour</description>
+        <cout>20</cout>
+        <element>Electricite</element>
+        <cible>soi</cible>
+        <effet>force</effet>
+        <magnitude>80</magnitude>
+        <duree>2</duree>
+      </Habilete>
+    </listeHabilete>
+    <listeHabileteActive xmlns="Habilete">
+      <Habilete>
+        <nom>Éclair</nom>
+        <description>Choc électrique</description>
+        <cout>30</cout>
+        <element>Electricite</element>
+        <cible>ennemi</cible>
+        <effet>degat</effet>
+        <magnitude>20</magnitude>
+        <duree>1</duree>
+      </Habilete>
+      <Habilete xsi:nil="true" />
+    </listeHabileteActive>
+    <nom_Image xmlns="Habilete">Zapdos.png</nom_Image>
+  </Monstre>
+  <Monstre>
+    <deBase xmlns="Habilete">
+      <point_vie>100</point_vie>
+      <point_energie>100</point_energie>
+      <regen_energie>10</regen_energie>
+      <attaque>20</attaque>
+      <defense>5</defense>
+    </deBase>
+    <progression xmlns="Habilete">
+      <point_vie>10</point_vie>
+      <point_energie>20</point_energie>
+      <regen_energie>5</regen_energie>
+      <attaque>45</attaque>
+      <defense>10</defense>
+    </progression>
+    <total xmlns="Habilete">
+      <point_vie>0</point_vie>
+      <point_energie>0</point_energie>
+      <regen_energie>0</regen_energie>
+      <attaque>0</attaque>
+      <defense>0</defense>
+    </total>
+    <actuel xmlns="Habilete">
+      <point_vie>0</point_vie>
+      <point_energie>0</point_energie>
+      <regen_energie>0</regen_energie>
+      <attaque>0</attaque>
+      <defense>0</defense>
+    </actuel>
+    <etat_actuel xmlns="Habilete">Vivant</etat_actuel>
+    <id xmlns="Habilete">4</id>
+    <nomMonstre xmlns="Habilete">Elektek</nomMonstre>
+    <descripMonstre xmlns="Habilete">Creature electrique mortelle</descripMonstre>
+    <aliasMonstre xmlns="Habilete">aucun</aliasMonstre>
+    <typeMonstre xmlns="Habilete">Electricite</typeMonstre>
+    <rarete xmlns="Habilete">68</rarete>
+    <niveauExp xmlns="Habilete">1</niveauExp>
+    <pointExp xmlns="Habilete">100</pointExp>
+    <listeHabilete xmlns="Habilete">
+      <Habilete>
+        <nom>Éclair</nom>
+        <description>Choc électrique</description>
+        <cout>30</cout>
+        <element>Electricite</element>
+        <cible>ennemi</cible>
+        <effet>degat</effet>
+        <magnitude>20</magnitude>
+        <duree>1</duree>
+      </Habilete>
+      <Habilete>
+        <nom>Cage</nom>
+        <description>Choc électrique qui paralyse l'ennemi pour 3 tours</description>
+        <cout>50</cout>
+        <element>Electricite</element>
+        <cible>ennemi</cible>
+        <effet>paralysie</effet>
+        <magnitude>40</magnitude>
+        <duree>3</duree>
+      </Habilete>
+      <Habilete>
+        <nom>Mange-tonnerre</nom>
+        <description>Absorbe l'énergie du tonnerre pour régénéré</description>
+        <cout>20</cout>
+        <element>Electricite</element>
+        <cible>soi</cible>
+        <effet>regeneration</effet>
+        <magnitude>30</magnitude>
+        <duree>1</duree>
+      </Habilete>
+      <Habilete>
+        <nom>Coup foudroyant</nom>
+        <description>Lance un éclair sur l'ennemi</description>
+        <cout>40</cout>
+        <element>Electricite</element>
+        <cible>ennemi</cible>
+        <effet>degat</effet>
+        <magnitude>80</magnitude>
+        <duree>1</duree>
+      </Habilete>
+      <Habilete>
+        <nom>Champ magnétique</nom>
+        <description>Créer un bouclier qui donne de la force pour 2 tour</description>
+        <cout>20</cout>
+        <element>Electricite</element>
+        <cible>soi</cible>
+        <effet>force</effet>
+        <magnitude>80</magnitude>
+        <duree>2</duree>
+      </Habilete>
+    </listeHabilete>
+    <listeHabileteActive xmlns="Habilete">
+      <Habilete>
+        <nom>Éclair</nom>
+        <description>Choc électrique</description>
+        <cout>30</cout>
+        <element>Electricite</element>
+        <cible>ennemi</cible>
+        <effet>degat</effet>
+        <magnitude>20</magnitude>
+        <duree>1</duree>
+      </Habilete>
+      <Habilete xsi:nil="true" />
+    </listeHabileteActive>
+    <nom_Image xmlns="Habilete">Elektek.png</nom_Image>
+  </Monstre>
+  <Monstre>
+    <deBase xmlns="Habilete">
+      <point_vie>100</point_vie>
+      <point_energie>100</point_energie>
+      <regen_energie>10</regen_energie>
+      <attaque>20</attaque>
+      <defense>5</defense>
+    </deBase>
+    <progression xmlns="Habilete">
+      <point_vie>5</point_vie>
+      <point_energie>10</point_energie>
+      <regen_energie>2</regen_energie>
+      <attaque>10</attaque>
+      <defense>1</defense>
+    </progression>
+    <total xmlns="Habilete">
+      <point_vie>0</point_vie>
+      <point_energie>0</point_energie>
+      <regen_energie>0</regen_energie>
+      <attaque>0</attaque>
+      <defense>0</defense>
+    </total>
+    <actuel xmlns="Habilete">
+      <point_vie>0</point_vie>
+      <point_energie>0</point_energie>
+      <regen_energie>0</regen_energie>
+      <attaque>0</attaque>
+      <defense>0</defense>
+    </actuel>
+    <etat_actuel xmlns="Habilete">Vivant</etat_actuel>
+    <id xmlns="Habilete">5</id>
+    <nomMonstre xmlns="Habilete">Squirtle</nomMonstre>
+    <descripMonstre xmlns="Habilete">Tortue aquatique</descripMonstre>
+    <aliasMonstre xmlns="Habilete">aucun</aliasMonstre>
+    <typeMonstre xmlns="Habilete">Eau</typeMonstre>
+    <rarete xmlns="Habilete">68</rarete>
+    <niveauExp xmlns="Habilete">1</niveauExp>
+    <pointExp xmlns="Habilete">100</pointExp>
+    <listeHabilete xmlns="Habilete">
+      <Habilete>
+        <nom>HydroCannon</nom>
+        <description>Envoie un puissant jet d'eau</description>
+        <cout>30</cout>
+        <element>Eau</element>
+        <cible>ennemi</cible>
+        <effet>degat</effet>
+        <magnitude>20</magnitude>
+        <duree>1</duree>
+      </Habilete>
+      <Habilete>
+        <nom>Siphon</nom>
+        <description> Piège l'ennemi pendent 2 tours</description>
+        <cout>50</cout>
+        <element>Eau</element>
+        <cible>ennemi</cible>
+        <effet>paralysie</effet>
+        <magnitude>50</magnitude>
+        <duree>2</duree>
+      </Habilete>
+      <Habilete>
+        <nom>Sauna</nom>
+        <description>S'enveloppe d'eau chaude pour régénérer 2 tours</description>
+        <cout>40</cout>
+        <element>Eau</element>
+        <cible>soi</cible>
+        <effet>regeneration</effet>
+        <magnitude>50</magnitude>
+        <duree>2</duree>
+      </Habilete>
+      <Habilete>
+        <nom>Carapace D'eau</nom>
+        <description>S'enveloppe d'eau pour se défendre 2 tours</description>
+        <cout>10</cout>
+        <element>Eau</element>
+        <cible>soi</cible>
+        <effet>force</effet>
+        <magnitude>40</magnitude>
+        <duree>2</duree>
+      </Habilete>
+      <Habilete>
+        <nom>Tsunami</nom>
+        <description>Propulse un Tsunami sur l'ennemi</description>
+        <cout>90</cout>
+        <element>Eau</element>
+        <cible>ennemi</cible>
+        <effet>degat</effet>
+        <magnitude>90</magnitude>
+        <duree>1</duree>
+      </Habilete>
+    </listeHabilete>
+    <listeHabileteActive xmlns="Habilete">
+      <Habilete>
+        <nom>HydroCannon</nom>
+        <description>Envoie un puissant jet d'eau</description>
+        <cout>30</cout>
+        <element>Eau</element>
+        <cible>ennemi</cible>
+        <effet>degat</effet>
+        <magnitude>20</magnitude>
+        <duree>1</duree>
+      </Habilete>
+      <Habilete xsi:nil="true" />
+    </listeHabileteActive>
+    <nom_Image xmlns="Habilete">Squirtle.png</nom_Image>
+  </Monstre>
+  <Monstre>
+    <deBase xmlns="Habilete">
+      <point_vie>100</point_vie>
+      <point_energie>100</point_energie>
+      <regen_energie>10</regen_energie>
+      <attaque>20</attaque>
+      <defense>5</defense>
+    </deBase>
+    <progression xmlns="Habilete">
+      <point_vie>10</point_vie>
+      <point_energie>20</point_energie>
+      <regen_energie>5</regen_energie>
+      <attaque>10</attaque>
+      <defense>1</defense>
+    </progression>
+    <total xmlns="Habilete">
+      <point_vie>0</point_vie>
+      <point_energie>0</point_energie>
+      <regen_energie>0</regen_energie>
+      <attaque>0</attaque>
+      <defense>0</defense>
+    </total>
+    <actuel xmlns="Habilete">
+      <point_vie>0</point_vie>
+      <point_energie>0</point_energie>
+      <regen_energie>0</regen_energie>
+      <attaque>0</attaque>
+      <defense>0</defense>
+    </actuel>
+    <etat_actuel xmlns="Habilete">Vivant</etat_actuel>
+    <id xmlns="Habilete">6</id>
+    <nomMonstre xmlns="Habilete">Milotic</nomMonstre>
+    <descripMonstre xmlns="Habilete">Serpent aquatique</descripMonstre>
+    <aliasMonstre xmlns="Habilete">aucun</aliasMonstre>
+    <typeMonstre xmlns="Habilete">Eau</typeMonstre>
+    <rarete xmlns="Habilete">68</rarete>
+    <niveauExp xmlns="Habilete">1</niveauExp>
+    <pointExp xmlns="Habilete">100</pointExp>
+    <listeHabilete xmlns="Habilete">
+      <Habilete>
+        <nom>HydroCannon</nom>
+        <description>Envoie un puissant jet d'eau</description>
+        <cout>30</cout>
+        <element>Eau</element>
+        <cible>ennemi</cible>
+        <effet>degat</effet>
+        <magnitude>20</magnitude>
+        <duree>1</duree>
+      </Habilete>
+      <Habilete>
+        <nom>Siphon</nom>
+        <description> Piège l'ennemi pendent 2 tours</description>
+        <cout>50</cout>
+        <element>Eau</element>
+        <cible>ennemi</cible>
+        <effet>paralysie</effet>
+        <magnitude>50</magnitude>
+        <duree>2</duree>
+      </Habilete>
+      <Habilete>
+        <nom>Sauna</nom>
+        <description>S'enveloppe d'eau chaude pour régénérer 2 tours</description>
+        <cout>40</cout>
+        <element>Eau</element>
+        <cible>soi</cible>
+        <effet>regeneration</effet>
+        <magnitude>50</magnitude>
+        <duree>2</duree>
+      </Habilete>
+      <Habilete>
+        <nom>Carapace D'eau</nom>
+        <description>S'enveloppe d'eau pour se défendre 2 tours</description>
+        <cout>10</cout>
+        <element>Eau</element>
+        <cible>soi</cible>
+        <effet>force</effet>
+        <magnitude>40</magnitude>
+        <duree>2</duree>
+      </Habilete>
+      <Habilete>
+        <nom>Tsunami</nom>
+        <description>Propulse un Tsunami sur l'ennemi</description>
+        <cout>90</cout>
+        <element>Eau</element>
+        <cible>ennemi</cible>
+        <effet>degat</effet>
+        <magnitude>90</magnitude>
+        <duree>1</duree>
+      </Habilete>
+    </listeHabilete>
+    <listeHabileteActive xmlns="Habilete">
+      <Habilete>
+        <nom>HydroCannon</nom>
+        <description>Envoie un puissant jet d'eau</description>
+        <cout>30</cout>
+        <element>Eau</element>
+        <cible>ennemi</cible>
+        <effet>degat</effet>
+        <magnitude>20</magnitude>
+        <duree>1</duree>
+      </Habilete>
+      <Habilete xsi:nil="true" />
+    </listeHabileteActive>
+    <nom_Image xmlns="Habilete">Milotic.png</nom_Image>
+  </Monstre>
+  <Monstre>
+    <deBase xmlns="Habilete">
+      <point_vie>100</point_vie>
+      <point_energie>100</point_energie>
+      <regen_energie>10</regen_energie>
+      <attaque>20</attaque>
+      <defense>5</defense>
+    </deBase>
+    <progression xmlns="Habilete">
+      <point_vie>10</point_vie>
+      <point_energie>15</point_energie>
+      <regen_energie>7</regen_energie>
+      <attaque>30</attaque>
+      <defense>5</defense>
+    </progression>
+    <total xmlns="Habilete">
+      <point_vie>0</point_vie>
+      <point_energie>0</point_energie>
+      <regen_energie>0</regen_energie>
+      <attaque>0</attaque>
+      <defense>0</defense>
+    </total>
+    <actuel xmlns="Habilete">
+      <point_vie>0</point_vie>
+      <point_energie>0</point_energie>
+      <regen_energie>0</regen_energie>
+      <attaque>0</attaque>
+      <defense>0</defense>
+    </actuel>
+    <etat_actuel xmlns="Habilete">Vivant</etat_actuel>
+    <id xmlns="Habilete">7</id>
+    <nomMonstre xmlns="Habilete">Golduck</nomMonstre>
+    <descripMonstre xmlns="Habilete">Canard tres agressif</descripMonstre>
+    <aliasMonstre xmlns="Habilete">aucun</aliasMonstre>
+    <typeMonstre xmlns="Habilete">Eau</typeMonstre>
+    <rarete xmlns="Habilete">68</rarete>
+    <niveauExp xmlns="Habilete">1</niveauExp>
+    <pointExp xmlns="Habilete">100</pointExp>
+    <listeHabilete xmlns="Habilete">
+      <Habilete>
+        <nom>HydroCannon</nom>
+        <description>Envoie un puissant jet d'eau</description>
+        <cout>30</cout>
+        <element>Eau</element>
+        <cible>ennemi</cible>
+        <effet>degat</effet>
+        <magnitude>20</magnitude>
+        <duree>1</duree>
+      </Habilete>
+      <Habilete>
+        <nom>Siphon</nom>
+        <description> Piège l'ennemi pendent 2 tours</description>
+        <cout>50</cout>
+        <element>Eau</element>
+        <cible>ennemi</cible>
+        <effet>paralysie</effet>
+        <magnitude>50</magnitude>
+        <duree>2</duree>
+      </Habilete>
+      <Habilete>
+        <nom>Sauna</nom>
+        <description>S'enveloppe d'eau chaude pour régénérer 2 tours</description>
+        <cout>40</cout>
+        <element>Eau</element>
+        <cible>soi</cible>
+        <effet>regeneration</effet>
+        <magnitude>50</magnitude>
+        <duree>2</duree>
+      </Habilete>
+      <Habilete>
+        <nom>Carapace D'eau</nom>
+        <description>S'enveloppe d'eau pour se défendre 2 tours</description>
+        <cout>10</cout>
+        <element>Eau</element>
+        <cible>soi</cible>
+        <effet>force</effet>
+        <magnitude>40</magnitude>
+        <duree>2</duree>
+      </Habilete>
+      <Habilete>
+        <nom>Tsunami</nom>
+        <description>Propulse un Tsunami sur l'ennemi</description>
+        <cout>90</cout>
+        <element>Eau</element>
+        <cible>ennemi</cible>
+        <effet>degat</effet>
+        <magnitude>90</magnitude>
+        <duree>1</duree>
+      </Habilete>
+    </listeHabilete>
+    <listeHabileteActive xmlns="Habilete">
+      <Habilete>
+        <nom>HydroCannon</nom>
+        <description>Envoie un puissant jet d'eau</description>
+        <cout>30</cout>
+        <element>Eau</element>
+        <cible>ennemi</cible>
+        <effet>degat</effet>
+        <magnitude>20</magnitude>
+        <duree>1</duree>
+      </Habilete>
+      <Habilete xsi:nil="true" />
+    </listeHabileteActive>
+    <nom_Image xmlns="Habilete">Golduck.png</nom_Image>
+  </Monstre>
+  <Monstre>
+    <deBase xmlns="Habilete">
+      <point_vie>100</point_vie>
+      <point_energie>100</point_energie>
+      <regen_energie>10</regen_energie>
+      <attaque>20</attaque>
+      <defense>5</defense>
+    </deBase>
+    <progression xmlns="Habilete">
+      <point_vie>10</point_vie>
+      <point_energie>15</point_energie>
+      <regen_energie>10</regen_energie>
+      <attaque>50</attaque>
+      <defense>20</defense>
+    </progression>
+    <total xmlns="Habilete">
+      <point_vie>0</point_vie>
+      <point_energie>0</point_energie>
+      <regen_energie>0</regen_energie>
+      <attaque>0</attaque>
+      <defense>0</defense>
+    </total>
+    <actuel xmlns="Habilete">
+      <point_vie>0</point_vie>
+      <point_energie>0</point_energie>
+      <regen_energie>0</regen_energie>
+      <attaque>0</attaque>
+      <defense>0</defense>
+    </actuel>
+    <etat_actuel xmlns="Habilete">Vivant</etat_actuel>
+    <id xmlns="Habilete">8</id>
+    <nomMonstre xmlns="Habilete">Vapoeron</nomMonstre>
+    <descripMonstre xmlns="Habilete">Creature a 4 pattes aquatique</descripMonstre>
+    <aliasMonstre xmlns="Habilete">aucun</aliasMonstre>
+    <typeMonstre xmlns="Habilete">Eau</typeMonstre>
+    <rarete xmlns="Habilete">68</rarete>
+    <niveauExp xmlns="Habilete">1</niveauExp>
+    <pointExp xmlns="Habilete">100</pointExp>
+    <listeHabilete xmlns="Habilete">
+      <Habilete>
+        <nom>HydroCannon</nom>
+        <description>Envoie un puissant jet d'eau</description>
+        <cout>30</cout>
+        <element>Eau</element>
+        <cible>ennemi</cible>
+        <effet>degat</effet>
+        <magnitude>20</magnitude>
+        <duree>1</duree>
+      </Habilete>
+      <Habilete>
+        <nom>Siphon</nom>
+        <description> Piège l'ennemi pendent 2 tours</description>
+        <cout>50</cout>
+        <element>Eau</element>
+        <cible>ennemi</cible>
+        <effet>paralysie</effet>
+        <magnitude>50</magnitude>
+        <duree>2</duree>
+      </Habilete>
+      <Habilete>
+        <nom>Sauna</nom>
+        <description>S'enveloppe d'eau chaude pour régénérer 2 tours</description>
+        <cout>40</cout>
+        <element>Eau</element>
+        <cible>soi</cible>
+        <effet>regeneration</effet>
+        <magnitude>50</magnitude>
+        <duree>2</duree>
+      </Habilete>
+      <Habilete>
+        <nom>Carapace D'eau</nom>
+        <description>S'enveloppe d'eau pour se défendre 2 tours</description>
+        <cout>10</cout>
+        <element>Eau</element>
+        <cible>soi</cible>
+        <effet>force</effet>
+        <magnitude>40</magnitude>
+        <duree>2</duree>
+      </Habilete>
+      <Habilete>
+        <nom>Tsunami</nom>
+        <description>Propulse un Tsunami sur l'ennemi</description>
+        <cout>90</cout>
+        <element>Eau</element>
+        <cible>ennemi</cible>
+        <effet>degat</effet>
+        <magnitude>90</magnitude>
+        <duree>1</duree>
+      </Habilete>
+    </listeHabilete>
+    <listeHabileteActive xmlns="Habilete">
+      <Habilete>
+        <nom>HydroCannon</nom>
+        <description>Envoie un puissant jet d'eau</description>
+        <cout>30</cout>
+        <element>Eau</element>
+        <cible>ennemi</cible>
+        <effet>degat</effet>
+        <magnitude>20</magnitude>
+        <duree>1</duree>
+      </Habilete>
+      <Habilete xsi:nil="true" />
+    </listeHabileteActive>
+    <nom_Image xmlns="Habilete">Vapoeron.png</nom_Image>
+  </Monstre>
+  <Monstre>
+    <deBase xmlns="Habilete">
+      <point_vie>100</point_vie>
+      <point_energie>100</point_energie>
+      <regen_energie>10</regen_energie>
+      <attaque>20</attaque>
+      <defense>5</defense>
+    </deBase>
+    <progression xmlns="Habilete">
+      <point_vie>5</point_vie>
+      <point_energie>10</point_energie>
+      <regen_energie>2</regen_energie>
+      <attaque>10</attaque>
+      <defense>1</defense>
+    </progression>
+    <total xmlns="Habilete">
+      <point_vie>0</point_vie>
+      <point_energie>0</point_energie>
+      <regen_energie>0</regen_energie>
+      <attaque>0</attaque>
+      <defense>0</defense>
+    </total>
+    <actuel xmlns="Habilete">
+      <point_vie>0</point_vie>
+      <point_energie>0</point_energie>
+      <regen_energie>0</regen_energie>
+      <attaque>0</attaque>
+      <defense>0</defense>
+    </actuel>
+    <etat_actuel xmlns="Habilete">Vivant</etat_actuel>
+    <id xmlns="Habilete">9</id>
+    <nomMonstre xmlns="Habilete">Bulbasaur</nomMonstre>
+    <descripMonstre xmlns="Habilete">Tortue Vegetale</descripMonstre>
+    <aliasMonstre xmlns="Habilete">aucun</aliasMonstre>
+    <typeMonstre xmlns="Habilete">Vegetation</typeMonstre>
+    <rarete xmlns="Habilete">68</rarete>
+    <niveauExp xmlns="Habilete">1</niveauExp>
+    <pointExp xmlns="Habilete">100</pointExp>
+    <listeHabilete xmlns="Habilete">
+      <Habilete>
+        <nom>Lance-Soleil</nom>
+        <description>absorbe la lumière et l'envoie sur l'ennemi</description>
+        <cout>40</cout>
+        <element>Vegetation</element>
+        <cible>ennemi</cible>
+        <effet>degat</effet>
+        <magnitude>20</magnitude>
+        <duree>1</duree>
+      </Habilete>
+      <Habilete>
+        <nom>Poudre Toxique</nom>
+        <description>Répand une poudre toxique pendent 3 tour</description>
+        <cout>15</cout>
+        <element>Vegetation</element>
+        <cible>ennemi</cible>
+        <effet>degat</effet>
+        <magnitude>10</magnitude>
+        <duree>3</duree>
+      </Habilete>
+      <Habilete>
+        <nom>Photosynthèse</nom>
+        <description>Regénère sa vie grâce au soleil</description>
+        <cout>40</cout>
+        <element>Vegetation</element>
+        <cible>soi</cible>
+        <effet>regeneration</effet>
+        <magnitude>20</magnitude>
+        <duree>1</duree>
+      </Habilete>
+      <Habilete>
+        <nom>Graine Canon</nom>
+        <description>Propulse des graines sur l'ennemi</description>
+        <cout>75</cout>
+        <element>Vegetation</element>
+        <cible>ennemi</cible>
+        <effet>degat</effet>
+        <magnitude>70</magnitude>
+        <duree>1</duree>
+      </Habilete>
+      <Habilete>
+        <nom>Cocon</nom>
+        <description>S'enveloppe d'une barrière qui bloque l'ennemi pour un tour</description>
+        <cout>75</cout>
+        <element>Vegetation</element>
+        <cible>ennemi</cible>
+        <effet>force</effet>
+        <magnitude>100</magnitude>
+        <duree>1</duree>
+      </Habilete>
+    </listeHabilete>
+    <listeHabileteActive xmlns="Habilete">
+      <Habilete>
+        <nom>Lance-Soleil</nom>
+        <description>absorbe la lumière et l'envoie sur l'ennemi</description>
+        <cout>40</cout>
+        <element>Vegetation</element>
+        <cible>ennemi</cible>
+        <effet>degat</effet>
+        <magnitude>20</magnitude>
+        <duree>1</duree>
+      </Habilete>
+      <Habilete xsi:nil="true" />
+    </listeHabileteActive>
+    <nom_Image xmlns="Habilete">Bulbasaur.png</nom_Image>
+  </Monstre>
+  <Monstre>
+    <deBase xmlns="Habilete">
+      <point_vie>100</point_vie>
+      <point_energie>100</point_energie>
+      <regen_energie>10</regen_energie>
+      <attaque>20</attaque>
+      <defense>5</defense>
+    </deBase>
+    <progression xmlns="Habilete">
+      <point_vie>5</point_vie>
+      <point_energie>30</point_energie>
+      <regen_energie>15</regen_energie>
+      <attaque>10</attaque>
+      <defense>1</defense>
+    </progression>
+    <total xmlns="Habilete">
+      <point_vie>0</point_vie>
+      <point_energie>0</point_energie>
+      <regen_energie>0</regen_energie>
+      <attaque>0</attaque>
+      <defense>0</defense>
+    </total>
+    <actuel xmlns="Habilete">
+      <point_vie>0</point_vie>
+      <point_energie>0</point_energie>
+      <regen_energie>0</regen_energie>
+      <attaque>0</attaque>
+      <defense>0</defense>
+    </actuel>
+    <etat_actuel xmlns="Habilete">Vivant</etat_actuel>
+    <id xmlns="Habilete">10</id>
+    <nomMonstre xmlns="Habilete">Vileplume</nomMonstre>
+    <descripMonstre xmlns="Habilete">Fleur mobile</descripMonstre>
+    <aliasMonstre xmlns="Habilete">aucun</aliasMonstre>
+    <typeMonstre xmlns="Habilete">Vegetation</typeMonstre>
+    <rarete xmlns="Habilete">68</rarete>
+    <niveauExp xmlns="Habilete">1</niveauExp>
+    <pointExp xmlns="Habilete">100</pointExp>
+    <listeHabilete xmlns="Habilete">
+      <Habilete>
+        <nom>Lance-Soleil</nom>
+        <description>absorbe la lumière et l'envoie sur l'ennemi</description>
+        <cout>40</cout>
+        <element>Vegetation</element>
+        <cible>ennemi</cible>
+        <effet>degat</effet>
+        <magnitude>20</magnitude>
+        <duree>1</duree>
+      </Habilete>
+      <Habilete>
+        <nom>Poudre Toxique</nom>
+        <description>Répand une poudre toxique pendent 3 tour</description>
+        <cout>15</cout>
+        <element>Vegetation</element>
+        <cible>ennemi</cible>
+        <effet>degat</effet>
+        <magnitude>10</magnitude>
+        <duree>3</duree>
+      </Habilete>
+      <Habilete>
+        <nom>Photosynthèse</nom>
+        <description>Regénère sa vie grâce au soleil</description>
+        <cout>40</cout>
+        <element>Vegetation</element>
+        <cible>soi</cible>
+        <effet>regeneration</effet>
+        <magnitude>20</magnitude>
+        <duree>1</duree>
+      </Habilete>
+      <Habilete>
+        <nom>Graine Canon</nom>
+        <description>Propulse des graines sur l'ennemi</description>
+        <cout>75</cout>
+        <element>Vegetation</element>
+        <cible>ennemi</cible>
+        <effet>degat</effet>
+        <magnitude>70</magnitude>
+        <duree>1</duree>
+      </Habilete>
+      <Habilete>
+        <nom>Cocon</nom>
+        <description>S'enveloppe d'une barrière qui bloque l'ennemi pour un tour</description>
+        <cout>75</cout>
+        <element>Vegetation</element>
+        <cible>ennemi</cible>
+        <effet>force</effet>
+        <magnitude>100</magnitude>
+        <duree>1</duree>
+      </Habilete>
+    </listeHabilete>
+    <listeHabileteActive xmlns="Habilete">
+      <Habilete>
+        <nom>Lance-Soleil</nom>
+        <description>absorbe la lumière et l'envoie sur l'ennemi</description>
+        <cout>40</cout>
+        <element>Vegetation</element>
+        <cible>ennemi</cible>
+        <effet>degat</effet>
+        <magnitude>20</magnitude>
+        <duree>1</duree>
+      </Habilete>
+      <Habilete xsi:nil="true" />
+    </listeHabileteActive>
+    <nom_Image xmlns="Habilete">Vileplume.png</nom_Image>
+  </Monstre>
+  <Monstre>
+    <deBase xmlns="Habilete">
+      <point_vie>500</point_vie>
+      <point_energie>100</point_energie>
+      <regen_energie>10</regen_energie>
+      <attaque>20</attaque>
+      <defense>5</defense>
+    </deBase>
+    <progression xmlns="Habilete">
+      <point_vie>5</point_vie>
+      <point_energie>10</point_energie>
+      <regen_energie>2</regen_energie>
+      <attaque>20</attaque>
+      <defense>10</defense>
+    </progression>
+    <total xmlns="Habilete">
+      <point_vie>0</point_vie>
+      <point_energie>0</point_energie>
+      <regen_energie>0</regen_energie>
+      <attaque>0</attaque>
+      <defense>0</defense>
+    </total>
+    <actuel xmlns="Habilete">
+      <point_vie>0</point_vie>
+      <point_energie>0</point_energie>
+      <regen_energie>0</regen_energie>
+      <attaque>0</attaque>
+      <defense>0</defense>
+    </actuel>
+    <etat_actuel xmlns="Habilete">Vivant</etat_actuel>
+    <id xmlns="Habilete">11</id>
+    <nomMonstre xmlns="Habilete">Exeggutor</nomMonstre>
+    <descripMonstre xmlns="Habilete">Anana malefique</descripMonstre>
+    <aliasMonstre xmlns="Habilete">aucun</aliasMonstre>
+    <typeMonstre xmlns="Habilete">Vegetation</typeMonstre>
+    <rarete xmlns="Habilete">68</rarete>
+    <niveauExp xmlns="Habilete">1</niveauExp>
+    <pointExp xmlns="Habilete">100</pointExp>
+    <listeHabilete xmlns="Habilete">
+      <Habilete>
+        <nom>Lance-Soleil</nom>
+        <description>absorbe la lumière et l'envoie sur l'ennemi</description>
+        <cout>40</cout>
+        <element>Vegetation</element>
+        <cible>ennemi</cible>
+        <effet>degat</effet>
+        <magnitude>20</magnitude>
+        <duree>1</duree>
+      </Habilete>
+      <Habilete>
+        <nom>Poudre Toxique</nom>
+        <description>Répand une poudre toxique pendent 3 tour</description>
+        <cout>15</cout>
+        <element>Vegetation</element>
+        <cible>ennemi</cible>
+        <effet>degat</effet>
+        <magnitude>10</magnitude>
+        <duree>3</duree>
+      </Habilete>
+      <Habilete>
+        <nom>Photosynthèse</nom>
+        <description>Regénère sa vie grâce au soleil</description>
+        <cout>40</cout>
+        <element>Vegetation</element>
+        <cible>soi</cible>
+        <effet>regeneration</effet>
+        <magnitude>20</magnitude>
+        <duree>1</duree>
+      </Habilete>
+      <Habilete>
+        <nom>Graine Canon</nom>
+        <description>Propulse des graines sur l'ennemi</description>
+        <cout>75</cout>
+        <element>Vegetation</element>
+        <cible>ennemi</cible>
+        <effet>degat</effet>
+        <magnitude>70</magnitude>
+        <duree>1</duree>
+      </Habilete>
+      <Habilete>
+        <nom>Cocon</nom>
+        <description>S'enveloppe d'une barrière qui bloque l'ennemi pour un tour</description>
+        <cout>75</cout>
+        <element>Vegetation</element>
+        <cible>ennemi</cible>
+        <effet>force</effet>
+        <magnitude>100</magnitude>
+        <duree>1</duree>
+      </Habilete>
+    </listeHabilete>
+    <listeHabileteActive xmlns="Habilete">
+      <Habilete>
+        <nom>Lance-Soleil</nom>
+        <description>absorbe la lumière et l'envoie sur l'ennemi</description>
+        <cout>40</cout>
+        <element>Vegetation</element>
+        <cible>ennemi</cible>
+        <effet>degat</effet>
+        <magnitude>20</magnitude>
+        <duree>1</duree>
+      </Habilete>
+      <Habilete xsi:nil="true" />
+    </listeHabileteActive>
+    <nom_Image xmlns="Habilete">Exeggutor.png</nom_Image>
+  </Monstre>
+  <Monstre>
+    <deBase xmlns="Habilete">
+      <point_vie>500</point_vie>
+      <point_energie>100</point_energie>
+      <regen_energie>10</regen_energie>
+      <attaque>20</attaque>
+      <defense>20</defense>
+    </deBase>
+    <progression xmlns="Habilete">
+      <point_vie>20</point_vie>
+      <point_energie>10</point_energie>
+      <regen_energie>2</regen_energie>
+      <attaque>10</attaque>
+      <defense>20</defense>
+    </progression>
+    <total xmlns="Habilete">
+      <point_vie>0</point_vie>
+      <point_energie>0</point_energie>
+      <regen_energie>0</regen_energie>
+      <attaque>0</attaque>
+      <defense>0</defense>
+    </total>
+    <actuel xmlns="Habilete">
+      <point_vie>0</point_vie>
+      <point_energie>0</point_energie>
+      <regen_energie>0</regen_energie>
+      <attaque>0</attaque>
+      <defense>0</defense>
+    </actuel>
+    <etat_actuel xmlns="Habilete">Vivant</etat_actuel>
+    <id xmlns="Habilete">12</id>
+    <nomMonstre xmlns="Habilete">Venusaur</nomMonstre>
+    <descripMonstre xmlns="Habilete">Tortue géante</descripMonstre>
+    <aliasMonstre xmlns="Habilete">aucun</aliasMonstre>
+    <typeMonstre xmlns="Habilete">Vegetation</typeMonstre>
+    <rarete xmlns="Habilete">3</rarete>
+    <niveauExp xmlns="Habilete">1</niveauExp>
+    <pointExp xmlns="Habilete">100</pointExp>
+    <listeHabilete xmlns="Habilete">
+      <Habilete>
+        <nom>Lance-Soleil</nom>
+        <description>absorbe la lumière et l'envoie sur l'ennemi</description>
+        <cout>40</cout>
+        <element>Vegetation</element>
+        <cible>ennemi</cible>
+        <effet>degat</effet>
+        <magnitude>20</magnitude>
+        <duree>1</duree>
+      </Habilete>
+      <Habilete>
+        <nom>Poudre Toxique</nom>
+        <description>Répand une poudre toxique pendent 3 tour</description>
+        <cout>15</cout>
+        <element>Vegetation</element>
+        <cible>ennemi</cible>
+        <effet>degat</effet>
+        <magnitude>10</magnitude>
+        <duree>3</duree>
+      </Habilete>
+      <Habilete>
+        <nom>Photosynthèse</nom>
+        <description>Regénère sa vie grâce au soleil</description>
+        <cout>40</cout>
+        <element>Vegetation</element>
+        <cible>soi</cible>
+        <effet>regeneration</effet>
+        <magnitude>20</magnitude>
+        <duree>1</duree>
+      </Habilete>
+      <Habilete>
+        <nom>Graine Canon</nom>
+        <description>Propulse des graines sur l'ennemi</description>
+        <cout>75</cout>
+        <element>Vegetation</element>
+        <cible>ennemi</cible>
+        <effet>degat</effet>
+        <magnitude>70</magnitude>
+        <duree>1</duree>
+      </Habilete>
+      <Habilete>
+        <nom>Cocon</nom>
+        <description>S'enveloppe d'une barrière qui bloque l'ennemi pour un tour</description>
+        <cout>75</cout>
+        <element>Vegetation</element>
+        <cible>ennemi</cible>
+        <effet>force</effet>
+        <magnitude>100</magnitude>
+        <duree>1</duree>
+      </Habilete>
+    </listeHabilete>
+    <listeHabileteActive xmlns="Habilete">
+      <Habilete>
+        <nom>Lance-Soleil</nom>
+        <description>absorbe la lumière et l'envoie sur l'ennemi</description>
+        <cout>40</cout>
+        <element>Vegetation</element>
+        <cible>ennemi</cible>
+        <effet>degat</effet>
+        <magnitude>20</magnitude>
+        <duree>1</duree>
+      </Habilete>
+      <Habilete xsi:nil="true" />
+    </listeHabileteActive>
+    <nom_Image xmlns="Habilete">Venusaur.png</nom_Image>
+  </Monstre>
+  <Monstre>
+    <deBase xmlns="Habilete">
+      <point_vie>100</point_vie>
+      <point_energie>100</point_energie>
+      <regen_energie>10</regen_energie>
+      <attaque>20</attaque>
+      <defense>5</defense>
+    </deBase>
+    <progression xmlns="Habilete">
+      <point_vie>5</point_vie>
+      <point_energie>10</point_energie>
+      <regen_energie>2</regen_energie>
+      <attaque>10</attaque>
+      <defense>1</defense>
+    </progression>
+    <total xmlns="Habilete">
+      <point_vie>0</point_vie>
+      <point_energie>0</point_energie>
+      <regen_energie>0</regen_energie>
+      <attaque>0</attaque>
+      <defense>0</defense>
+    </total>
+    <actuel xmlns="Habilete">
+      <point_vie>0</point_vie>
+      <point_energie>0</point_energie>
+      <regen_energie>0</regen_energie>
+      <attaque>0</attaque>
+      <defense>0</defense>
+    </actuel>
+    <etat_actuel xmlns="Habilete">Vivant</etat_actuel>
+    <id xmlns="Habilete">13</id>
+    <nomMonstre xmlns="Habilete">Charmander</nomMonstre>
+    <descripMonstre xmlns="Habilete">Lézard de feu</descripMonstre>
+    <aliasMonstre xmlns="Habilete">aucun</aliasMonstre>
+    <typeMonstre xmlns="Habilete">Feu</typeMonstre>
+    <rarete xmlns="Habilete">3</rarete>
+    <niveauExp xmlns="Habilete">1</niveauExp>
+    <pointExp xmlns="Habilete">100</pointExp>
+    <listeHabilete xmlns="Habilete">
+      <Habilete>
+        <nom>Flammeche</nom>
+        <description>Faible attaque de feu</description>
+        <cout>15</cout>
+        <element>Feu</element>
+        <cible>ennemi</cible>
+        <effet>degat</effet>
+        <magnitude>20</magnitude>
+        <duree>1</duree>
+      </Habilete>
+      <Habilete>
+        <nom>Prison de feu</nom>
+        <description>Entour l'ennemi d'un cercle de feu pour un tour</description>
+        <cout>35</cout>
+        <element>Feu</element>
+        <cible>ennemi</cible>
+        <effet>paralysie</effet>
+        <magnitude>35</magnitude>
+        <duree>1</duree>
+      </Habilete>
+      <Habilete>
+        <nom>Canicule</nom>
+        <description>Souffle ardent qui réduit les défenses de l'ennemi</description>
+        <cout>35</cout>
+        <element>Feu</element>
+        <cible>ennemi</cible>
+        <effet>faiblesse</effet>
+        <magnitude>35</magnitude>
+        <duree>1</duree>
+      </Habilete>
+      <Habilete>
+        <nom>Flamme bleu</nom>
+        <description>S'entour d'un cercle de feu bleu qui protège</description>
+        <cout>35</cout>
+        <element>Feu</element>
+        <cible>soi</cible>
+        <effet>force</effet>
+        <magnitude>70</magnitude>
+        <duree>1</duree>
+      </Habilete>
+      <Habilete>
+        <nom>Magma</nom>
+        <description>Propulse du magma sur l'ennemi</description>
+        <cout>75</cout>
+        <element>Feu</element>
+        <cible>ennemi</cible>
+        <effet>degat</effet>
+        <magnitude>95</magnitude>
+        <duree>1</duree>
+      </Habilete>
+    </listeHabilete>
+    <listeHabileteActive xmlns="Habilete">
+      <Habilete>
+        <nom>Flammeche</nom>
+        <description>Faible attaque de feu</description>
+        <cout>15</cout>
+        <element>Feu</element>
+        <cible>ennemi</cible>
+        <effet>degat</effet>
+        <magnitude>20</magnitude>
+        <duree>1</duree>
+      </Habilete>
+      <Habilete xsi:nil="true" />
+    </listeHabileteActive>
+    <nom_Image xmlns="Habilete">Charmander.png</nom_Image>
+  </Monstre>
+  <Monstre>
+    <deBase xmlns="Habilete">
+      <point_vie>100</point_vie>
+      <point_energie>100</point_energie>
+      <regen_energie>10</regen_energie>
+      <attaque>30</attaque>
+      <defense>5</defense>
+    </deBase>
+    <progression xmlns="Habilete">
+      <point_vie>5</point_vie>
+      <point_energie>10</point_energie>
+      <regen_energie>10</regen_energie>
+      <attaque>30</attaque>
+      <defense>1</defense>
+    </progression>
+    <total xmlns="Habilete">
+      <point_vie>0</point_vie>
+      <point_energie>0</point_energie>
+      <regen_energie>0</regen_energie>
+      <attaque>0</attaque>
+      <defense>0</defense>
+    </total>
+    <actuel xmlns="Habilete">
+      <point_vie>0</point_vie>
+      <point_energie>0</point_energie>
+      <regen_energie>0</regen_energie>
+      <attaque>0</attaque>
+      <defense>0</defense>
+    </actuel>
+    <etat_actuel xmlns="Habilete">Vivant</etat_actuel>
+    <id xmlns="Habilete">14</id>
+    <nomMonstre xmlns="Habilete">Ninetales</nomMonstre>
+    <descripMonstre xmlns="Habilete">Loup volcanique</descripMonstre>
+    <aliasMonstre xmlns="Habilete">aucun</aliasMonstre>
+    <typeMonstre xmlns="Habilete">Feu</typeMonstre>
+    <rarete xmlns="Habilete">3</rarete>
+    <niveauExp xmlns="Habilete">1</niveauExp>
+    <pointExp xmlns="Habilete">100</pointExp>
+    <listeHabilete xmlns="Habilete">
+      <Habilete>
+        <nom>Flammeche</nom>
+        <description>Faible attaque de feu</description>
+        <cout>15</cout>
+        <element>Feu</element>
+        <cible>ennemi</cible>
+        <effet>degat</effet>
+        <magnitude>20</magnitude>
+        <duree>1</duree>
+      </Habilete>
+      <Habilete>
+        <nom>Prison de feu</nom>
+        <description>Entour l'ennemi d'un cercle de feu pour un tour</description>
+        <cout>35</cout>
+        <element>Feu</element>
+        <cible>ennemi</cible>
+        <effet>paralysie</effet>
+        <magnitude>35</magnitude>
+        <duree>1</duree>
+      </Habilete>
+      <Habilete>
+        <nom>Canicule</nom>
+        <description>Souffle ardent qui réduit les défenses de l'ennemi</description>
+        <cout>35</cout>
+        <element>Feu</element>
+        <cible>ennemi</cible>
+        <effet>faiblesse</effet>
+        <magnitude>35</magnitude>
+        <duree>1</duree>
+      </Habilete>
+      <Habilete>
+        <nom>Flamme bleu</nom>
+        <description>S'entour d'un cercle de feu bleu qui protège</description>
+        <cout>35</cout>
+        <element>Feu</element>
+        <cible>soi</cible>
+        <effet>force</effet>
+        <magnitude>70</magnitude>
+        <duree>1</duree>
+      </Habilete>
+      <Habilete>
+        <nom>Magma</nom>
+        <description>Propulse du magma sur l'ennemi</description>
+        <cout>75</cout>
+        <element>Feu</element>
+        <cible>ennemi</cible>
+        <effet>degat</effet>
+        <magnitude>95</magnitude>
+        <duree>1</duree>
+      </Habilete>
+    </listeHabilete>
+    <listeHabileteActive xmlns="Habilete">
+      <Habilete>
+        <nom>Flammeche</nom>
+        <description>Faible attaque de feu</description>
+        <cout>15</cout>
+        <element>Feu</element>
+        <cible>ennemi</cible>
+        <effet>degat</effet>
+        <magnitude>20</magnitude>
+        <duree>1</duree>
+      </Habilete>
+      <Habilete xsi:nil="true" />
+    </listeHabileteActive>
+    <nom_Image xmlns="Habilete">Ninetales.png</nom_Image>
+  </Monstre>
+  <Monstre>
+    <deBase xmlns="Habilete">
+      <point_vie>100</point_vie>
+      <point_energie>100</point_energie>
+      <regen_energie>10</regen_energie>
+      <attaque>20</attaque>
+      <defense>5</defense>
+    </deBase>
+    <progression xmlns="Habilete">
+      <point_vie>15</point_vie>
+      <point_energie>20</point_energie>
+      <regen_energie>2</regen_energie>
+      <attaque>30</attaque>
+      <defense>5</defense>
+    </progression>
+    <total xmlns="Habilete">
+      <point_vie>0</point_vie>
+      <point_energie>0</point_energie>
+      <regen_energie>0</regen_energie>
+      <attaque>0</attaque>
+      <defense>0</defense>
+    </total>
+    <actuel xmlns="Habilete">
+      <point_vie>0</point_vie>
+      <point_energie>0</point_energie>
+      <regen_energie>0</regen_energie>
+      <attaque>0</attaque>
+      <defense>0</defense>
+    </actuel>
+    <etat_actuel xmlns="Habilete">Vivant</etat_actuel>
+    <id xmlns="Habilete">15</id>
+    <nomMonstre xmlns="Habilete">Rapidash</nomMonstre>
+    <descripMonstre xmlns="Habilete">Cheval volcanique</descripMonstre>
+    <aliasMonstre xmlns="Habilete">aucun</aliasMonstre>
+    <typeMonstre xmlns="Habilete">Feu</typeMonstre>
+    <rarete xmlns="Habilete">3</rarete>
+    <niveauExp xmlns="Habilete">1</niveauExp>
+    <pointExp xmlns="Habilete">100</pointExp>
+    <listeHabilete xmlns="Habilete">
+      <Habilete>
+        <nom>Flammeche</nom>
+        <description>Faible attaque de feu</description>
+        <cout>15</cout>
+        <element>Feu</element>
+        <cible>ennemi</cible>
+        <effet>degat</effet>
+        <magnitude>20</magnitude>
+        <duree>1</duree>
+      </Habilete>
+      <Habilete>
+        <nom>Prison de feu</nom>
+        <description>Entour l'ennemi d'un cercle de feu pour un tour</description>
+        <cout>35</cout>
+        <element>Feu</element>
+        <cible>ennemi</cible>
+        <effet>paralysie</effet>
+        <magnitude>35</magnitude>
+        <duree>1</duree>
+      </Habilete>
+      <Habilete>
+        <nom>Canicule</nom>
+        <description>Souffle ardent qui réduit les défenses de l'ennemi</description>
+        <cout>35</cout>
+        <element>Feu</element>
+        <cible>ennemi</cible>
+        <effet>faiblesse</effet>
+        <magnitude>35</magnitude>
+        <duree>1</duree>
+      </Habilete>
+      <Habilete>
+        <nom>Flamme bleu</nom>
+        <description>S'entour d'un cercle de feu bleu qui protège</description>
+        <cout>35</cout>
+        <element>Feu</element>
+        <cible>soi</cible>
+        <effet>force</effet>
+        <magnitude>70</magnitude>
+        <duree>1</duree>
+      </Habilete>
+      <Habilete>
+        <nom>Magma</nom>
+        <description>Propulse du magma sur l'ennemi</description>
+        <cout>75</cout>
+        <element>Feu</element>
+        <cible>ennemi</cible>
+        <effet>degat</effet>
+        <magnitude>95</magnitude>
+        <duree>1</duree>
+      </Habilete>
+    </listeHabilete>
+    <listeHabileteActive xmlns="Habilete">
+      <Habilete>
+        <nom>Flammeche</nom>
+        <description>Faible attaque de feu</description>
+        <cout>15</cout>
+        <element>Feu</element>
+        <cible>ennemi</cible>
+        <effet>degat</effet>
+        <magnitude>20</magnitude>
+        <duree>1</duree>
+      </Habilete>
+      <Habilete xsi:nil="true" />
+    </listeHabileteActive>
+    <nom_Image xmlns="Habilete">Rapidash.png</nom_Image>
+  </Monstre>
+  <Monstre>
+    <deBase xmlns="Habilete">
+      <point_vie>100</point_vie>
+      <point_energie>100</point_energie>
+      <regen_energie>10</regen_energie>
+      <attaque>20</attaque>
+      <defense>5</defense>
+    </deBase>
+    <progression xmlns="Habilete">
+      <point_vie>30</point_vie>
+      <point_energie>10</point_energie>
+      <regen_energie>5</regen_energie>
+      <attaque>60</attaque>
+      <defense>10</defense>
+    </progression>
+    <total xmlns="Habilete">
+      <point_vie>0</point_vie>
+      <point_energie>0</point_energie>
+      <regen_energie>0</regen_energie>
+      <attaque>0</attaque>
+      <defense>0</defense>
+    </total>
+    <actuel xmlns="Habilete">
+      <point_vie>0</point_vie>
+      <point_energie>0</point_energie>
+      <regen_energie>0</regen_energie>
+      <attaque>0</attaque>
+      <defense>0</defense>
+    </actuel>
+    <etat_actuel xmlns="Habilete">Vivant</etat_actuel>
+    <id xmlns="Habilete">16</id>
+    <nomMonstre xmlns="Habilete">Moltres</nomMonstre>
+    <descripMonstre xmlns="Habilete">Oiseau Volcanique</descripMonstre>
+    <aliasMonstre xmlns="Habilete">aucun</aliasMonstre>
+    <typeMonstre xmlns="Habilete">Feu</typeMonstre>
+    <rarete xmlns="Habilete">3</rarete>
+    <niveauExp xmlns="Habilete">1</niveauExp>
+    <pointExp xmlns="Habilete">100</pointExp>
+    <listeHabilete xmlns="Habilete">
+      <Habilete>
+        <nom>Flammeche</nom>
+        <description>Faible attaque de feu</description>
+        <cout>15</cout>
+        <element>Feu</element>
+        <cible>ennemi</cible>
+        <effet>degat</effet>
+        <magnitude>20</magnitude>
+        <duree>1</duree>
+      </Habilete>
+      <Habilete>
+        <nom>Prison de feu</nom>
+        <description>Entour l'ennemi d'un cercle de feu pour un tour</description>
+        <cout>35</cout>
+        <element>Feu</element>
+        <cible>ennemi</cible>
+        <effet>paralysie</effet>
+        <magnitude>35</magnitude>
+        <duree>1</duree>
+      </Habilete>
+      <Habilete>
+        <nom>Canicule</nom>
+        <description>Souffle ardent qui réduit les défenses de l'ennemi</description>
+        <cout>35</cout>
+        <element>Feu</element>
+        <cible>ennemi</cible>
+        <effet>faiblesse</effet>
+        <magnitude>35</magnitude>
+        <duree>1</duree>
+      </Habilete>
+      <Habilete>
+        <nom>Flamme bleu</nom>
+        <description>S'entour d'un cercle de feu bleu qui protège</description>
+        <cout>35</cout>
+        <element>Feu</element>
+        <cible>soi</cible>
+        <effet>force</effet>
+        <magnitude>70</magnitude>
+        <duree>1</duree>
+      </Habilete>
+      <Habilete>
+        <nom>Magma</nom>
+        <description>Propulse du magma sur l'ennemi</description>
+        <cout>75</cout>
+        <element>Feu</element>
+        <cible>ennemi</cible>
+        <effet>degat</effet>
+        <magnitude>95</magnitude>
+        <duree>1</duree>
+      </Habilete>
+    </listeHabilete>
+    <listeHabileteActive xmlns="Habilete">
+      <Habilete>
+        <nom>Flammeche</nom>
+        <description>Faible attaque de feu</description>
+        <cout>15</cout>
+        <element>Feu</element>
+        <cible>ennemi</cible>
+        <effet>degat</effet>
+        <magnitude>20</magnitude>
+        <duree>1</duree>
+      </Habilete>
+      <Habilete xsi:nil="true" />
+    </listeHabileteActive>
+    <nom_Image xmlns="Habilete">Moltres.png</nom_Image>
+  </Monstre>
+  <Monstre xsi:nil="true" />
+  <Monstre xsi:nil="true" />
+  <Monstre xsi:nil="true" />
+  <Monstre xsi:nil="true" />
+</ArrayOfMonstre>

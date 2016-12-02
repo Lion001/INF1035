@@ -14,7 +14,7 @@
         <TextBox x:Name="textBox_cible" HorizontalAlignment="Left" Height="23" Margin="86,136,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="textBox_magnitude" HorizontalAlignment="Left" Height="23" Margin="86,192,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="textBox_dure" HorizontalAlignment="Left" Height="23" Margin="86,220,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="button" Content="Save" HorizontalAlignment="Left" Margin="31,259,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="button" Content="Save" HorizontalAlignment="Left" Margin="31,259,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
         <Button x:Name="button_ajouter" Content="Add" HorizontalAlignment="Left" Margin="174,259,0,0" VerticalAlignment="Top" Width="75" Click="button_ajouter_Click"/>
         <TextBox x:Name="textBox_cible1" HorizontalAlignment="Left" Height="23" Margin="86,164,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
 
