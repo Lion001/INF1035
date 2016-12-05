@@ -19,9 +19,11 @@ namespace TP_Pokemon
     /// </summary>
     public partial class Map : Window
     {
-        public Map()
+        public Aventure parti;
+        public Map(Aventure aventure)
         {
             InitializeComponent();
+            parti = aventure;
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
@@ -49,6 +51,7 @@ namespace TP_Pokemon
                 panel_inventaire.Visibility = System.Windows.Visibility.Hidden;
                 panel_pokemons.Visibility = System.Windows.Visibility.Hidden;
                 //Afficher le nom du joueur
+                label_nom_user.Content = parti.joueur.nomJoueur;
             }
             else
             {
@@ -82,8 +85,9 @@ namespace TP_Pokemon
                 panel_pokemons.Visibility = System.Windows.Visibility.Visible;
                 panel_utilisateur.Visibility = System.Windows.Visibility.Hidden;
                 panel_inventaire.Visibility = System.Windows.Visibility.Hidden;
-               //Afficher les 5 choix de départ
-               //Afficher la listes des pokemons capturés
+                //Afficher les 5 choix de départ
+                //Afficher la listes des pokemons capturés
+                afficher_team();
             }
             else
             {
@@ -94,6 +98,16 @@ namespace TP_Pokemon
         private void icone_quitter_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
+        }
+
+        private void afficher_team()
+        {
+            //string adresse = parti.joueur.monstreCapture[0].nom_Image;
+            string adresse = "Images/charmander.png";
+            Uri imageUri = new Uri(adresse, UriKind.Relative);
+            BitmapImage imageBitmap = new BitmapImage(imageUri);
+            Image myImage = new Image();
+            image_pokemon1 = myImage;
         }
 
         //########################################################################
@@ -135,5 +149,13 @@ namespace TP_Pokemon
             this.Close();
         }
 
+        //###############################################################################
+        //#		                   Panel Utilisateur                                    #
+        //###############################################################################
+        private void button_change_name_Click(object sender, RoutedEventArgs e)
+        {
+            parti.joueur.nomJoueur = textBox_change_name.Text;
+            label_nom_user.Content = parti.joueur.nomJoueur;
+        }
     }
 }

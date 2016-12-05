@@ -19,7 +19,7 @@
                 </Button.Background>
             </Button>
         </Grid>
-        <Grid x:Name="menu_deroulant" HorizontalAlignment="Left" Height="289" Margin="0,24,0,0" VerticalAlignment="Top" Width="76" RenderTransformOrigin="0.44,0.922" Background="#FF7E7E7E" Visibility="Hidden">
+        <Grid x:Name="menu_deroulant" HorizontalAlignment="Left" Height="289" Margin="0,24,0,0" VerticalAlignment="Top" Width="76" RenderTransformOrigin="0.44,0.922" Background="#FF7E7E7E" Visibility="Visible">
             <Button x:Name="icone_enregistrer" HorizontalAlignment="Left" Margin="10,175,0,0" VerticalAlignment="Top" Width="58" Height="50" RenderTransformOrigin="0.501,5.734" Background="{x:Null}">
                 <Image x:Name="image_bouton_save" Height="40" Width="48" Source="Images/Save.png"/>
             </Button>
@@ -51,14 +51,14 @@
         <Button x:Name="button_parc" HorizontalAlignment="Left" Margin="116,220,0,0" VerticalAlignment="Top" Width="124" Height="124" Background="{x:Null}" Click="button_parc_Click">
             <Image x:Name="image_parc" Height="100" Width="100" Source="Images/parc.png"/>
         </Button>
-        <Grid x:Name="panel_utilisateur" HorizontalAlignment="Left" Height="429" Margin="81,29,0,0" VerticalAlignment="Top" Width="418" Visibility="Hidden">
+        <Grid x:Name="panel_utilisateur" HorizontalAlignment="Left" Height="275" Margin="81,29,0,0" VerticalAlignment="Top" Width="418" Visibility="Hidden">
             <Grid.Background>
                 <ImageBrush ImageSource="Images/background-menu.jpg"/>
             </Grid.Background>
-            <Image x:Name="image" HorizontalAlignment="Left" Height="166" Margin="133,50,0,0" VerticalAlignment="Top" Width="145" Source="Images/icone_user.png"/>
-            <Label x:Name="label_nom_user" Content="Nom du joueur" HorizontalAlignment="Left" Margin="72,216,0,0" VerticalAlignment="Top" Width="298" Height="58" Foreground="#FFF3EDED" BorderBrush="Black" FontSize="36"/>
-            <Button x:Name="button_change_name" Content="Changer" HorizontalAlignment="Left" Margin="276,330,0,0" VerticalAlignment="Top" Width="75" Height="24"/>
-            <TextBox x:Name="textBox_change_name" HorizontalAlignment="Left" Height="23" Margin="81,330,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="180"/>
+            <Image x:Name="image" HorizontalAlignment="Left" Height="138" Margin="10,19,0,0" VerticalAlignment="Top" Width="116" Source="Images/icone_user.png"/>
+            <Label x:Name="label_nom_user" Content="Nom du joueur" HorizontalAlignment="Left" Margin="147,55,0,0" VerticalAlignment="Top" Width="250" Height="58" Foreground="#FFF3EDED" BorderBrush="Black" FontSize="36" RenderTransformOrigin="0.504,0.517"/>
+            <Button x:Name="button_change_name" Content="Changer" HorizontalAlignment="Left" Margin="266,194,0,0" VerticalAlignment="Top" Width="75" Height="24" Click="button_change_name_Click"/>
+            <TextBox x:Name="textBox_change_name" HorizontalAlignment="Left" Height="23" Margin="71,194,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="180"/>
         </Grid>
         <Grid x:Name="panel_inventaire" HorizontalAlignment="Left" Height="486" Margin="81,29,0,0" VerticalAlignment="Top" Width="249" Visibility="Hidden">
             <Grid.Background>

@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Windows.Controls;
+using System.Windows.Media.Imaging;
 using System.Xml.Serialization;
 
 namespace TP_Pokemon
@@ -38,11 +36,11 @@ namespace TP_Pokemon
         public int rarete { get; set;}
         public int niveauExp { get; set;}
         public int pointExp { get; set;}
-        public caracteristique deBase, progression, total, actuel;
+        public caracteristique deBase, prog, total, actuel;
         public etat_actif etat_actuel = new etat_actif();
         public Habilete[] listeHabilete { get; set; }
         public Habilete[] listeHabileteActive { get; set; }
-        public string nom_Image { get; set; }
+        public Image nom_Image { get; set; }
 
         //Constructeur sans paramètre utilisé dans la Serialization
         public Monstre() { }
@@ -60,17 +58,18 @@ namespace TP_Pokemon
             this.pointExp = 100;//valeur par defaut
             //-- Caracteristique ---
             deBase = new caracteristique();
-            progression = new caracteristique();
-            total = calcul_caract(deBase, progression);
+            prog = new caracteristique();
+            calcul_caract();
             actuel = total;  // Actuel sera modifier au cours des combats
             //-----------------------
             etat_actuel= etat_actif.Vivant;
             listeHabilete = new Habilete[6]; // Cette liste contiendra seulement 5 habilete possible mais j'ai créer un tableau plus gros au cas ou
             listeHabileteActive = new Habilete[2]; // Cette liste contiendra seulement 2 habilete possible mais ^
-            this.nom_Image = nom_Image;
+            this.nom_Image = Image.FromFile("");
     
         }
-       
+
+        //Fonction qui genere automatiquement la rarete du pokemon
         public int hasard()
         {
             Random rand = new Random();
@@ -80,23 +79,15 @@ namespace TP_Pokemon
         }
 
         // Fonction qui calcul les caractèristiques totales (Total = Base + prog*lvl)
-        public caracteristique calcul_caract(caracteristique deBase, caracteristique prog)
+        public void calcul_caract()
         {
-            caracteristique total = new caracteristique();
-            total.point_vie = deBase.point_vie + prog.point_vie * this.niveauExp;
-            total.point_energie = deBase.point_energie + prog.point_energie * this.niveauExp;
-            total.regen_energie = deBase.regen_energie + prog.regen_energie * this.niveauExp;
-            total.attaque = deBase.attaque + prog.attaque * this.niveauExp;
-            total.defense = deBase.defense + prog.defense*this.niveauExp;
-            return total;
-        }
-
-        //le but est de prendre les informations sur le fichier xml pour le remplir 
-        /** Gab:  Je pense que tu veux charger un pokemon garder en mémoir si je comprend bien ? On devrait plutot charger un array de pokemon dans ce cas-ci car l'utilisateur va vouloir
-          sauvegarder tout son équipe. Voir les fonctions plus bas  **/
-        public Monstre(string id, string nomMonstre, string descripMonstre, string aliasMonstre)
-        {
-
+            caracteristique total2 = new caracteristique();
+            total2.point_vie = deBase.point_vie + prog.point_vie * this.niveauExp;
+            total2.point_energie = deBase.point_energie + prog.point_energie * this.niveauExp;
+            total2.regen_energie = deBase.regen_energie + prog.regen_energie * this.niveauExp;
+            total2.attaque = deBase.attaque + prog.attaque * this.niveauExp;
+            total2.defense = deBase.defense + prog.defense*this.niveauExp;
+            total = total2;
         }
 
         // Enregistrer une liste de Monstre en XML
@@ -115,7 +106,46 @@ namespace TP_Pokemon
             return nouveau;
         }
 
+        //Trouver un monstre dans la liste complete
+        public static Monstre chercher_m(string nom)
+        {
+            Monstre[] liste = Charger_Liste_Monstre();
+            foreach(Monstre x in liste)
+            {
+                if (x != null)
+                {
+                    if (x.nomMonstre == nom)
+                    {
+                        return x;
+                    }
+                }
+            }
+            return null;
+        }
 
+        // Ajout de l'experience et modification relié
+        public void add_xp(int xp_add)
+        {
+            this.pointExp += xp_add;
+            int x = this.pointExp;
+            if (x==150||x==250||x==400||x==600||x==850||x==1150)
+            {
+                this.niveauExp++;
+                this.calcul_caract();
+            }
+        }
 
+        // Tableau contenant tout les Images
+        public Image portrait_monstre(string nom)
+        {
+            Image portrait = new Image();
+            string path = "/Images/" + nom + ".PNG";
+            BitmapImage bi = new BitmapImage();
+            bi.BeginInit();
+            bi.UriSource = new Uri("plane.png", UriKind.Relative);
+            bi.EndInit();
+            portrait.Source = bi;
+            return portrait;
+        }
     }
 }

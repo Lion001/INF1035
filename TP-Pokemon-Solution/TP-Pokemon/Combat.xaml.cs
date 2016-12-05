@@ -29,9 +29,6 @@ namespace TP_Pokemon
         // Bouton temporaire servant a retourner a la map
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            Map newWin = new Map();
-            newWin.Show();
-            this.Close();
         }
 
         // Choix de la difficulté

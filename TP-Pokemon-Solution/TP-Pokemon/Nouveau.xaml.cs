@@ -24,8 +24,6 @@ namespace TP_Pokemon
             InitializeComponent();
         }
 
-
-        // Je suis en train de créer une liste mannuelle de tout les habileté disponible dans le jeu
         private void button_ajouter_Click(object sender, RoutedEventArgs e)
         {
 
@@ -33,7 +31,7 @@ namespace TP_Pokemon
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            Item nouveau = new Item()
+
         }
     }
 }
