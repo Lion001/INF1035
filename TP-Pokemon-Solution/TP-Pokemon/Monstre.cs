@@ -18,16 +18,6 @@ namespace TP_Pokemon
             Mort,Vivant,Paralysie,Empoisonnement,Faiblesse,Force_Decuple
         }
 
-        public struct caracteristique
-        {
-            public int point_vie { get; set; }
-            public int point_energie { get; set; }
-            public int regen_energie { get; set; }
-            public int attaque { get; set; }
-            public int defense { get; set; }
-        }
-
-
         public int id { get; set;}
         public string nomMonstre { get; set;}
         public string descripMonstre { get; set;}
@@ -36,11 +26,11 @@ namespace TP_Pokemon
         public int rarete { get; set;}
         public int niveauExp { get; set;}
         public int pointExp { get; set;}
-        public caracteristique deBase, prog, total, actuel;
+        public int[] deBase, prog, total, actuel; 
         public etat_actif etat_actuel = new etat_actif();
         public Habilete[] listeHabilete { get; set; }
         public Habilete[] listeHabileteActive { get; set; }
-        public Image nom_Image { get; set; }
+        public string nom_Image { get; set; }
 
         //Constructeur sans paramètre utilisé dans la Serialization
         public Monstre() { }
@@ -56,16 +46,16 @@ namespace TP_Pokemon
             this.rarete = hasard();
             this.niveauExp = 1;//valeur par defaut
             this.pointExp = 100;//valeur par defaut
-            //-- Caracteristique ---
-            deBase = new caracteristique();
-            prog = new caracteristique();
-            calcul_caract();
-            actuel = total;  // Actuel sera modifier au cours des combats
+            //-- Caracteristique --- // Tableau de Int :  [0] = point_vie, [1] point_energie, [2] regen_energie, [3] attaque, [4] defense
+            deBase = new int[5];
+            prog = new int[5];
+            total = new int[5];
+            actuel = new int[5];
             //-----------------------
             etat_actuel= etat_actif.Vivant;
             listeHabilete = new Habilete[6]; // Cette liste contiendra seulement 5 habilete possible mais j'ai créer un tableau plus gros au cas ou
             listeHabileteActive = new Habilete[2]; // Cette liste contiendra seulement 2 habilete possible mais ^
-            this.nom_Image = Image.FromFile("");
+            this.nom_Image = nom_Image;
     
         }
 
@@ -81,12 +71,12 @@ namespace TP_Pokemon
         // Fonction qui calcul les caractèristiques totales (Total = Base + prog*lvl)
         public void calcul_caract()
         {
-            caracteristique total2 = new caracteristique();
-            total2.point_vie = deBase.point_vie + prog.point_vie * this.niveauExp;
-            total2.point_energie = deBase.point_energie + prog.point_energie * this.niveauExp;
-            total2.regen_energie = deBase.regen_energie + prog.regen_energie * this.niveauExp;
-            total2.attaque = deBase.attaque + prog.attaque * this.niveauExp;
-            total2.defense = deBase.defense + prog.defense*this.niveauExp;
+            int[] total2 = new int[5];
+            total2[0] = deBase[0] + prog[0] * this.niveauExp;
+            total2[1] = deBase[1] + prog[1] * this.niveauExp;
+            total2[2] = deBase[2] + prog[2] * this.niveauExp;
+            total2[3] = deBase[3] + prog[3] * this.niveauExp;
+            total2[4] = deBase[4] + prog[4]*this.niveauExp;
             total = total2;
         }
 
@@ -106,22 +96,6 @@ namespace TP_Pokemon
             return nouveau;
         }
 
-        //Trouver un monstre dans la liste complete
-        public static Monstre chercher_m(string nom)
-        {
-            Monstre[] liste = Charger_Liste_Monstre();
-            foreach(Monstre x in liste)
-            {
-                if (x != null)
-                {
-                    if (x.nomMonstre == nom)
-                    {
-                        return x;
-                    }
-                }
-            }
-            return null;
-        }
 
         // Ajout de l'experience et modification relié
         public void add_xp(int xp_add)
@@ -135,17 +109,14 @@ namespace TP_Pokemon
             }
         }
 
-        // Tableau contenant tout les Images
-        public Image portrait_monstre(string nom)
+        //Retourne le portrait du monstre
+        public static BitmapImage portrait(string nom)
         {
-            Image portrait = new Image();
-            string path = "/Images/" + nom + ".PNG";
-            BitmapImage bi = new BitmapImage();
-            bi.BeginInit();
-            bi.UriSource = new Uri("plane.png", UriKind.Relative);
-            bi.EndInit();
-            portrait.Source = bi;
-            return portrait;
+            Image image_final = new Image();
+            string path = "Images/" + nom + ".png";
+            BitmapImage image_tmp = new BitmapImage(new Uri(path, UriKind.Relative));
+            return image_tmp;
         }
+
     }
 }

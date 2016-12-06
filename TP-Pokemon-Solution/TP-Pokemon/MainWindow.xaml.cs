@@ -17,15 +17,14 @@ namespace TP_Pokemon
 {
     public partial class MainWindow : Window
     {
+        public Joueur inconnu = new Joueur("inconnu", null);
         public MainWindow()
         {
             InitializeComponent();
         }
 
         //###############################################################################
-        //#                                                                             #
         //#		            	      Menu principal                                    #
-        //#                                                                            	#
         //###############################################################################
 
         private void bouton_New_Click(object sender, RoutedEventArgs e)
@@ -48,36 +47,14 @@ namespace TP_Pokemon
         //-------------------------------------------------------------------------------
 
         //###############################################################################
-        //#                                                                             #
         //#			                 Panel Nouveau Joueur                               #
-        //#                                                                            	#
         //###############################################################################
 
         public Aventure creer_aventure()
         {
             string nom = textBox_newName.Text;
-
-            // Monstre Depart
-            Monstre depart;
-            if (radioButton_bulbasaur.IsChecked == true)
-            {
-               depart = Monstre.chercher_m("bulbasaur");
-            }
-            else if (radioButton_charmander.IsChecked == true)
-            {
-                depart = Monstre.chercher_m("charmander");
-            }
-            else if (radioButton_pikachu.IsChecked == true)
-            {
-                depart = Monstre.chercher_m("pikachu");
-            }
-            else
-            {
-                depart = Monstre.chercher_m("squirtle");
-            }
-            //---------------
-            Joueur nouveau = new Joueur(nom, depart);
-            Aventure nouvelle = new Aventure(nouveau);
+            inconnu.nomJoueur = nom;
+            Aventure nouvelle = new Aventure(inconnu);
             return nouvelle;
         }
 
@@ -87,6 +64,38 @@ namespace TP_Pokemon
             Map newMap = new Map(nouveau);
             newMap.Show();
             this.Close();
+        }
+
+        private void button_bulbasaur_Click(object sender, RoutedEventArgs e)
+        {
+            Monstre[] liste = Monstre.Charger_Liste_Monstre();
+            inconnu.monstreDepart = liste[8]; // liste[8] point sur l'objet bulbasaur
+            inconnu.monstreCapture[0] = liste[8];
+            inconnu.equipe[0] = liste[8];
+        }
+
+        private void button_charmander_Click(object sender, RoutedEventArgs e)
+        {
+            Monstre[] liste = Monstre.Charger_Liste_Monstre();
+            inconnu.monstreDepart = liste[12];
+            inconnu.monstreCapture[0] = liste[12];
+            inconnu.equipe[0] = liste[12];
+        }
+
+        private void button_pikachu_Click(object sender, RoutedEventArgs e)
+        {
+            Monstre[] liste = Monstre.Charger_Liste_Monstre();
+            inconnu.monstreDepart = liste[0];
+            inconnu.monstreCapture[0] = liste[0];
+            inconnu.equipe[0] = liste[0];
+        }
+
+        private void button_squirtle_Click(object sender, RoutedEventArgs e)
+        {
+            Monstre[] liste = Monstre.Charger_Liste_Monstre();
+            inconnu.monstreDepart = liste[4];
+            inconnu.monstreCapture[0] = liste[4];
+            inconnu.equipe[0] = liste[4];
         }
         //-------------------------------------------------------------------------------
     }

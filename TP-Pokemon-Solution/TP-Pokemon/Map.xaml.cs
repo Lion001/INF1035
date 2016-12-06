@@ -85,9 +85,8 @@ namespace TP_Pokemon
                 panel_pokemons.Visibility = System.Windows.Visibility.Visible;
                 panel_utilisateur.Visibility = System.Windows.Visibility.Hidden;
                 panel_inventaire.Visibility = System.Windows.Visibility.Hidden;
-                //Afficher les 5 choix de départ
-                //Afficher la listes des pokemons capturés
                 afficher_team();
+                afficher_stat(parti.joueur.equipe[0]);
             }
             else
             {
@@ -102,12 +101,53 @@ namespace TP_Pokemon
 
         private void afficher_team()
         {
-            //string adresse = parti.joueur.monstreCapture[0].nom_Image;
-            string adresse = "Images/charmander.png";
-            Uri imageUri = new Uri(adresse, UriKind.Relative);
-            BitmapImage imageBitmap = new BitmapImage(imageUri);
-            Image myImage = new Image();
-            image_pokemon1 = myImage;
+            //Choix 1
+            string pokemon = parti.joueur.equipe[0].nomMonstre;
+            image_pokemon_choix_1.Source = Monstre.portrait(pokemon);
+
+            //Choix 2
+            if (parti.joueur.equipe[1] != null)
+            {
+                pokemon = parti.joueur.equipe[1].nomMonstre;
+                image_pokemon_choix_2.Source = Monstre.portrait(pokemon);
+            }
+
+            //Choix 3
+            if (parti.joueur.equipe[2] != null)
+            {
+                pokemon = parti.joueur.equipe[2].nomMonstre;
+                image_pokemon_choix_3.Source = Monstre.portrait(pokemon);
+            }
+
+            //Choix 4
+            if (parti.joueur.equipe[3] != null)
+            {
+                pokemon = parti.joueur.equipe[3].nomMonstre;
+                image_pokemon_choix_4.Source = Monstre.portrait(pokemon);
+            }
+
+            //Choix 5
+            if (parti.joueur.equipe[4] != null)
+            {
+                pokemon = parti.joueur.equipe[4].nomMonstre;
+                image_pokemon_choix_5.Source = Monstre.portrait(pokemon);
+            }
+        }
+
+        private void afficher_stat(Monstre monstre)
+        {
+            image_pokemon_afficher.Source = Monstre.portrait(monstre.nomMonstre);
+            label_nom.Content = monstre.nomMonstre;
+            label_level.Content = "Level " + monstre.niveauExp;
+            label_id.Content ="ID : "+ monstre.id;
+            label_element.Content = monstre.typeMonstre;
+            label_xp.Content = "XP : " + monstre.pointExp;
+            label_vie.Content = "Vie : " + monstre.total[0];
+            label_mana.Content = "Mana : " + monstre.total[1];
+            label_mana_Copy.Content = "Regen : +" + monstre.total[2];
+            label_attaque.Content = "Attaque : " + monstre.total[3];
+            label_défense.Content = "Défense : " + monstre.total[4];
+
         }
 
         //########################################################################

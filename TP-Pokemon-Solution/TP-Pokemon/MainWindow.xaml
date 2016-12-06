@@ -26,17 +26,21 @@
             <RadioButton x:Name="radioButton_homme" Content="" HorizontalAlignment="Left" Margin="90,137,0,0" VerticalAlignment="Top" RenderTransformOrigin="5.34,0.277" GroupName="genre"/>
             <RadioButton x:Name="radioButton_femme" Content="" HorizontalAlignment="Left" Margin="191,137,0,0" VerticalAlignment="Top" RenderTransformOrigin="5.34,0.277" GroupName="genre"/>
             <Label x:Name="label_pokemon" Content="Pokemon" HorizontalAlignment="Left" Margin="12,209,0,0" VerticalAlignment="Top" Foreground="#FFE4DDDD" RenderTransformOrigin="-0.076,0.54"/>
-            <Image x:Name="image_femme_Copy" HorizontalAlignment="Left" Height="62" Margin="212,188,0,0" VerticalAlignment="Top" Width="62" Source="Images/charmander.png"/>
-            <Image x:Name="image_homme_Copy" HorizontalAlignment="Left" Height="62" Margin="111,188,0,0" VerticalAlignment="Top" Width="62" Source="Images/bulbasaur.png" RenderTransformOrigin="-0.815,0.461"/>
-            <RadioButton x:Name="radioButton_bulbasaur" Content="" HorizontalAlignment="Left" Margin="90,219,0,0" VerticalAlignment="Top" RenderTransformOrigin="5.34,0.277" GroupName="pokemon"/>
-            <RadioButton x:Name="radioButton_charmander" Content="" HorizontalAlignment="Left" Margin="191,219,0,0" VerticalAlignment="Top" RenderTransformOrigin="5.34,0.277" GroupName="pokemon"/>
             <TextBox x:Name="textBox_nickname" HorizontalAlignment="Left" Height="22" Margin="108,356,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
             <Label x:Name="label_nickname" Content="Surnom" HorizontalAlignment="Left" Margin="21,356,0,0" VerticalAlignment="Top" Foreground="#FFE4DDDD"/>
             <Button x:Name="button_creer" Content="Créer" HorizontalAlignment="Left" Margin="111,436,0,0" VerticalAlignment="Top" Width="75" Click="button_creer_Click"/>
-            <Image x:Name="image_femme_Copy1" HorizontalAlignment="Left" Height="62" Margin="212,268,0,0" VerticalAlignment="Top" Width="62" Source="Images/squirtle.png"/>
-            <Image x:Name="image_homme_Copy1" HorizontalAlignment="Left" Height="62" Margin="111,268,0,0" VerticalAlignment="Top" Width="62" Source="Images/pikachu.png" RenderTransformOrigin="-0.815,0.461"/>
-            <RadioButton x:Name="radioButton_pikachu" Content="" HorizontalAlignment="Left" Margin="90,298,0,0" VerticalAlignment="Top" RenderTransformOrigin="5.34,0.277" GroupName="pokemon"/>
-            <RadioButton x:Name="radioButton_squirtle" Content="" HorizontalAlignment="Left" Margin="191,298,0,0" VerticalAlignment="Top" RenderTransformOrigin="5.34,0.277" GroupName="pokemon"/>
+            <Button x:Name="button_bulbasaur" HorizontalAlignment="Left" Margin="108,188,0,0" VerticalAlignment="Top" Width="75" Height="70" Background="{x:Null}" BorderBrush="{x:Null}" Click="button_bulbasaur_Click">
+                <Image x:Name="image_homme_Copy" HorizontalAlignment="Left" Height="62" VerticalAlignment="Top" Width="62" Source="Images/bulbasaur.png" RenderTransformOrigin="-0.815,0.461"/>
+            </Button>
+            <Button x:Name="button_charmander" HorizontalAlignment="Left" Margin="199,188,0,0" VerticalAlignment="Top" Width="75" Height="70" Background="{x:Null}" BorderBrush="{x:Null}" Click="button_charmander_Click">
+                <Image x:Name="image_homme_Copy2" HorizontalAlignment="Left" Height="62" VerticalAlignment="Top" Width="56" Source="Images/charmander.png" RenderTransformOrigin="-0.815,0.461"/>
+            </Button>
+            <Button x:Name="button_pikachu" HorizontalAlignment="Left" Margin="108,263,0,0" VerticalAlignment="Top" Width="75" Height="70" Background="{x:Null}" BorderBrush="{x:Null}" Click="button_pikachu_Click">
+                <Image x:Name="image_homme_Copy3" HorizontalAlignment="Left" Height="62" VerticalAlignment="Top" Width="62" Source="Images/pikachu.png" RenderTransformOrigin="-0.815,0.461"/>
+            </Button>
+            <Button x:Name="button_squirtle" HorizontalAlignment="Left" Margin="199,263,0,0" VerticalAlignment="Top" Width="75" Height="70" Background="{x:Null}" BorderBrush="{x:Null}" Click="button_squirtle_Click">
+                <Image x:Name="image_homme_Copy1" HorizontalAlignment="Left" Height="62" VerticalAlignment="Top" Width="56" Source="Images/squirtle.png" RenderTransformOrigin="-0.815,0.461"/>
+            </Button>
         </Grid>
 
     </Grid>

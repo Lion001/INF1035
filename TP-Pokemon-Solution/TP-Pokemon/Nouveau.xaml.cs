@@ -26,7 +26,7 @@ namespace TP_Pokemon
 
         private void button_ajouter_Click(object sender, RoutedEventArgs e)
         {
-
+           
         }
 
         private void button_Click(object sender, RoutedEventArgs e)

@@ -2,32 +2,32 @@
 <ArrayOfMonstre xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Monstre>
     <deBase xmlns="Habilete">
-      <point_vie>100</point_vie>
-      <point_energie>100</point_energie>
-      <regen_energie>10</regen_energie>
-      <attaque>20</attaque>
-      <defense>5</defense>
+      <int>100</int>
+      <int>100</int>
+      <int>10</int>
+      <int>20</int>
+      <int>5</int>
     </deBase>
-    <progression xmlns="Habilete">
-      <point_vie>5</point_vie>
-      <point_energie>10</point_energie>
-      <regen_energie>2</regen_energie>
-      <attaque>10</attaque>
-      <defense>1</defense>
-    </progression>
+    <prog xmlns="Habilete">
+      <int>5</int>
+      <int>10</int>
+      <int>2</int>
+      <int>10</int>
+      <int>1</int>
+    </prog>
     <total xmlns="Habilete">
-      <point_vie>0</point_vie>
-      <point_energie>0</point_energie>
-      <regen_energie>0</regen_energie>
-      <attaque>0</attaque>
-      <defense>0</defense>
+      <int>105</int>
+      <int>110</int>
+      <int>12</int>
+      <int>30</int>
+      <int>6</int>
     </total>
     <actuel xmlns="Habilete">
-      <point_vie>0</point_vie>
-      <point_energie>0</point_energie>
-      <regen_energie>0</regen_energie>
-      <attaque>0</attaque>
-      <defense>0</defense>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
     </actuel>
     <etat_actuel xmlns="Habilete">Vivant</etat_actuel>
     <id xmlns="Habilete">1</id>
@@ -35,7 +35,7 @@
     <descripMonstre xmlns="Habilete">Souris électrique</descripMonstre>
     <aliasMonstre xmlns="Habilete">aucun</aliasMonstre>
     <typeMonstre xmlns="Habilete">Electricite</typeMonstre>
-    <rarete xmlns="Habilete">84</rarete>
+    <rarete xmlns="Habilete">65</rarete>
     <niveauExp xmlns="Habilete">1</niveauExp>
     <pointExp xmlns="Habilete">100</pointExp>
     <listeHabilete xmlns="Habilete">
@@ -107,32 +107,32 @@
   </Monstre>
   <Monstre>
     <deBase xmlns="Habilete">
-      <point_vie>100</point_vie>
-      <point_energie>100</point_energie>
-      <regen_energie>10</regen_energie>
-      <attaque>20</attaque>
-      <defense>5</defense>
+      <int>100</int>
+      <int>100</int>
+      <int>10</int>
+      <int>20</int>
+      <int>5</int>
     </deBase>
-    <progression xmlns="Habilete">
-      <point_vie>5</point_vie>
-      <point_energie>20</point_energie>
-      <regen_energie>2</regen_energie>
-      <attaque>10</attaque>
-      <defense>10</defense>
-    </progression>
+    <prog xmlns="Habilete">
+      <int>5</int>
+      <int>20</int>
+      <int>2</int>
+      <int>10</int>
+      <int>10</int>
+    </prog>
     <total xmlns="Habilete">
-      <point_vie>0</point_vie>
-      <point_energie>0</point_energie>
-      <regen_energie>0</regen_energie>
-      <attaque>0</attaque>
-      <defense>0</defense>
+      <int>105</int>
+      <int>120</int>
+      <int>12</int>
+      <int>30</int>
+      <int>15</int>
     </total>
     <actuel xmlns="Habilete">
-      <point_vie>0</point_vie>
-      <point_energie>0</point_energie>
-      <regen_energie>0</regen_energie>
-      <attaque>0</attaque>
-      <defense>0</defense>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
     </actuel>
     <etat_actuel xmlns="Habilete">Vivant</etat_actuel>
     <id xmlns="Habilete">2</id>
@@ -140,7 +140,7 @@
     <descripMonstre xmlns="Habilete">Creature a trois oeil</descripMonstre>
     <aliasMonstre xmlns="Habilete">aucun</aliasMonstre>
     <typeMonstre xmlns="Habilete">Electricite</typeMonstre>
-    <rarete xmlns="Habilete">68</rarete>
+    <rarete xmlns="Habilete">3</rarete>
     <niveauExp xmlns="Habilete">1</niveauExp>
     <pointExp xmlns="Habilete">100</pointExp>
     <listeHabilete xmlns="Habilete">
@@ -212,32 +212,32 @@
   </Monstre>
   <Monstre>
     <deBase xmlns="Habilete">
-      <point_vie>100</point_vie>
-      <point_energie>100</point_energie>
-      <regen_energie>10</regen_energie>
-      <attaque>20</attaque>
-      <defense>5</defense>
+      <int>100</int>
+      <int>100</int>
+      <int>10</int>
+      <int>20</int>
+      <int>5</int>
     </deBase>
-    <progression xmlns="Habilete">
-      <point_vie>10</point_vie>
-      <point_energie>10</point_energie>
-      <regen_energie>10</regen_energie>
-      <attaque>15</attaque>
-      <defense>5</defense>
-    </progression>
+    <prog xmlns="Habilete">
+      <int>10</int>
+      <int>10</int>
+      <int>10</int>
+      <int>15</int>
+      <int>5</int>
+    </prog>
     <total xmlns="Habilete">
-      <point_vie>0</point_vie>
-      <point_energie>0</point_energie>
-      <regen_energie>0</regen_energie>
-      <attaque>0</attaque>
-      <defense>0</defense>
+      <int>110</int>
+      <int>110</int>
+      <int>20</int>
+      <int>35</int>
+      <int>10</int>
     </total>
     <actuel xmlns="Habilete">
-      <point_vie>0</point_vie>
-      <point_energie>0</point_energie>
-      <regen_energie>0</regen_energie>
-      <attaque>0</attaque>
-      <defense>0</defense>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
     </actuel>
     <etat_actuel xmlns="Habilete">Vivant</etat_actuel>
     <id xmlns="Habilete">3</id>
@@ -245,7 +245,7 @@
     <descripMonstre xmlns="Habilete">Oiseau électrique</descripMonstre>
     <aliasMonstre xmlns="Habilete">aucun</aliasMonstre>
     <typeMonstre xmlns="Habilete">Electricite</typeMonstre>
-    <rarete xmlns="Habilete">68</rarete>
+    <rarete xmlns="Habilete">3</rarete>
     <niveauExp xmlns="Habilete">1</niveauExp>
     <pointExp xmlns="Habilete">100</pointExp>
     <listeHabilete xmlns="Habilete">
@@ -317,32 +317,32 @@
   </Monstre>
   <Monstre>
     <deBase xmlns="Habilete">
-      <point_vie>100</point_vie>
-      <point_energie>100</point_energie>
-      <regen_energie>10</regen_energie>
-      <attaque>20</attaque>
-      <defense>5</defense>
+      <int>100</int>
+      <int>100</int>
+      <int>10</int>
+      <int>20</int>
+      <int>5</int>
     </deBase>
-    <progression xmlns="Habilete">
-      <point_vie>10</point_vie>
-      <point_energie>20</point_energie>
-      <regen_energie>5</regen_energie>
-      <attaque>45</attaque>
-      <defense>10</defense>
-    </progression>
+    <prog xmlns="Habilete">
+      <int>10</int>
+      <int>20</int>
+      <int>5</int>
+      <int>45</int>
+      <int>10</int>
+    </prog>
     <total xmlns="Habilete">
-      <point_vie>0</point_vie>
-      <point_energie>0</point_energie>
-      <regen_energie>0</regen_energie>
-      <attaque>0</attaque>
-      <defense>0</defense>
+      <int>110</int>
+      <int>120</int>
+      <int>15</int>
+      <int>65</int>
+      <int>15</int>
     </total>
     <actuel xmlns="Habilete">
-      <point_vie>0</point_vie>
-      <point_energie>0</point_energie>
-      <regen_energie>0</regen_energie>
-      <attaque>0</attaque>
-      <defense>0</defense>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
     </actuel>
     <etat_actuel xmlns="Habilete">Vivant</etat_actuel>
     <id xmlns="Habilete">4</id>
@@ -350,7 +350,7 @@
     <descripMonstre xmlns="Habilete">Creature electrique mortelle</descripMonstre>
     <aliasMonstre xmlns="Habilete">aucun</aliasMonstre>
     <typeMonstre xmlns="Habilete">Electricite</typeMonstre>
-    <rarete xmlns="Habilete">68</rarete>
+    <rarete xmlns="Habilete">3</rarete>
     <niveauExp xmlns="Habilete">1</niveauExp>
     <pointExp xmlns="Habilete">100</pointExp>
     <listeHabilete xmlns="Habilete">
@@ -422,32 +422,32 @@
   </Monstre>
   <Monstre>
     <deBase xmlns="Habilete">
-      <point_vie>100</point_vie>
-      <point_energie>100</point_energie>
-      <regen_energie>10</regen_energie>
-      <attaque>20</attaque>
-      <defense>5</defense>
+      <int>100</int>
+      <int>100</int>
+      <int>10</int>
+      <int>20</int>
+      <int>5</int>
     </deBase>
-    <progression xmlns="Habilete">
-      <point_vie>5</point_vie>
-      <point_energie>10</point_energie>
-      <regen_energie>2</regen_energie>
-      <attaque>10</attaque>
-      <defense>1</defense>
-    </progression>
+    <prog xmlns="Habilete">
+      <int>5</int>
+      <int>10</int>
+      <int>2</int>
+      <int>10</int>
+      <int>1</int>
+    </prog>
     <total xmlns="Habilete">
-      <point_vie>0</point_vie>
-      <point_energie>0</point_energie>
-      <regen_energie>0</regen_energie>
-      <attaque>0</attaque>
-      <defense>0</defense>
+      <int>105</int>
+      <int>110</int>
+      <int>12</int>
+      <int>30</int>
+      <int>6</int>
     </total>
     <actuel xmlns="Habilete">
-      <point_vie>0</point_vie>
-      <point_energie>0</point_energie>
-      <regen_energie>0</regen_energie>
-      <attaque>0</attaque>
-      <defense>0</defense>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
     </actuel>
     <etat_actuel xmlns="Habilete">Vivant</etat_actuel>
     <id xmlns="Habilete">5</id>
@@ -455,7 +455,7 @@
     <descripMonstre xmlns="Habilete">Tortue aquatique</descripMonstre>
     <aliasMonstre xmlns="Habilete">aucun</aliasMonstre>
     <typeMonstre xmlns="Habilete">Eau</typeMonstre>
-    <rarete xmlns="Habilete">68</rarete>
+    <rarete xmlns="Habilete">3</rarete>
     <niveauExp xmlns="Habilete">1</niveauExp>
     <pointExp xmlns="Habilete">100</pointExp>
     <listeHabilete xmlns="Habilete">
@@ -527,32 +527,32 @@
   </Monstre>
   <Monstre>
     <deBase xmlns="Habilete">
-      <point_vie>100</point_vie>
-      <point_energie>100</point_energie>
-      <regen_energie>10</regen_energie>
-      <attaque>20</attaque>
-      <defense>5</defense>
+      <int>100</int>
+      <int>100</int>
+      <int>10</int>
+      <int>20</int>
+      <int>5</int>
     </deBase>
-    <progression xmlns="Habilete">
-      <point_vie>10</point_vie>
-      <point_energie>20</point_energie>
-      <regen_energie>5</regen_energie>
-      <attaque>10</attaque>
-      <defense>1</defense>
-    </progression>
+    <prog xmlns="Habilete">
+      <int>10</int>
+      <int>20</int>
+      <int>5</int>
+      <int>10</int>
+      <int>1</int>
+    </prog>
     <total xmlns="Habilete">
-      <point_vie>0</point_vie>
-      <point_energie>0</point_energie>
-      <regen_energie>0</regen_energie>
-      <attaque>0</attaque>
-      <defense>0</defense>
+      <int>110</int>
+      <int>120</int>
+      <int>15</int>
+      <int>30</int>
+      <int>6</int>
     </total>
     <actuel xmlns="Habilete">
-      <point_vie>0</point_vie>
-      <point_energie>0</point_energie>
-      <regen_energie>0</regen_energie>
-      <attaque>0</attaque>
-      <defense>0</defense>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
     </actuel>
     <etat_actuel xmlns="Habilete">Vivant</etat_actuel>
     <id xmlns="Habilete">6</id>
@@ -560,7 +560,7 @@
     <descripMonstre xmlns="Habilete">Serpent aquatique</descripMonstre>
     <aliasMonstre xmlns="Habilete">aucun</aliasMonstre>
     <typeMonstre xmlns="Habilete">Eau</typeMonstre>
-    <rarete xmlns="Habilete">68</rarete>
+    <rarete xmlns="Habilete">3</rarete>
     <niveauExp xmlns="Habilete">1</niveauExp>
     <pointExp xmlns="Habilete">100</pointExp>
     <listeHabilete xmlns="Habilete">
@@ -632,32 +632,32 @@
   </Monstre>
   <Monstre>
     <deBase xmlns="Habilete">
-      <point_vie>100</point_vie>
-      <point_energie>100</point_energie>
-      <regen_energie>10</regen_energie>
-      <attaque>20</attaque>
-      <defense>5</defense>
+      <int>100</int>
+      <int>100</int>
+      <int>10</int>
+      <int>20</int>
+      <int>5</int>
     </deBase>
-    <progression xmlns="Habilete">
-      <point_vie>10</point_vie>
-      <point_energie>15</point_energie>
-      <regen_energie>7</regen_energie>
-      <attaque>30</attaque>
-      <defense>5</defense>
-    </progression>
+    <prog xmlns="Habilete">
+      <int>10</int>
+      <int>15</int>
+      <int>7</int>
+      <int>30</int>
+      <int>5</int>
+    </prog>
     <total xmlns="Habilete">
-      <point_vie>0</point_vie>
-      <point_energie>0</point_energie>
-      <regen_energie>0</regen_energie>
-      <attaque>0</attaque>
-      <defense>0</defense>
+      <int>110</int>
+      <int>115</int>
+      <int>17</int>
+      <int>50</int>
+      <int>10</int>
     </total>
     <actuel xmlns="Habilete">
-      <point_vie>0</point_vie>
-      <point_energie>0</point_energie>
-      <regen_energie>0</regen_energie>
-      <attaque>0</attaque>
-      <defense>0</defense>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
     </actuel>
     <etat_actuel xmlns="Habilete">Vivant</etat_actuel>
     <id xmlns="Habilete">7</id>
@@ -665,7 +665,7 @@
     <descripMonstre xmlns="Habilete">Canard tres agressif</descripMonstre>
     <aliasMonstre xmlns="Habilete">aucun</aliasMonstre>
     <typeMonstre xmlns="Habilete">Eau</typeMonstre>
-    <rarete xmlns="Habilete">68</rarete>
+    <rarete xmlns="Habilete">3</rarete>
     <niveauExp xmlns="Habilete">1</niveauExp>
     <pointExp xmlns="Habilete">100</pointExp>
     <listeHabilete xmlns="Habilete">
@@ -737,32 +737,32 @@
   </Monstre>
   <Monstre>
     <deBase xmlns="Habilete">
-      <point_vie>100</point_vie>
-      <point_energie>100</point_energie>
-      <regen_energie>10</regen_energie>
-      <attaque>20</attaque>
-      <defense>5</defense>
+      <int>100</int>
+      <int>100</int>
+      <int>10</int>
+      <int>20</int>
+      <int>5</int>
     </deBase>
-    <progression xmlns="Habilete">
-      <point_vie>10</point_vie>
-      <point_energie>15</point_energie>
-      <regen_energie>10</regen_energie>
-      <attaque>50</attaque>
-      <defense>20</defense>
-    </progression>
+    <prog xmlns="Habilete">
+      <int>10</int>
+      <int>15</int>
+      <int>10</int>
+      <int>50</int>
+      <int>20</int>
+    </prog>
     <total xmlns="Habilete">
-      <point_vie>0</point_vie>
-      <point_energie>0</point_energie>
-      <regen_energie>0</regen_energie>
-      <attaque>0</attaque>
-      <defense>0</defense>
+      <int>110</int>
+      <int>115</int>
+      <int>20</int>
+      <int>70</int>
+      <int>25</int>
     </total>
     <actuel xmlns="Habilete">
-      <point_vie>0</point_vie>
-      <point_energie>0</point_energie>
-      <regen_energie>0</regen_energie>
-      <attaque>0</attaque>
-      <defense>0</defense>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
     </actuel>
     <etat_actuel xmlns="Habilete">Vivant</etat_actuel>
     <id xmlns="Habilete">8</id>
@@ -770,7 +770,7 @@
     <descripMonstre xmlns="Habilete">Creature a 4 pattes aquatique</descripMonstre>
     <aliasMonstre xmlns="Habilete">aucun</aliasMonstre>
     <typeMonstre xmlns="Habilete">Eau</typeMonstre>
-    <rarete xmlns="Habilete">68</rarete>
+    <rarete xmlns="Habilete">3</rarete>
     <niveauExp xmlns="Habilete">1</niveauExp>
     <pointExp xmlns="Habilete">100</pointExp>
     <listeHabilete xmlns="Habilete">
@@ -842,32 +842,32 @@
   </Monstre>
   <Monstre>
     <deBase xmlns="Habilete">
-      <point_vie>100</point_vie>
-      <point_energie>100</point_energie>
-      <regen_energie>10</regen_energie>
-      <attaque>20</attaque>
-      <defense>5</defense>
+      <int>100</int>
+      <int>100</int>
+      <int>10</int>
+      <int>20</int>
+      <int>5</int>
     </deBase>
-    <progression xmlns="Habilete">
-      <point_vie>5</point_vie>
-      <point_energie>10</point_energie>
-      <regen_energie>2</regen_energie>
-      <attaque>10</attaque>
-      <defense>1</defense>
-    </progression>
+    <prog xmlns="Habilete">
+      <int>5</int>
+      <int>10</int>
+      <int>2</int>
+      <int>10</int>
+      <int>1</int>
+    </prog>
     <total xmlns="Habilete">
-      <point_vie>0</point_vie>
-      <point_energie>0</point_energie>
-      <regen_energie>0</regen_energie>
-      <attaque>0</attaque>
-      <defense>0</defense>
+      <int>105</int>
+      <int>110</int>
+      <int>12</int>
+      <int>30</int>
+      <int>6</int>
     </total>
     <actuel xmlns="Habilete">
-      <point_vie>0</point_vie>
-      <point_energie>0</point_energie>
-      <regen_energie>0</regen_energie>
-      <attaque>0</attaque>
-      <defense>0</defense>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
     </actuel>
     <etat_actuel xmlns="Habilete">Vivant</etat_actuel>
     <id xmlns="Habilete">9</id>
@@ -875,7 +875,7 @@
     <descripMonstre xmlns="Habilete">Tortue Vegetale</descripMonstre>
     <aliasMonstre xmlns="Habilete">aucun</aliasMonstre>
     <typeMonstre xmlns="Habilete">Vegetation</typeMonstre>
-    <rarete xmlns="Habilete">68</rarete>
+    <rarete xmlns="Habilete">3</rarete>
     <niveauExp xmlns="Habilete">1</niveauExp>
     <pointExp xmlns="Habilete">100</pointExp>
     <listeHabilete xmlns="Habilete">
@@ -947,32 +947,32 @@
   </Monstre>
   <Monstre>
     <deBase xmlns="Habilete">
-      <point_vie>100</point_vie>
-      <point_energie>100</point_energie>
-      <regen_energie>10</regen_energie>
-      <attaque>20</attaque>
-      <defense>5</defense>
+      <int>100</int>
+      <int>100</int>
+      <int>10</int>
+      <int>20</int>
+      <int>5</int>
     </deBase>
-    <progression xmlns="Habilete">
-      <point_vie>5</point_vie>
-      <point_energie>30</point_energie>
-      <regen_energie>15</regen_energie>
-      <attaque>10</attaque>
-      <defense>1</defense>
-    </progression>
+    <prog xmlns="Habilete">
+      <int>5</int>
+      <int>30</int>
+      <int>15</int>
+      <int>10</int>
+      <int>1</int>
+    </prog>
     <total xmlns="Habilete">
-      <point_vie>0</point_vie>
-      <point_energie>0</point_energie>
-      <regen_energie>0</regen_energie>
-      <attaque>0</attaque>
-      <defense>0</defense>
+      <int>105</int>
+      <int>130</int>
+      <int>25</int>
+      <int>30</int>
+      <int>6</int>
     </total>
     <actuel xmlns="Habilete">
-      <point_vie>0</point_vie>
-      <point_energie>0</point_energie>
-      <regen_energie>0</regen_energie>
-      <attaque>0</attaque>
-      <defense>0</defense>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
     </actuel>
     <etat_actuel xmlns="Habilete">Vivant</etat_actuel>
     <id xmlns="Habilete">10</id>
@@ -980,7 +980,7 @@
     <descripMonstre xmlns="Habilete">Fleur mobile</descripMonstre>
     <aliasMonstre xmlns="Habilete">aucun</aliasMonstre>
     <typeMonstre xmlns="Habilete">Vegetation</typeMonstre>
-    <rarete xmlns="Habilete">68</rarete>
+    <rarete xmlns="Habilete">3</rarete>
     <niveauExp xmlns="Habilete">1</niveauExp>
     <pointExp xmlns="Habilete">100</pointExp>
     <listeHabilete xmlns="Habilete">
@@ -1052,32 +1052,32 @@
   </Monstre>
   <Monstre>
     <deBase xmlns="Habilete">
-      <point_vie>500</point_vie>
-      <point_energie>100</point_energie>
-      <regen_energie>10</regen_energie>
-      <attaque>20</attaque>
-      <defense>5</defense>
+      <int>500</int>
+      <int>100</int>
+      <int>10</int>
+      <int>20</int>
+      <int>5</int>
     </deBase>
-    <progression xmlns="Habilete">
-      <point_vie>5</point_vie>
-      <point_energie>10</point_energie>
-      <regen_energie>2</regen_energie>
-      <attaque>20</attaque>
-      <defense>10</defense>
-    </progression>
+    <prog xmlns="Habilete">
+      <int>5</int>
+      <int>10</int>
+      <int>2</int>
+      <int>20</int>
+      <int>10</int>
+    </prog>
     <total xmlns="Habilete">
-      <point_vie>0</point_vie>
-      <point_energie>0</point_energie>
-      <regen_energie>0</regen_energie>
-      <attaque>0</attaque>
-      <defense>0</defense>
+      <int>505</int>
+      <int>110</int>
+      <int>12</int>
+      <int>40</int>
+      <int>15</int>
     </total>
     <actuel xmlns="Habilete">
-      <point_vie>0</point_vie>
-      <point_energie>0</point_energie>
-      <regen_energie>0</regen_energie>
-      <attaque>0</attaque>
-      <defense>0</defense>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
     </actuel>
     <etat_actuel xmlns="Habilete">Vivant</etat_actuel>
     <id xmlns="Habilete">11</id>
@@ -1085,7 +1085,7 @@
     <descripMonstre xmlns="Habilete">Anana malefique</descripMonstre>
     <aliasMonstre xmlns="Habilete">aucun</aliasMonstre>
     <typeMonstre xmlns="Habilete">Vegetation</typeMonstre>
-    <rarete xmlns="Habilete">68</rarete>
+    <rarete xmlns="Habilete">3</rarete>
     <niveauExp xmlns="Habilete">1</niveauExp>
     <pointExp xmlns="Habilete">100</pointExp>
     <listeHabilete xmlns="Habilete">
@@ -1157,32 +1157,32 @@
   </Monstre>
   <Monstre>
     <deBase xmlns="Habilete">
-      <point_vie>500</point_vie>
-      <point_energie>100</point_energie>
-      <regen_energie>10</regen_energie>
-      <attaque>20</attaque>
-      <defense>20</defense>
+      <int>500</int>
+      <int>100</int>
+      <int>10</int>
+      <int>20</int>
+      <int>20</int>
     </deBase>
-    <progression xmlns="Habilete">
-      <point_vie>20</point_vie>
-      <point_energie>10</point_energie>
-      <regen_energie>2</regen_energie>
-      <attaque>10</attaque>
-      <defense>20</defense>
-    </progression>
+    <prog xmlns="Habilete">
+      <int>20</int>
+      <int>10</int>
+      <int>2</int>
+      <int>10</int>
+      <int>20</int>
+    </prog>
     <total xmlns="Habilete">
-      <point_vie>0</point_vie>
-      <point_energie>0</point_energie>
-      <regen_energie>0</regen_energie>
-      <attaque>0</attaque>
-      <defense>0</defense>
+      <int>520</int>
+      <int>110</int>
+      <int>12</int>
+      <int>30</int>
+      <int>40</int>
     </total>
     <actuel xmlns="Habilete">
-      <point_vie>0</point_vie>
-      <point_energie>0</point_energie>
-      <regen_energie>0</regen_energie>
-      <attaque>0</attaque>
-      <defense>0</defense>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
     </actuel>
     <etat_actuel xmlns="Habilete">Vivant</etat_actuel>
     <id xmlns="Habilete">12</id>
@@ -1262,32 +1262,32 @@
   </Monstre>
   <Monstre>
     <deBase xmlns="Habilete">
-      <point_vie>100</point_vie>
-      <point_energie>100</point_energie>
-      <regen_energie>10</regen_energie>
-      <attaque>20</attaque>
-      <defense>5</defense>
+      <int>100</int>
+      <int>100</int>
+      <int>10</int>
+      <int>20</int>
+      <int>5</int>
     </deBase>
-    <progression xmlns="Habilete">
-      <point_vie>5</point_vie>
-      <point_energie>10</point_energie>
-      <regen_energie>2</regen_energie>
-      <attaque>10</attaque>
-      <defense>1</defense>
-    </progression>
+    <prog xmlns="Habilete">
+      <int>5</int>
+      <int>10</int>
+      <int>2</int>
+      <int>10</int>
+      <int>1</int>
+    </prog>
     <total xmlns="Habilete">
-      <point_vie>0</point_vie>
-      <point_energie>0</point_energie>
-      <regen_energie>0</regen_energie>
-      <attaque>0</attaque>
-      <defense>0</defense>
+      <int>105</int>
+      <int>110</int>
+      <int>12</int>
+      <int>30</int>
+      <int>6</int>
     </total>
     <actuel xmlns="Habilete">
-      <point_vie>0</point_vie>
-      <point_energie>0</point_energie>
-      <regen_energie>0</regen_energie>
-      <attaque>0</attaque>
-      <defense>0</defense>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
     </actuel>
     <etat_actuel xmlns="Habilete">Vivant</etat_actuel>
     <id xmlns="Habilete">13</id>
@@ -1295,7 +1295,7 @@
     <descripMonstre xmlns="Habilete">Lézard de feu</descripMonstre>
     <aliasMonstre xmlns="Habilete">aucun</aliasMonstre>
     <typeMonstre xmlns="Habilete">Feu</typeMonstre>
-    <rarete xmlns="Habilete">3</rarete>
+    <rarete xmlns="Habilete">39</rarete>
     <niveauExp xmlns="Habilete">1</niveauExp>
     <pointExp xmlns="Habilete">100</pointExp>
     <listeHabilete xmlns="Habilete">
@@ -1367,32 +1367,32 @@
   </Monstre>
   <Monstre>
     <deBase xmlns="Habilete">
-      <point_vie>100</point_vie>
-      <point_energie>100</point_energie>
-      <regen_energie>10</regen_energie>
-      <attaque>30</attaque>
-      <defense>5</defense>
+      <int>100</int>
+      <int>100</int>
+      <int>10</int>
+      <int>30</int>
+      <int>5</int>
     </deBase>
-    <progression xmlns="Habilete">
-      <point_vie>5</point_vie>
-      <point_energie>10</point_energie>
-      <regen_energie>10</regen_energie>
-      <attaque>30</attaque>
-      <defense>1</defense>
-    </progression>
+    <prog xmlns="Habilete">
+      <int>5</int>
+      <int>10</int>
+      <int>10</int>
+      <int>30</int>
+      <int>1</int>
+    </prog>
     <total xmlns="Habilete">
-      <point_vie>0</point_vie>
-      <point_energie>0</point_energie>
-      <regen_energie>0</regen_energie>
-      <attaque>0</attaque>
-      <defense>0</defense>
+      <int>105</int>
+      <int>110</int>
+      <int>20</int>
+      <int>60</int>
+      <int>6</int>
     </total>
     <actuel xmlns="Habilete">
-      <point_vie>0</point_vie>
-      <point_energie>0</point_energie>
-      <regen_energie>0</regen_energie>
-      <attaque>0</attaque>
-      <defense>0</defense>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
     </actuel>
     <etat_actuel xmlns="Habilete">Vivant</etat_actuel>
     <id xmlns="Habilete">14</id>
@@ -1400,7 +1400,7 @@
     <descripMonstre xmlns="Habilete">Loup volcanique</descripMonstre>
     <aliasMonstre xmlns="Habilete">aucun</aliasMonstre>
     <typeMonstre xmlns="Habilete">Feu</typeMonstre>
-    <rarete xmlns="Habilete">3</rarete>
+    <rarete xmlns="Habilete">39</rarete>
     <niveauExp xmlns="Habilete">1</niveauExp>
     <pointExp xmlns="Habilete">100</pointExp>
     <listeHabilete xmlns="Habilete">
@@ -1472,32 +1472,32 @@
   </Monstre>
   <Monstre>
     <deBase xmlns="Habilete">
-      <point_vie>100</point_vie>
-      <point_energie>100</point_energie>
-      <regen_energie>10</regen_energie>
-      <attaque>20</attaque>
-      <defense>5</defense>
+      <int>100</int>
+      <int>100</int>
+      <int>10</int>
+      <int>20</int>
+      <int>5</int>
     </deBase>
-    <progression xmlns="Habilete">
-      <point_vie>15</point_vie>
-      <point_energie>20</point_energie>
-      <regen_energie>2</regen_energie>
-      <attaque>30</attaque>
-      <defense>5</defense>
-    </progression>
+    <prog xmlns="Habilete">
+      <int>15</int>
+      <int>20</int>
+      <int>2</int>
+      <int>30</int>
+      <int>5</int>
+    </prog>
     <total xmlns="Habilete">
-      <point_vie>0</point_vie>
-      <point_energie>0</point_energie>
-      <regen_energie>0</regen_energie>
-      <attaque>0</attaque>
-      <defense>0</defense>
+      <int>115</int>
+      <int>120</int>
+      <int>12</int>
+      <int>50</int>
+      <int>10</int>
     </total>
     <actuel xmlns="Habilete">
-      <point_vie>0</point_vie>
-      <point_energie>0</point_energie>
-      <regen_energie>0</regen_energie>
-      <attaque>0</attaque>
-      <defense>0</defense>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
     </actuel>
     <etat_actuel xmlns="Habilete">Vivant</etat_actuel>
     <id xmlns="Habilete">15</id>
@@ -1505,7 +1505,7 @@
     <descripMonstre xmlns="Habilete">Cheval volcanique</descripMonstre>
     <aliasMonstre xmlns="Habilete">aucun</aliasMonstre>
     <typeMonstre xmlns="Habilete">Feu</typeMonstre>
-    <rarete xmlns="Habilete">3</rarete>
+    <rarete xmlns="Habilete">39</rarete>
     <niveauExp xmlns="Habilete">1</niveauExp>
     <pointExp xmlns="Habilete">100</pointExp>
     <listeHabilete xmlns="Habilete">
@@ -1577,32 +1577,32 @@
   </Monstre>
   <Monstre>
     <deBase xmlns="Habilete">
-      <point_vie>100</point_vie>
-      <point_energie>100</point_energie>
-      <regen_energie>10</regen_energie>
-      <attaque>20</attaque>
-      <defense>5</defense>
+      <int>100</int>
+      <int>100</int>
+      <int>10</int>
+      <int>20</int>
+      <int>5</int>
     </deBase>
-    <progression xmlns="Habilete">
-      <point_vie>30</point_vie>
-      <point_energie>10</point_energie>
-      <regen_energie>5</regen_energie>
-      <attaque>60</attaque>
-      <defense>10</defense>
-    </progression>
+    <prog xmlns="Habilete">
+      <int>30</int>
+      <int>10</int>
+      <int>5</int>
+      <int>60</int>
+      <int>10</int>
+    </prog>
     <total xmlns="Habilete">
-      <point_vie>0</point_vie>
-      <point_energie>0</point_energie>
-      <regen_energie>0</regen_energie>
-      <attaque>0</attaque>
-      <defense>0</defense>
+      <int>130</int>
+      <int>110</int>
+      <int>15</int>
+      <int>80</int>
+      <int>15</int>
     </total>
     <actuel xmlns="Habilete">
-      <point_vie>0</point_vie>
-      <point_energie>0</point_energie>
-      <regen_energie>0</regen_energie>
-      <attaque>0</attaque>
-      <defense>0</defense>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
     </actuel>
     <etat_actuel xmlns="Habilete">Vivant</etat_actuel>
     <id xmlns="Habilete">16</id>
@@ -1610,7 +1610,7 @@
     <descripMonstre xmlns="Habilete">Oiseau Volcanique</descripMonstre>
     <aliasMonstre xmlns="Habilete">aucun</aliasMonstre>
     <typeMonstre xmlns="Habilete">Feu</typeMonstre>
-    <rarete xmlns="Habilete">3</rarete>
+    <rarete xmlns="Habilete">39</rarete>
     <niveauExp xmlns="Habilete">1</niveauExp>
     <pointExp xmlns="Habilete">100</pointExp>
     <listeHabilete xmlns="Habilete">
