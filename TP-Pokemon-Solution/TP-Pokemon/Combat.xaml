@@ -16,8 +16,8 @@
             </Grid.Background>
             <Border BorderBrush="Black" BorderThickness="8" HorizontalAlignment="Left" Height="262" VerticalAlignment="Top" Width="644" Margin="0,-1,0,0"/>
             <Image x:Name="image_pokemon_panel" HorizontalAlignment="Left" Height="238" VerticalAlignment="Top" Width="218" Source="Images/inconnu.png" Margin="34,13,0,0"/>
-            <Button x:Name="button_habilete_1" Content="Habilete 1" HorizontalAlignment="Left" Margin="329,147,0,0" VerticalAlignment="Top" Width="200" Height="36" Background="#FF4933D6" Foreground="#FFFDFCFC"/>
-            <Button x:Name="button_habilete_2" Content="Habilete 2" HorizontalAlignment="Left" Margin="329,205,0,0" VerticalAlignment="Top" Width="200" Height="36" Background="#FF4933D6" Foreground="#FFFDFCFC"/>
+            <Button x:Name="button_habilete_1" Content="Habilete 1" HorizontalAlignment="Left" Margin="329,147,0,0" VerticalAlignment="Top" Width="200" Height="36" Background="#FF4933D6" Foreground="#FFFDFCFC" Click="button_habilete_1_Click"/>
+            <Button x:Name="button_habilete_2" Content="Habilete 2" HorizontalAlignment="Left" Margin="329,205,0,0" VerticalAlignment="Top" Width="200" Height="36" Background="#FF4933D6" Foreground="#FFFDFCFC" Click="button_habilete_2_Click"/>
             <Label x:Name="label_nom" Content="Nom Inconnu" HorizontalAlignment="Left" Margin="290,13,0,0" VerticalAlignment="Top" FontSize="18" Foreground="#FFE8D9D9"/>
             <Label x:Name="label_level" Content="Level 0" HorizontalAlignment="Left" Margin="427,13,0,0" VerticalAlignment="Top" FontSize="18" Foreground="#FFE8D9D9"/>
             <Label x:Name="label_id" Content="#id" HorizontalAlignment="Left" Margin="329,43,0,0" VerticalAlignment="Top" FontSize="16" Foreground="#FFE8D9D9"/>
@@ -88,57 +88,57 @@
             <Grid.Background>
                 <ImageBrush ImageSource="background.jpg"/>
             </Grid.Background>
-            <Button x:Name="button_facile" Content="Facile" HorizontalAlignment="Left" Margin="356,146,0,0" VerticalAlignment="Top" Width="340" Height="46" FontSize="20" Foreground="#FFF1EEEE" Click="pick_difficulte">
-                <Button.Background>
-                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
-                        <GradientStop Color="#FFF3F3F3" Offset="0"/>
-                        <GradientStop Color="#FFEBEBEB"/>
-                        <GradientStop Color="#FFDDDDDD" Offset="0.006"/>
-                        <GradientStop Color="#FF1C7CDC" Offset="0.099"/>
-                    </LinearGradientBrush>
-                </Button.Background>
-            </Button>
-            <Button x:Name="button_moyen" Content="Moyen" HorizontalAlignment="Left" Margin="356,196,0,0" VerticalAlignment="Top" Width="340" Height="46" FontSize="20" Foreground="#FFF1EEEE">
-                <Button.Background>
-                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
-                        <GradientStop Color="#FFF3F3F3" Offset="0"/>
-                        <GradientStop Color="#FFEBEBEB"/>
-                        <GradientStop Color="#FFDDDDDD" Offset="0.006"/>
-                        <GradientStop Color="#FF1C7CDC" Offset="0.099"/>
-                    </LinearGradientBrush>
-                </Button.Background>
-            </Button>
-            <Button x:Name="button_Difficile" Content="Difficile" HorizontalAlignment="Left" Margin="356,260,0,0" VerticalAlignment="Top" Width="340" Height="46" FontSize="20" Foreground="#FFF1EEEE">
-                <Button.Background>
-                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
-                        <GradientStop Color="#FFF3F3F3" Offset="0"/>
-                        <GradientStop Color="#FFEBEBEB"/>
-                        <GradientStop Color="#FFDDDDDD" Offset="0.006"/>
-                        <GradientStop Color="#FF1C7CDC" Offset="0.099"/>
-                    </LinearGradientBrush>
-                </Button.Background>
-            </Button>
-            <Button x:Name="button_expert" Content="Expert" HorizontalAlignment="Left" Margin="356,324,0,0" VerticalAlignment="Top" Width="340" Height="46" FontSize="20" Foreground="#FFF1EEEE">
-                <Button.Background>
-                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
-                        <GradientStop Color="#FFF3F3F3" Offset="0"/>
-                        <GradientStop Color="#FFEBEBEB"/>
-                        <GradientStop Color="#FFDDDDDD" Offset="0.006"/>
-                        <GradientStop Color="#FF1C7CDC" Offset="0.099"/>
-                    </LinearGradientBrush>
-                </Button.Background>
-            </Button>
-            <Button x:Name="button_Legende" Content="Légendaire" HorizontalAlignment="Left" Margin="356,390,0,0" VerticalAlignment="Top" Width="340" Height="46" FontSize="20" Foreground="#FFF1EEEE">
-                <Button.Background>
-                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
-                        <GradientStop Color="#FFF3F3F3" Offset="0"/>
-                        <GradientStop Color="#FFEBEBEB"/>
-                        <GradientStop Color="#FFDDDDDD" Offset="0.006"/>
-                        <GradientStop Color="#FF1C7CDC" Offset="0.099"/>
-                    </LinearGradientBrush>
-                </Button.Background>
-            </Button>
             <Border BorderBrush="Black" BorderThickness="8" HorizontalAlignment="Left" Height="590" VerticalAlignment="Top" Width="1100"/>
+            <Button x:Name="button_facile" Content="Facile" HorizontalAlignment="Left" Margin="356,124,0,0" VerticalAlignment="Top" Width="340" Height="46" FontSize="20" Foreground="#FFF1EEEE" Click="button_facile_Click">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                        <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                        <GradientStop Color="#FFEBEBEB"/>
+                        <GradientStop Color="#FFDDDDDD" Offset="0.006"/>
+                        <GradientStop Color="#FF1C7CDC" Offset="0.099"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button x:Name="button_moyen" Content="Moyen" HorizontalAlignment="Left" Margin="356,196,0,0" VerticalAlignment="Top" Width="340" Height="46" FontSize="20" Foreground="#FFF1EEEE" Click="button_moyen_Click">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                        <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                        <GradientStop Color="#FFEBEBEB"/>
+                        <GradientStop Color="#FFDDDDDD" Offset="0.006"/>
+                        <GradientStop Color="#FF1C7CDC" Offset="0.099"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button x:Name="button_Difficile" Content="Difficile" HorizontalAlignment="Left" Margin="356,260,0,0" VerticalAlignment="Top" Width="340" Height="46" FontSize="20" Foreground="#FFF1EEEE" Click="button_Difficile_Click">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                        <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                        <GradientStop Color="#FFEBEBEB"/>
+                        <GradientStop Color="#FFDDDDDD" Offset="0.006"/>
+                        <GradientStop Color="#FF1C7CDC" Offset="0.099"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button x:Name="button_expert" Content="Expert" HorizontalAlignment="Left" Margin="356,324,0,0" VerticalAlignment="Top" Width="340" Height="46" FontSize="20" Foreground="#FFF1EEEE" Click="button_expert_Click">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                        <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                        <GradientStop Color="#FFEBEBEB"/>
+                        <GradientStop Color="#FFDDDDDD" Offset="0.006"/>
+                        <GradientStop Color="#FF1C7CDC" Offset="0.099"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button x:Name="button_Legende" Content="Légendaire" HorizontalAlignment="Left" Margin="356,390,0,0" VerticalAlignment="Top" Width="340" Height="46" FontSize="20" Foreground="#FFF1EEEE" Click="button_Legende_Click">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                        <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                        <GradientStop Color="#FFEBEBEB"/>
+                        <GradientStop Color="#FFDDDDDD" Offset="0.006"/>
+                        <GradientStop Color="#FF1C7CDC" Offset="0.099"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
         </Grid>
         <Grid x:Name="panel_inventaire" HorizontalAlignment="Left" Height="261" Margin="446,422,0,0" VerticalAlignment="Top" Width="676" Visibility="Hidden">
             <Grid.Background>

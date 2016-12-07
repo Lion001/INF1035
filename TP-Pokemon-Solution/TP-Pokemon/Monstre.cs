@@ -96,6 +96,23 @@ namespace TP_Pokemon
             return nouveau;
         }
 
+        //Retour une liste de monstre d'un element donnée
+        public static Monstre[] Liste_par_Element(TypeElement element)
+        {
+            Monstre[] liste_general = Monstre.Charger_Liste_Monstre();
+            Monstre[] liste_element = new Monstre[5];
+            int loop = 0;
+            foreach (Monstre x in liste_general)
+            {
+                if(x!=null && x.typeMonstre == element)
+                {
+                    liste_element[loop] = x;
+                    loop++;
+                }
+            }
+            return liste_element;
+        }
+
         // Ajout de l'experience et modification relié
         public void add_xp(int xp_add)
         {
