@@ -214,7 +214,7 @@ namespace TP_Pokemon
         //Bouton Stade
         private void button_stade_Click(object sender, RoutedEventArgs e)
         {
-            Combat newWin = new Combat();
+            Combat newWin = new Combat(parti);
             newWin.Show();
             this.Close();
         }
@@ -222,7 +222,7 @@ namespace TP_Pokemon
         //Bouton Port
         private void button_port_Click(object sender, RoutedEventArgs e)
         {
-            Combat newWin = new Combat();
+            Combat newWin = new Combat(parti);
             newWin.Background = new ImageBrush( new BitmapImage(new Uri(@"pack://application:,,,/TP-Pokemon;component/Images/port.jpg")));
             newWin.Show();
             this.Close();
@@ -231,7 +231,7 @@ namespace TP_Pokemon
         //Bouton Parc
         private void button_parc_Click(object sender, RoutedEventArgs e)
         {
-            Combat newWin = new Combat();
+            Combat newWin = new Combat(parti);
             newWin.Background = new ImageBrush(new BitmapImage(new Uri(@"pack://application:,,,/TP-Pokemon;component/Images/parc-bg.jpg")));
             newWin.Show();
             this.Close();
@@ -240,7 +240,7 @@ namespace TP_Pokemon
         //Bouton Central électrique
         private void button_central_h_Click(object sender, RoutedEventArgs e)
         {
-            Combat newWin = new Combat();
+            Combat newWin = new Combat(parti);
             newWin.Background = new ImageBrush(new BitmapImage(new Uri(@"pack://application:,,,/TP-Pokemon;component/Images/electrique.jpg")));
             newWin.Show();
             this.Close();
