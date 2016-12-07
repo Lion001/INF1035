@@ -14,7 +14,8 @@ namespace TP_Pokemon
         Feu,
         Vegetation,
         Eau,
-        Electricite
+        Electricite,
+        Aucun
     }
 
     public enum Cible
@@ -31,7 +32,8 @@ namespace TP_Pokemon
         sommeil,
         paralysie,
         force,
-        faiblesse
+        faiblesse,
+        capture
     }
     [Serializable]
    public class Habilete

@@ -96,7 +96,6 @@ namespace TP_Pokemon
             return nouveau;
         }
 
-
         // Ajout de l'experience et modification relié
         public void add_xp(int xp_add)
         {
@@ -118,5 +117,20 @@ namespace TP_Pokemon
             return image_tmp;
         }
 
+        //Retourne un monstre
+        public static Monstre trouver_monstre(string nom)
+        {
+            Monstre[] liste = Charger_Liste_Monstre();
+            Monstre reponse = new Monstre();
+            int loop;
+            for(loop=0;loop<20;loop++)
+            {
+                if(liste[loop]!=null && liste[loop].nomMonstre==nom)
+                {
+                    reponse = liste[loop];
+                }
+            }
+            return reponse;
+        }
     }
 }

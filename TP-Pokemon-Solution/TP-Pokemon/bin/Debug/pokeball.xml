@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<Item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <nom>Pokeball</nom>
+  <description>Sphere qui permet de capturer des pokemons</description>
+  <cout>0</cout>
+  <element>Aucun</element>
+  <cible>ennemi</cible>
+  <effet>capture</effet>
+  <magnitude>50</magnitude>
+  <duree>1</duree>
+  <valeur_monetaire>100</valeur_monetaire>
+</Item>

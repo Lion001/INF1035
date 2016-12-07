@@ -73,6 +73,9 @@
     <Compile Include="Aventure.cs" />
     <Compile Include="Caracteristique.cs" />
     <Compile Include="Habilete.cs" />
+    <Compile Include="Shop.xaml.cs">
+      <DependentUpon>Shop.xaml</DependentUpon>
+    </Compile>
     <Page Include="Combat.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -102,6 +105,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Shop.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Map.xaml.cs">
@@ -112,7 +119,6 @@
     <Compile Include="Nouveau.xaml.cs">
       <DependentUpon>Nouveau.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pokeball.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -215,7 +221,7 @@
     <Resource Include="Images\pikachu.png" />
     <Resource Include="Images\rapidash.png" />
     <Resource Include="Images\squirtle.png" />
-    <Resource Include="Images\vaporeon.png" />
+    <Resource Include="Images\vapoeron.png" />
     <Resource Include="Images\venusaur.png" />
     <Resource Include="Images\vileplume.png" />
     <Resource Include="Images\zapdos.png" />
@@ -223,6 +229,9 @@
   <ItemGroup>
     <Resource Include="Images\boy.png" />
     <Resource Include="Images\girl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\background-shop.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

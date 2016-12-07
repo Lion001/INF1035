@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<Item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <nom>Potion Or</nom>
+  <description>Potion qui regenere la vie et la mana d'un pokemon</description>
+  <cout>0</cout>
+  <element>Aucun</element>
+  <cible>soi</cible>
+  <effet>guerison</effet>
+  <magnitude>100</magnitude>
+  <duree>1</duree>
+  <valeur_monetaire>500</valeur_monetaire>
+</Item>

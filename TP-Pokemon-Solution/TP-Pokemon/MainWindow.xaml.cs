@@ -17,7 +17,7 @@ namespace TP_Pokemon
 {
     public partial class MainWindow : Window
     {
-        public Joueur inconnu = new Joueur("inconnu", null);
+        public Joueur inconnu = new Joueur("inconnu",Sexe.homme ,null);
         public MainWindow()
         {
             InitializeComponent();
@@ -34,8 +34,7 @@ namespace TP_Pokemon
 
         private void bouton_Charger_Click(object sender, RoutedEventArgs e)
         {
-    
-            Nouveau newMap = new Nouveau();           
+            Map newMap = new Map(Aventure.Charger_Aventure());           
             newMap.Show();
             this.Close();
         }
@@ -52,8 +51,13 @@ namespace TP_Pokemon
 
         public Aventure creer_aventure()
         {
-            string nom = textBox_newName.Text;
-            inconnu.nomJoueur = nom;
+            //Nom
+            inconnu.nomJoueur = textBox_newName.Text;
+            //Sexe
+            if (radioButton_homme.IsChecked == true)    { inconnu.sexe = Sexe.homme; }
+            else { inconnu.sexe = Sexe.homme; }
+            // Nickname du Monstre
+            inconnu.equipe[0].aliasMonstre = textBox_nickname.Text;
             Aventure nouvelle = new Aventure(inconnu);
             return nouvelle;
         }
@@ -66,6 +70,7 @@ namespace TP_Pokemon
             this.Close();
         }
 
+        // Pokemon de Départ
         private void button_bulbasaur_Click(object sender, RoutedEventArgs e)
         {
             Monstre[] liste = Monstre.Charger_Liste_Monstre();

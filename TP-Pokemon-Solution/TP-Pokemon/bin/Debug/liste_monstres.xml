@@ -35,7 +35,7 @@
     <descripMonstre xmlns="Habilete">Souris électrique</descripMonstre>
     <aliasMonstre xmlns="Habilete">aucun</aliasMonstre>
     <typeMonstre xmlns="Habilete">Electricite</typeMonstre>
-    <rarete xmlns="Habilete">65</rarete>
+    <rarete xmlns="Habilete">25</rarete>
     <niveauExp xmlns="Habilete">1</niveauExp>
     <pointExp xmlns="Habilete">100</pointExp>
     <listeHabilete xmlns="Habilete">
@@ -140,7 +140,7 @@
     <descripMonstre xmlns="Habilete">Creature a trois oeil</descripMonstre>
     <aliasMonstre xmlns="Habilete">aucun</aliasMonstre>
     <typeMonstre xmlns="Habilete">Electricite</typeMonstre>
-    <rarete xmlns="Habilete">3</rarete>
+    <rarete xmlns="Habilete">25</rarete>
     <niveauExp xmlns="Habilete">1</niveauExp>
     <pointExp xmlns="Habilete">100</pointExp>
     <listeHabilete xmlns="Habilete">
@@ -245,7 +245,7 @@
     <descripMonstre xmlns="Habilete">Oiseau électrique</descripMonstre>
     <aliasMonstre xmlns="Habilete">aucun</aliasMonstre>
     <typeMonstre xmlns="Habilete">Electricite</typeMonstre>
-    <rarete xmlns="Habilete">3</rarete>
+    <rarete xmlns="Habilete">25</rarete>
     <niveauExp xmlns="Habilete">1</niveauExp>
     <pointExp xmlns="Habilete">100</pointExp>
     <listeHabilete xmlns="Habilete">
@@ -350,7 +350,7 @@
     <descripMonstre xmlns="Habilete">Creature electrique mortelle</descripMonstre>
     <aliasMonstre xmlns="Habilete">aucun</aliasMonstre>
     <typeMonstre xmlns="Habilete">Electricite</typeMonstre>
-    <rarete xmlns="Habilete">3</rarete>
+    <rarete xmlns="Habilete">25</rarete>
     <niveauExp xmlns="Habilete">1</niveauExp>
     <pointExp xmlns="Habilete">100</pointExp>
     <listeHabilete xmlns="Habilete">
@@ -455,7 +455,7 @@
     <descripMonstre xmlns="Habilete">Tortue aquatique</descripMonstre>
     <aliasMonstre xmlns="Habilete">aucun</aliasMonstre>
     <typeMonstre xmlns="Habilete">Eau</typeMonstre>
-    <rarete xmlns="Habilete">3</rarete>
+    <rarete xmlns="Habilete">25</rarete>
     <niveauExp xmlns="Habilete">1</niveauExp>
     <pointExp xmlns="Habilete">100</pointExp>
     <listeHabilete xmlns="Habilete">
@@ -560,7 +560,7 @@
     <descripMonstre xmlns="Habilete">Serpent aquatique</descripMonstre>
     <aliasMonstre xmlns="Habilete">aucun</aliasMonstre>
     <typeMonstre xmlns="Habilete">Eau</typeMonstre>
-    <rarete xmlns="Habilete">3</rarete>
+    <rarete xmlns="Habilete">25</rarete>
     <niveauExp xmlns="Habilete">1</niveauExp>
     <pointExp xmlns="Habilete">100</pointExp>
     <listeHabilete xmlns="Habilete">
@@ -665,7 +665,7 @@
     <descripMonstre xmlns="Habilete">Canard tres agressif</descripMonstre>
     <aliasMonstre xmlns="Habilete">aucun</aliasMonstre>
     <typeMonstre xmlns="Habilete">Eau</typeMonstre>
-    <rarete xmlns="Habilete">3</rarete>
+    <rarete xmlns="Habilete">25</rarete>
     <niveauExp xmlns="Habilete">1</niveauExp>
     <pointExp xmlns="Habilete">100</pointExp>
     <listeHabilete xmlns="Habilete">
@@ -770,7 +770,7 @@
     <descripMonstre xmlns="Habilete">Creature a 4 pattes aquatique</descripMonstre>
     <aliasMonstre xmlns="Habilete">aucun</aliasMonstre>
     <typeMonstre xmlns="Habilete">Eau</typeMonstre>
-    <rarete xmlns="Habilete">3</rarete>
+    <rarete xmlns="Habilete">25</rarete>
     <niveauExp xmlns="Habilete">1</niveauExp>
     <pointExp xmlns="Habilete">100</pointExp>
     <listeHabilete xmlns="Habilete">
@@ -875,7 +875,7 @@
     <descripMonstre xmlns="Habilete">Tortue Vegetale</descripMonstre>
     <aliasMonstre xmlns="Habilete">aucun</aliasMonstre>
     <typeMonstre xmlns="Habilete">Vegetation</typeMonstre>
-    <rarete xmlns="Habilete">3</rarete>
+    <rarete xmlns="Habilete">25</rarete>
     <niveauExp xmlns="Habilete">1</niveauExp>
     <pointExp xmlns="Habilete">100</pointExp>
     <listeHabilete xmlns="Habilete">
@@ -980,7 +980,7 @@
     <descripMonstre xmlns="Habilete">Fleur mobile</descripMonstre>
     <aliasMonstre xmlns="Habilete">aucun</aliasMonstre>
     <typeMonstre xmlns="Habilete">Vegetation</typeMonstre>
-    <rarete xmlns="Habilete">3</rarete>
+    <rarete xmlns="Habilete">25</rarete>
     <niveauExp xmlns="Habilete">1</niveauExp>
     <pointExp xmlns="Habilete">100</pointExp>
     <listeHabilete xmlns="Habilete">
@@ -1085,7 +1085,7 @@
     <descripMonstre xmlns="Habilete">Anana malefique</descripMonstre>
     <aliasMonstre xmlns="Habilete">aucun</aliasMonstre>
     <typeMonstre xmlns="Habilete">Vegetation</typeMonstre>
-    <rarete xmlns="Habilete">3</rarete>
+    <rarete xmlns="Habilete">25</rarete>
     <niveauExp xmlns="Habilete">1</niveauExp>
     <pointExp xmlns="Habilete">100</pointExp>
     <listeHabilete xmlns="Habilete">
@@ -1190,7 +1190,7 @@
     <descripMonstre xmlns="Habilete">Tortue géante</descripMonstre>
     <aliasMonstre xmlns="Habilete">aucun</aliasMonstre>
     <typeMonstre xmlns="Habilete">Vegetation</typeMonstre>
-    <rarete xmlns="Habilete">3</rarete>
+    <rarete xmlns="Habilete">25</rarete>
     <niveauExp xmlns="Habilete">1</niveauExp>
     <pointExp xmlns="Habilete">100</pointExp>
     <listeHabilete xmlns="Habilete">
@@ -1295,7 +1295,7 @@
     <descripMonstre xmlns="Habilete">Lézard de feu</descripMonstre>
     <aliasMonstre xmlns="Habilete">aucun</aliasMonstre>
     <typeMonstre xmlns="Habilete">Feu</typeMonstre>
-    <rarete xmlns="Habilete">39</rarete>
+    <rarete xmlns="Habilete">25</rarete>
     <niveauExp xmlns="Habilete">1</niveauExp>
     <pointExp xmlns="Habilete">100</pointExp>
     <listeHabilete xmlns="Habilete">
@@ -1400,7 +1400,7 @@
     <descripMonstre xmlns="Habilete">Loup volcanique</descripMonstre>
     <aliasMonstre xmlns="Habilete">aucun</aliasMonstre>
     <typeMonstre xmlns="Habilete">Feu</typeMonstre>
-    <rarete xmlns="Habilete">39</rarete>
+    <rarete xmlns="Habilete">25</rarete>
     <niveauExp xmlns="Habilete">1</niveauExp>
     <pointExp xmlns="Habilete">100</pointExp>
     <listeHabilete xmlns="Habilete">
@@ -1505,7 +1505,7 @@
     <descripMonstre xmlns="Habilete">Cheval volcanique</descripMonstre>
     <aliasMonstre xmlns="Habilete">aucun</aliasMonstre>
     <typeMonstre xmlns="Habilete">Feu</typeMonstre>
-    <rarete xmlns="Habilete">39</rarete>
+    <rarete xmlns="Habilete">25</rarete>
     <niveauExp xmlns="Habilete">1</niveauExp>
     <pointExp xmlns="Habilete">100</pointExp>
     <listeHabilete xmlns="Habilete">
@@ -1610,7 +1610,7 @@
     <descripMonstre xmlns="Habilete">Oiseau Volcanique</descripMonstre>
     <aliasMonstre xmlns="Habilete">aucun</aliasMonstre>
     <typeMonstre xmlns="Habilete">Feu</typeMonstre>
-    <rarete xmlns="Habilete">39</rarete>
+    <rarete xmlns="Habilete">25</rarete>
     <niveauExp xmlns="Habilete">1</niveauExp>
     <pointExp xmlns="Habilete">100</pointExp>
     <listeHabilete xmlns="Habilete">
