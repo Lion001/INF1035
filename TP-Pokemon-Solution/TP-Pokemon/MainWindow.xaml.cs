@@ -42,6 +42,7 @@ namespace TP_Pokemon
         private void bouton_Quitter_Click_1(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
+
         }
         //-------------------------------------------------------------------------------
 

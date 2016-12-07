@@ -77,7 +77,7 @@ namespace TP_Pokemon
             total2[2] = deBase[2] + prog[2] * this.niveauExp;
             total2[3] = deBase[3] + prog[3] * this.niveauExp;
             total2[4] = deBase[4] + prog[4]*this.niveauExp;
-            total = total2;
+            actuel= total = total2;
         }
 
         // Enregistrer une liste de Monstre en XML

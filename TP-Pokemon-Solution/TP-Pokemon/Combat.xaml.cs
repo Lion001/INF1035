@@ -44,6 +44,8 @@ namespace TP_Pokemon
             afficher_pokemon(parti.joueur.equipe[0]);
             textBox_Console.Text = "\n--------------------------------\n" + parti.joueur.nomJoueur + " envoie " + parti.joueur.equipe[0].nomMonstre + " au combat !";
             selectionne = parti.joueur.equipe[0];
+            barre_vie_player.Value = parti.joueur.equipe[0].actuel[0];
+            barre_mana_player.Value = parti.joueur.equipe[0].actuel[1];
         }
         private void button_choix2_Click(object sender, RoutedEventArgs e)
         {
@@ -54,6 +56,9 @@ namespace TP_Pokemon
                 afficher_pokemon(parti.joueur.equipe[1]);
                 textBox_Console.Text = "\n--------------------------------\n" + parti.joueur.nomJoueur + " envoie " + parti.joueur.equipe[1].nomMonstre + " au combat !";
                 selectionne = parti.joueur.equipe[1];
+                barre_vie_player.Value = parti.joueur.equipe[1].actuel[0];
+                barre_mana_player.Value = parti.joueur.equipe[1].actuel[1];
+
             }
         }
         private void button_choix3_Click(object sender, RoutedEventArgs e)
@@ -65,6 +70,8 @@ namespace TP_Pokemon
                 afficher_pokemon(parti.joueur.equipe[2]);
                 textBox_Console.Text = "\n--------------------------------\n" + parti.joueur.nomJoueur + " envoie " + parti.joueur.equipe[2].nomMonstre + " au combat !";
                 selectionne = parti.joueur.equipe[2];
+                barre_vie_player.Value = parti.joueur.equipe[2].actuel[0];
+                barre_mana_player.Value = parti.joueur.equipe[2].actuel[1];
             }
         }
         private void button_choix4_Click(object sender, RoutedEventArgs e)
@@ -76,6 +83,8 @@ namespace TP_Pokemon
                 afficher_pokemon(parti.joueur.equipe[3]);
                 textBox_Console.Text ="\n--------------------------------\n" + parti.joueur.nomJoueur + " envoie " + parti.joueur.equipe[3].nomMonstre + " au combat !";
                 selectionne = parti.joueur.equipe[3];
+                barre_vie_player.Value = parti.joueur.equipe[3].actuel[0];
+                barre_mana_player.Value = parti.joueur.equipe[3].actuel[1];
             }
         }
         private void button_choix5_Click(object sender, RoutedEventArgs e)
@@ -87,6 +96,8 @@ namespace TP_Pokemon
                 afficher_pokemon(parti.joueur.equipe[4]);
                 textBox_Console.Text ="\n--------------------------------\n" + parti.joueur.nomJoueur + " envoie " + parti.joueur.equipe[4].nomMonstre + " au combat !";
                 selectionne = parti.joueur.equipe[4];
+                barre_vie_player.Value = parti.joueur.equipe[4].actuel[0];
+                barre_mana_player.Value = parti.joueur.equipe[4].actuel[1];
             }
         }
 
@@ -107,8 +118,10 @@ namespace TP_Pokemon
             newMap.Show();
             this.Close();
         }
-        
-        // Choix de difficulter
+
+        //###############################################################################
+        //#		             Panel du choix de difficulte                               #
+        //###############################################################################
         private void button_facile_Click(object sender, RoutedEventArgs e)
         {
             fenetre_difficulty.Visibility = System.Windows.Visibility.Hidden;
@@ -212,9 +225,9 @@ namespace TP_Pokemon
             label_id.Content = "# " + monstre.id;
             label_element.Content = monstre.typeMonstre;
             label_xp.Content = "XP : " + monstre.pointExp;
-            label_mana_Copy.Content = "Regen : +" + monstre.total[2];
-            label_attaque.Content = "Attaque : " + monstre.total[3];
-            label_défense.Content = "Défense : " + monstre.total[4];
+            label_mana_Copy.Content = "Regen : +" + monstre.actuel[2];
+            label_attaque.Content = "Attaque : " + monstre.actuel[3];
+            label_défense.Content = "Défense : " + monstre.actuel[4];
             image_pokemon_panel.Source = Monstre.portrait(monstre.nomMonstre);
             image_pokemon_player.Source = Monstre.portrait(monstre.nomMonstre);
 
@@ -246,17 +259,17 @@ namespace TP_Pokemon
        
         }
 
-        private void attaquer(Monstre attaquant, Monstre cible, Habilete spell)
+        private void attaquer(Monstre attaquant, Monstre cible, Habilete spell_use)
         {
-            if (attaquant.total[1] < spell.cout)
+            Habilete spell = spell_use;
+            if (attaquant.actuel[1] < spell.cout)
             {
-                System.Windows.MessageBox.Show("Ce pokemon n'a pas assez de mana pour effectuer l'attaque: Mana"+attaquant.total[1]+" Cout "+spell.cout );
+                System.Windows.MessageBox.Show("Ce pokemon n'a pas assez de mana pour effectuer l'attaque: Mana"+attaquant.actuel[1]+" Cout "+spell.cout );
             }
             else
             {
                 //Si l'attaquant est de type eau, l'electricite diminu de moitier le spell et le feu encaisse le double
-                if (attaquant.typeMonstre == TypeElement.Eau)
-                {
+                if (attaquant.typeMonstre == TypeElement.Eau)          {
                     if (cible.typeMonstre == TypeElement.Electricite)
                     {
                         spell.magnitude = spell.magnitude / 2;
@@ -311,24 +324,30 @@ namespace TP_Pokemon
                 }
 
                 //Calcul de l'attaque
-                spell.magnitude = (spell.magnitude/10) * (attaquant.total[3]/2);
-                double vie = cible.total[0];
-                int pc_spell = (spell.magnitude * 100) / cible.total[0];
-                cible.total[0] -= (spell.magnitude-(cible.total[4]*100));
-
-                if (cible == adversaire)
-                {
-                    barre_vie_adverse.Value = barre_vie_adverse.Value - pc_spell;
-                    barre_mana_player.Value = barre_mana_player.Value - spell.cout;
-                }
-                else
-                {
-                    barre_vie_player.Value = barre_vie_player.Value - pc_spell;
-                    barre_mana_adverse.Value = barre_mana_adverse.Value - spell.cout;
-                }
-
-                textBox_Console.Text = textBox_Console.Text + "\n" + attaquant.nomMonstre + " utilise " + spell.nom + " !\n" + cible.nomMonstre + " encaisse " + spell.magnitude + " de damage !";
+                int damageBrute = spell.magnitude + attaquant.actuel[3];
+                int damageNet = damageBrute - cible.actuel[4];
+                cible.actuel[0] -= damageNet;
+                attaquant.actuel[1] -= spell.cout;
+                MAJ_barre();
+                textBox_Console.Text ="\n-------------------------------------------------\n" + attaquant.nomMonstre + " utilise " + spell.nom + " !\n" + cible.nomMonstre + " encaisse " + spell.magnitude + " de damage !";
             }
+
+        }
+
+        //Fonction qui  met les barres de vie et de mana à jour
+        private void MAJ_barre()
+        {
+            double valeur = (selectionne.actuel[0]*100) / selectionne.total[0];
+            barre_vie_player.Value = valeur;
+
+            valeur = (selectionne.actuel[1]*100) / selectionne.total[1];
+            barre_mana_player.Value = valeur;
+
+            valeur = (adversaire.actuel[0]*100) / adversaire.total[0];
+            barre_vie_adverse.Value = valeur;
+
+            valeur = (adversaire.actuel[1]*100) / adversaire.total[1];
+            barre_mana_adverse.Value = valeur;
 
         }
 

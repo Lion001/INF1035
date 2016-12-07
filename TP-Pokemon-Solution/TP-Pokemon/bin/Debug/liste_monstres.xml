@@ -23,11 +23,11 @@
       <int>6</int>
     </total>
     <actuel xmlns="Habilete">
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
+      <int>105</int>
+      <int>110</int>
+      <int>12</int>
+      <int>30</int>
+      <int>6</int>
     </actuel>
     <etat_actuel xmlns="Habilete">Vivant</etat_actuel>
     <id xmlns="Habilete">1</id>
@@ -35,7 +35,7 @@
     <descripMonstre xmlns="Habilete">Souris électrique</descripMonstre>
     <aliasMonstre xmlns="Habilete">aucun</aliasMonstre>
     <typeMonstre xmlns="Habilete">Electricite</typeMonstre>
-    <rarete xmlns="Habilete">25</rarete>
+    <rarete xmlns="Habilete">31</rarete>
     <niveauExp xmlns="Habilete">1</niveauExp>
     <pointExp xmlns="Habilete">100</pointExp>
     <listeHabilete xmlns="Habilete">
@@ -128,11 +128,11 @@
       <int>15</int>
     </total>
     <actuel xmlns="Habilete">
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
+      <int>105</int>
+      <int>120</int>
+      <int>12</int>
+      <int>30</int>
+      <int>15</int>
     </actuel>
     <etat_actuel xmlns="Habilete">Vivant</etat_actuel>
     <id xmlns="Habilete">2</id>
@@ -140,7 +140,7 @@
     <descripMonstre xmlns="Habilete">Creature a trois oeil</descripMonstre>
     <aliasMonstre xmlns="Habilete">aucun</aliasMonstre>
     <typeMonstre xmlns="Habilete">Electricite</typeMonstre>
-    <rarete xmlns="Habilete">25</rarete>
+    <rarete xmlns="Habilete">6</rarete>
     <niveauExp xmlns="Habilete">1</niveauExp>
     <pointExp xmlns="Habilete">100</pointExp>
     <listeHabilete xmlns="Habilete">
@@ -233,11 +233,11 @@
       <int>10</int>
     </total>
     <actuel xmlns="Habilete">
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
+      <int>110</int>
+      <int>110</int>
+      <int>20</int>
+      <int>35</int>
+      <int>10</int>
     </actuel>
     <etat_actuel xmlns="Habilete">Vivant</etat_actuel>
     <id xmlns="Habilete">3</id>
@@ -245,7 +245,7 @@
     <descripMonstre xmlns="Habilete">Oiseau électrique</descripMonstre>
     <aliasMonstre xmlns="Habilete">aucun</aliasMonstre>
     <typeMonstre xmlns="Habilete">Electricite</typeMonstre>
-    <rarete xmlns="Habilete">25</rarete>
+    <rarete xmlns="Habilete">6</rarete>
     <niveauExp xmlns="Habilete">1</niveauExp>
     <pointExp xmlns="Habilete">100</pointExp>
     <listeHabilete xmlns="Habilete">
@@ -338,11 +338,11 @@
       <int>15</int>
     </total>
     <actuel xmlns="Habilete">
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
+      <int>110</int>
+      <int>120</int>
+      <int>15</int>
+      <int>65</int>
+      <int>15</int>
     </actuel>
     <etat_actuel xmlns="Habilete">Vivant</etat_actuel>
     <id xmlns="Habilete">4</id>
@@ -350,7 +350,7 @@
     <descripMonstre xmlns="Habilete">Creature electrique mortelle</descripMonstre>
     <aliasMonstre xmlns="Habilete">aucun</aliasMonstre>
     <typeMonstre xmlns="Habilete">Electricite</typeMonstre>
-    <rarete xmlns="Habilete">25</rarete>
+    <rarete xmlns="Habilete">6</rarete>
     <niveauExp xmlns="Habilete">1</niveauExp>
     <pointExp xmlns="Habilete">100</pointExp>
     <listeHabilete xmlns="Habilete">
@@ -443,11 +443,11 @@
       <int>6</int>
     </total>
     <actuel xmlns="Habilete">
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
+      <int>105</int>
+      <int>110</int>
+      <int>12</int>
+      <int>30</int>
+      <int>6</int>
     </actuel>
     <etat_actuel xmlns="Habilete">Vivant</etat_actuel>
     <id xmlns="Habilete">5</id>
@@ -455,7 +455,7 @@
     <descripMonstre xmlns="Habilete">Tortue aquatique</descripMonstre>
     <aliasMonstre xmlns="Habilete">aucun</aliasMonstre>
     <typeMonstre xmlns="Habilete">Eau</typeMonstre>
-    <rarete xmlns="Habilete">25</rarete>
+    <rarete xmlns="Habilete">6</rarete>
     <niveauExp xmlns="Habilete">1</niveauExp>
     <pointExp xmlns="Habilete">100</pointExp>
     <listeHabilete xmlns="Habilete">
@@ -548,11 +548,11 @@
       <int>6</int>
     </total>
     <actuel xmlns="Habilete">
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
+      <int>110</int>
+      <int>120</int>
+      <int>15</int>
+      <int>30</int>
+      <int>6</int>
     </actuel>
     <etat_actuel xmlns="Habilete">Vivant</etat_actuel>
     <id xmlns="Habilete">6</id>
@@ -560,7 +560,7 @@
     <descripMonstre xmlns="Habilete">Serpent aquatique</descripMonstre>
     <aliasMonstre xmlns="Habilete">aucun</aliasMonstre>
     <typeMonstre xmlns="Habilete">Eau</typeMonstre>
-    <rarete xmlns="Habilete">25</rarete>
+    <rarete xmlns="Habilete">6</rarete>
     <niveauExp xmlns="Habilete">1</niveauExp>
     <pointExp xmlns="Habilete">100</pointExp>
     <listeHabilete xmlns="Habilete">
@@ -653,11 +653,11 @@
       <int>10</int>
     </total>
     <actuel xmlns="Habilete">
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
+      <int>110</int>
+      <int>115</int>
+      <int>17</int>
+      <int>50</int>
+      <int>10</int>
     </actuel>
     <etat_actuel xmlns="Habilete">Vivant</etat_actuel>
     <id xmlns="Habilete">7</id>
@@ -665,7 +665,7 @@
     <descripMonstre xmlns="Habilete">Canard tres agressif</descripMonstre>
     <aliasMonstre xmlns="Habilete">aucun</aliasMonstre>
     <typeMonstre xmlns="Habilete">Eau</typeMonstre>
-    <rarete xmlns="Habilete">25</rarete>
+    <rarete xmlns="Habilete">6</rarete>
     <niveauExp xmlns="Habilete">1</niveauExp>
     <pointExp xmlns="Habilete">100</pointExp>
     <listeHabilete xmlns="Habilete">
@@ -758,11 +758,11 @@
       <int>25</int>
     </total>
     <actuel xmlns="Habilete">
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
+      <int>110</int>
+      <int>115</int>
+      <int>20</int>
+      <int>70</int>
+      <int>25</int>
     </actuel>
     <etat_actuel xmlns="Habilete">Vivant</etat_actuel>
     <id xmlns="Habilete">8</id>
@@ -770,7 +770,7 @@
     <descripMonstre xmlns="Habilete">Creature a 4 pattes aquatique</descripMonstre>
     <aliasMonstre xmlns="Habilete">aucun</aliasMonstre>
     <typeMonstre xmlns="Habilete">Eau</typeMonstre>
-    <rarete xmlns="Habilete">25</rarete>
+    <rarete xmlns="Habilete">6</rarete>
     <niveauExp xmlns="Habilete">1</niveauExp>
     <pointExp xmlns="Habilete">100</pointExp>
     <listeHabilete xmlns="Habilete">
@@ -863,11 +863,11 @@
       <int>6</int>
     </total>
     <actuel xmlns="Habilete">
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
+      <int>105</int>
+      <int>110</int>
+      <int>12</int>
+      <int>30</int>
+      <int>6</int>
     </actuel>
     <etat_actuel xmlns="Habilete">Vivant</etat_actuel>
     <id xmlns="Habilete">9</id>
@@ -875,7 +875,7 @@
     <descripMonstre xmlns="Habilete">Tortue Vegetale</descripMonstre>
     <aliasMonstre xmlns="Habilete">aucun</aliasMonstre>
     <typeMonstre xmlns="Habilete">Vegetation</typeMonstre>
-    <rarete xmlns="Habilete">25</rarete>
+    <rarete xmlns="Habilete">6</rarete>
     <niveauExp xmlns="Habilete">1</niveauExp>
     <pointExp xmlns="Habilete">100</pointExp>
     <listeHabilete xmlns="Habilete">
@@ -968,11 +968,11 @@
       <int>6</int>
     </total>
     <actuel xmlns="Habilete">
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
+      <int>105</int>
+      <int>130</int>
+      <int>25</int>
+      <int>30</int>
+      <int>6</int>
     </actuel>
     <etat_actuel xmlns="Habilete">Vivant</etat_actuel>
     <id xmlns="Habilete">10</id>
@@ -980,7 +980,7 @@
     <descripMonstre xmlns="Habilete">Fleur mobile</descripMonstre>
     <aliasMonstre xmlns="Habilete">aucun</aliasMonstre>
     <typeMonstre xmlns="Habilete">Vegetation</typeMonstre>
-    <rarete xmlns="Habilete">25</rarete>
+    <rarete xmlns="Habilete">6</rarete>
     <niveauExp xmlns="Habilete">1</niveauExp>
     <pointExp xmlns="Habilete">100</pointExp>
     <listeHabilete xmlns="Habilete">
@@ -1073,11 +1073,11 @@
       <int>15</int>
     </total>
     <actuel xmlns="Habilete">
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
+      <int>505</int>
+      <int>110</int>
+      <int>12</int>
+      <int>40</int>
+      <int>15</int>
     </actuel>
     <etat_actuel xmlns="Habilete">Vivant</etat_actuel>
     <id xmlns="Habilete">11</id>
@@ -1085,7 +1085,7 @@
     <descripMonstre xmlns="Habilete">Anana malefique</descripMonstre>
     <aliasMonstre xmlns="Habilete">aucun</aliasMonstre>
     <typeMonstre xmlns="Habilete">Vegetation</typeMonstre>
-    <rarete xmlns="Habilete">25</rarete>
+    <rarete xmlns="Habilete">6</rarete>
     <niveauExp xmlns="Habilete">1</niveauExp>
     <pointExp xmlns="Habilete">100</pointExp>
     <listeHabilete xmlns="Habilete">
@@ -1178,11 +1178,11 @@
       <int>40</int>
     </total>
     <actuel xmlns="Habilete">
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
+      <int>520</int>
+      <int>110</int>
+      <int>12</int>
+      <int>30</int>
+      <int>40</int>
     </actuel>
     <etat_actuel xmlns="Habilete">Vivant</etat_actuel>
     <id xmlns="Habilete">12</id>
@@ -1190,7 +1190,7 @@
     <descripMonstre xmlns="Habilete">Tortue géante</descripMonstre>
     <aliasMonstre xmlns="Habilete">aucun</aliasMonstre>
     <typeMonstre xmlns="Habilete">Vegetation</typeMonstre>
-    <rarete xmlns="Habilete">25</rarete>
+    <rarete xmlns="Habilete">6</rarete>
     <niveauExp xmlns="Habilete">1</niveauExp>
     <pointExp xmlns="Habilete">100</pointExp>
     <listeHabilete xmlns="Habilete">
@@ -1283,11 +1283,11 @@
       <int>6</int>
     </total>
     <actuel xmlns="Habilete">
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
+      <int>105</int>
+      <int>110</int>
+      <int>12</int>
+      <int>30</int>
+      <int>6</int>
     </actuel>
     <etat_actuel xmlns="Habilete">Vivant</etat_actuel>
     <id xmlns="Habilete">13</id>
@@ -1295,7 +1295,7 @@
     <descripMonstre xmlns="Habilete">Lézard de feu</descripMonstre>
     <aliasMonstre xmlns="Habilete">aucun</aliasMonstre>
     <typeMonstre xmlns="Habilete">Feu</typeMonstre>
-    <rarete xmlns="Habilete">25</rarete>
+    <rarete xmlns="Habilete">6</rarete>
     <niveauExp xmlns="Habilete">1</niveauExp>
     <pointExp xmlns="Habilete">100</pointExp>
     <listeHabilete xmlns="Habilete">
@@ -1388,11 +1388,11 @@
       <int>6</int>
     </total>
     <actuel xmlns="Habilete">
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
+      <int>105</int>
+      <int>110</int>
+      <int>20</int>
+      <int>60</int>
+      <int>6</int>
     </actuel>
     <etat_actuel xmlns="Habilete">Vivant</etat_actuel>
     <id xmlns="Habilete">14</id>
@@ -1400,7 +1400,7 @@
     <descripMonstre xmlns="Habilete">Loup volcanique</descripMonstre>
     <aliasMonstre xmlns="Habilete">aucun</aliasMonstre>
     <typeMonstre xmlns="Habilete">Feu</typeMonstre>
-    <rarete xmlns="Habilete">25</rarete>
+    <rarete xmlns="Habilete">6</rarete>
     <niveauExp xmlns="Habilete">1</niveauExp>
     <pointExp xmlns="Habilete">100</pointExp>
     <listeHabilete xmlns="Habilete">
@@ -1493,11 +1493,11 @@
       <int>10</int>
     </total>
     <actuel xmlns="Habilete">
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
+      <int>115</int>
+      <int>120</int>
+      <int>12</int>
+      <int>50</int>
+      <int>10</int>
     </actuel>
     <etat_actuel xmlns="Habilete">Vivant</etat_actuel>
     <id xmlns="Habilete">15</id>
@@ -1505,7 +1505,7 @@
     <descripMonstre xmlns="Habilete">Cheval volcanique</descripMonstre>
     <aliasMonstre xmlns="Habilete">aucun</aliasMonstre>
     <typeMonstre xmlns="Habilete">Feu</typeMonstre>
-    <rarete xmlns="Habilete">25</rarete>
+    <rarete xmlns="Habilete">6</rarete>
     <niveauExp xmlns="Habilete">1</niveauExp>
     <pointExp xmlns="Habilete">100</pointExp>
     <listeHabilete xmlns="Habilete">
@@ -1598,11 +1598,11 @@
       <int>15</int>
     </total>
     <actuel xmlns="Habilete">
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
+      <int>130</int>
+      <int>110</int>
+      <int>15</int>
+      <int>80</int>
+      <int>15</int>
     </actuel>
     <etat_actuel xmlns="Habilete">Vivant</etat_actuel>
     <id xmlns="Habilete">16</id>
@@ -1610,7 +1610,7 @@
     <descripMonstre xmlns="Habilete">Oiseau Volcanique</descripMonstre>
     <aliasMonstre xmlns="Habilete">aucun</aliasMonstre>
     <typeMonstre xmlns="Habilete">Feu</typeMonstre>
-    <rarete xmlns="Habilete">25</rarete>
+    <rarete xmlns="Habilete">6</rarete>
     <niveauExp xmlns="Habilete">1</niveauExp>
     <pointExp xmlns="Habilete">100</pointExp>
     <listeHabilete xmlns="Habilete">
