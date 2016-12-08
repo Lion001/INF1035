@@ -32,7 +32,7 @@
             <Grid.Background>
                 <ImageBrush ImageSource="Images/background-menu2.jpg"/>
             </Grid.Background>
-            <Border BorderBrush="Black" BorderThickness="8" HorizontalAlignment="Left" Height="261" VerticalAlignment="Top" Width="331" Margin="10,0,-10,0"/>
+            <Border BorderBrush="Black" BorderThickness="8" HorizontalAlignment="Left" Height="261" VerticalAlignment="Top" Width="331"/>
             <Button x:Name="button_choix1" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="73" Height="67" Background="{x:Null}" Click="button_choix1_Click">
                 <Image x:Name="image_choix1" Height="57" Width="63" Source="Images/inconnu.png"/>
             </Button>
@@ -140,22 +140,22 @@
                 </Button.Background>
             </Button>
         </Grid>
-        <Grid x:Name="panel_inventaire" HorizontalAlignment="Left" Height="261" Margin="446,422,0,0" VerticalAlignment="Top" Width="676" Visibility="Hidden">
+        <Grid x:Name="panel_inventaire" HorizontalAlignment="Left" Height="261" Margin="446,422,0,0" VerticalAlignment="Top" Width="676" Visibility="Visible">
             <Grid.Background>
                 <ImageBrush ImageSource="Images/background-menu2.jpg"/>
             </Grid.Background>
             <Border BorderBrush="Black" BorderThickness="8" HorizontalAlignment="Left" Height="261" VerticalAlignment="Top" Width="676"/>
-            <Button x:Name="button_pokeball" HorizontalAlignment="Left" Margin="28,55,0,0" VerticalAlignment="Top" Width="133" Height="120" Background="{x:Null}"/>
-            <Button x:Name="button_pokeball_Copy" HorizontalAlignment="Left" Margin="192,55,0,0" VerticalAlignment="Top" Width="134" Height="120" Background="{x:Null}">
+            <Button x:Name="button_pokeball" HorizontalAlignment="Left" Margin="28,55,0,0" VerticalAlignment="Top" Width="133" Height="120" Background="{x:Null}" Click="button_pokeball_Click"/>
+            <Button x:Name="button_potion_vie" HorizontalAlignment="Left" Margin="192,55,0,0" VerticalAlignment="Top" Width="134" Height="120" Background="{x:Null}" Click="button_potion_vie_Click">
                 <Image x:Name="image1_Copy" HorizontalAlignment="Left" Height="120" VerticalAlignment="Top" Width="133" Source="Images/potion-mauve.png"/>
             </Button>
-            <Button x:Name="button_pokeball_Copy1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="134" Height="120" Background="{x:Null}" Margin="519,55,0,0">
+            <Button x:Name="button_potion_max" HorizontalAlignment="Left" VerticalAlignment="Top" Width="134" Height="120" Background="{x:Null}" Margin="519,55,0,0" Click="button_potion_max_Click">
                 <Image x:Name="image1_Copy2" HorizontalAlignment="Left" Height="120" VerticalAlignment="Top" Width="133" Source="Images/potion-or.png"/>
             </Button>
-            <Button x:Name="button_pokeball_Copy2" HorizontalAlignment="Left" Margin="356,55,0,0" VerticalAlignment="Top" Width="134" Height="120" Background="{x:Null}">
+            <Button x:Name="button_potion_mana" HorizontalAlignment="Left" Margin="356,55,0,0" VerticalAlignment="Top" Width="134" Height="120" Background="{x:Null}" Click="button_potion_mana_Click">
                 <Image x:Name="image1_Copy1" HorizontalAlignment="Left" Height="120" VerticalAlignment="Top" Width="133" Source="Images/potion-max.png"/>
             </Button>
-            <Image x:Name="image1" HorizontalAlignment="Left" Height="120" Margin="28,55,0,0" VerticalAlignment="Top" Width="133" Source="Images/pokeball-inventaire.png"/>
+            <Image x:Name="image_pokeball" HorizontalAlignment="Left" Height="120" Margin="28,55,0,0" VerticalAlignment="Top" Width="133" Source="Images/pokeball-inventaire.png"/>
             <Label x:Name="label_pokeball" Content="x 10" HorizontalAlignment="Left" Margin="60,198,0,0" VerticalAlignment="Top" Height="40" Width="66" Foreground="#FFF5F0F0" FontSize="24"/>
             <Label x:Name="label_potion_mauve" Content="x 10" HorizontalAlignment="Left" Margin="228,198,0,0" VerticalAlignment="Top" Height="40" Width="66" Foreground="#FFF5F0F0" FontSize="24"/>
             <Label x:Name="label_potion_mana" Content="x 10" HorizontalAlignment="Left" Margin="387,198,0,0" VerticalAlignment="Top" Height="40" Width="66" Foreground="#FFF5F0F0" FontSize="24"/>

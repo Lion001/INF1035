@@ -263,10 +263,15 @@ namespace TP_Pokemon
             {
                 x++;
             }
-            parti.joueur.monstreCapture[x] = liste[3];
-            parti.joueur.monstreCapture[x+1] = liste[9];
-            parti.joueur.monstreCapture[x+2] = liste[7];
-            parti.joueur.monstreCapture[x+3] = liste[12];
+ 
+            parti.joueur.Ajouter_Pokemon_listeTotal(liste[3]);
+ 
+            parti.joueur.Ajouter_Pokemon_listeTotal(liste[9]);
+ 
+            parti.joueur.Ajouter_Pokemon_listeTotal(liste[7]);
+
+            parti.joueur.Ajouter_Pokemon_listeTotal(liste[12]);
+
             parti.joueur.argent += 1000;
         }
 
@@ -285,7 +290,7 @@ namespace TP_Pokemon
         private void button_afficher_pokemon_Click(object sender, RoutedEventArgs e)
         {
             string nom = comboBox_liste_pokemon.Text;
-            Monstre monstre = Monstre.trouver_monstre(nom);
+            Monstre monstre = parti.joueur.trouver_monstre_parNom(nom);
             afficher_stat(monstre);
 
             comboBox_habilete_1.Items.Clear();

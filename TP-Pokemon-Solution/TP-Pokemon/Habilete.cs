@@ -110,9 +110,9 @@ namespace TP_Pokemon
             {
                 if (x != null)
                 {
-                    if(x.effet == Effet.guerison || x.effet == Effet.regeneration || x.effet == Effet.force)
+                    if( x.effet == Effet.regeneration || x.effet == Effet.force)
                     {
-                        reponse = x;
+                        return x;
                     }
                 }
             }

@@ -60,7 +60,7 @@ namespace TP_Pokemon
         }
 
         //Fonction qui genere automatiquement la rarete du pokemon
-        public int hasard()
+        public static int hasard()
         {
             Random rand = new Random();
             int rarete_1 = rand.Next(0, 101);
@@ -78,6 +78,16 @@ namespace TP_Pokemon
             total2[3] = deBase[3] + prog[3] * this.niveauExp;
             total2[4] = deBase[4] + prog[4]*this.niveauExp;
             actuel= total = total2;
+        }
+
+        // Fonction qui ramene les stats actuel au stats total
+        public void renew_caract()
+        {
+            actuel[0] = total[0];
+            actuel[1] = total[1];
+            actuel[2] = total[2];
+            actuel[3] = total[3];
+            actuel[4] = total[4];
         }
 
         // Enregistrer une liste de Monstre en XML
@@ -114,15 +124,19 @@ namespace TP_Pokemon
         }
 
         // Ajout de l'experience et modification relié
-        public void add_xp(int xp_add)
+        public void add_xp(int xp_add, Aventure parti)
         {
-            this.pointExp += xp_add;
+            int reference = parti.joueur.trouver_monstre_listeCapture(this);
+            this.pointExp = this.pointExp + xp_add;
+            parti.joueur.monstreCapture[reference].pointExp = this.pointExp;
             int x = this.pointExp;
             if (x==150||x==250||x==400||x==600||x==850||x==1150)
             {
                 this.niveauExp++;
                 this.calcul_caract();
+                parti.joueur.monstreCapture[reference].calcul_caract();
             }
+           
         }
 
         //Retourne le portrait du monstre
@@ -150,18 +164,16 @@ namespace TP_Pokemon
             return reponse;
         }
 
-        //Retourne l'index du monstre de la liste de monstres capturé d'un joueur donné
-        public static int trouver_monstre_equipe(Monstre monstre,Joueur joueur)
+        //Compare 2 Pokemon, cette fonction est utilisé dans les fonctions de combat ( Attaque() )
+        public static bool estIdentique(Monstre monstre1, Monstre monstre2)
         {
-            int loop = 0;
-            Monstre[] liste = joueur.equipe;
-
-            while (liste[loop]!=monstre)
+            bool comparaison = false;
+            if(monstre1.pointExp == monstre2.pointExp && monstre1.nomMonstre == monstre2.nomMonstre)  // Je compare simplement les points d'exp car durant la génération d'un pokemon aleatoire, j'ajoute 1 point d'exp.
             {
-                loop++;
+                comparaison = true;
             }
-
-            return loop;
+            return comparaison;
         }
+
     }
 }
