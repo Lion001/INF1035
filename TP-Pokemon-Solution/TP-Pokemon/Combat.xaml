@@ -32,7 +32,7 @@
             <Grid.Background>
                 <ImageBrush ImageSource="Images/background-menu2.jpg"/>
             </Grid.Background>
-            <Border BorderBrush="Black" BorderThickness="8" HorizontalAlignment="Left" Height="261" VerticalAlignment="Top" Width="331"/>
+            <Border BorderBrush="Black" BorderThickness="8" HorizontalAlignment="Left" Height="261" VerticalAlignment="Top" Width="331" Margin="10,0,-10,0"/>
             <Button x:Name="button_choix1" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="73" Height="67" Background="{x:Null}" Click="button_choix1_Click">
                 <Image x:Name="image_choix1" Height="57" Width="63" Source="Images/inconnu.png"/>
             </Button>

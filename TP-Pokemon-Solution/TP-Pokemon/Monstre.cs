@@ -134,7 +134,7 @@ namespace TP_Pokemon
             return image_tmp;
         }
 
-        //Retourne un monstre
+        //Retourne un monstre de la liste complete
         public static Monstre trouver_monstre(string nom)
         {
             Monstre[] liste = Charger_Liste_Monstre();
@@ -148,6 +148,20 @@ namespace TP_Pokemon
                 }
             }
             return reponse;
+        }
+
+        //Retourne l'index du monstre de la liste de monstres capturé d'un joueur donné
+        public static int trouver_monstre_equipe(Monstre monstre,Joueur joueur)
+        {
+            int loop = 0;
+            Monstre[] liste = joueur.equipe;
+
+            while (liste[loop]!=monstre)
+            {
+                loop++;
+            }
+
+            return loop;
         }
     }
 }

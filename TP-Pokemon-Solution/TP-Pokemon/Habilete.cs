@@ -99,5 +99,24 @@ namespace TP_Pokemon
             }
             return nouveau;
         }
+
+        // Retourne une habileté de protection (utilisé dans l'intelligence artificielle)
+        public static Habilete habilete_protection_element(TypeElement element)
+        {
+            Habilete[] liste = Charger_Liste_Habilete_Element(element);
+            Habilete reponse = null;
+
+            foreach (Habilete x in liste)
+            {
+                if (x != null)
+                {
+                    if(x.effet == Effet.guerison || x.effet == Effet.regeneration || x.effet == Effet.force)
+                    {
+                        reponse = x;
+                    }
+                }
+            }
+            return reponse;
+        }
     }
 }

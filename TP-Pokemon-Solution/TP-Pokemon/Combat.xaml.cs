@@ -114,6 +114,17 @@ namespace TP_Pokemon
 
         private void button_quitter_Click(object sender, RoutedEventArgs e)
         {
+            foreach(Monstre x in parti.joueur.equipe)
+            {
+                if(x !=null)
+                {
+                    x.actuel[0] = x.total[0];
+                    x.actuel[1] = x.total[1];
+                    x.actuel[2] = x.total[2];
+                    x.actuel[3] = x.total[3];
+                    x.actuel[4] = x.total[4];
+                }
+            }
             Map newMap = new Map(parti);
             newMap.Show();
             this.Close();
@@ -264,12 +275,12 @@ namespace TP_Pokemon
             Habilete spell = spell_use;
             if (attaquant.actuel[1] < spell.cout)
             {
-                System.Windows.MessageBox.Show("Ce pokemon n'a pas assez de mana pour effectuer l'attaque: Mana"+attaquant.actuel[1]+" Cout "+spell.cout );
+                System.Windows.MessageBox.Show("Ce pokemon n'a pas assez de mana pour effectuer l'attaque: Mana" + attaquant.actuel[1] + " Cout " + spell.cout);
             }
             else
             {
                 //Si l'attaquant est de type eau, l'electricite diminu de moitier le spell et le feu encaisse le double
-                if (attaquant.typeMonstre == TypeElement.Eau)          {
+                if (attaquant.typeMonstre == TypeElement.Eau) {
                     if (cible.typeMonstre == TypeElement.Electricite)
                     {
                         spell.magnitude = spell.magnitude / 2;
@@ -328,27 +339,111 @@ namespace TP_Pokemon
                 int damageNet = damageBrute - cible.actuel[4];
                 cible.actuel[0] -= damageNet;
                 attaquant.actuel[1] -= spell.cout;
+
+                if (cible == selectionne)
+                {
+                    adversaire.actuel[0] = cible.actuel[0];
+                    selectionne.actuel[1] = attaquant.actuel[1];
+                }
+                else
+                {
+                    selectionne.actuel[0] = cible.actuel[0];
+                    adversaire.actuel[1] = attaquant.actuel[1];
+                }
+
                 MAJ_barre();
-                textBox_Console.Text ="\n-------------------------------------------------\n" + attaquant.nomMonstre + " utilise " + spell.nom + " !\n" + cible.nomMonstre + " encaisse " + spell.magnitude + " de damage !";
+                textBox_Console.Text = textBox_Console.Text + "\n-------------------------------------------------\n" + attaquant.nomMonstre + " utilise " + spell.nom + " !\n" + cible.nomMonstre + " encaisse " + spell.magnitude + " de damage !";
+
             }
 
+        }
+
+        private void reponse_adverse()
+        {
+            if(adversaire.actuel[0]<=0)
+            {
+                adversaire.etat_actuel = Monstre.etat_actif.Mort;
+                textBox_Console.Text = adversaire.nomMonstre + "est mort !\nVous avez gagné !";
+                panel_pokemon.Visibility = System.Windows.Visibility.Hidden;
+                disable_button();
+                //Attribution des récompenses
+                int numero_monstre = Monstre.trouver_monstre_equipe(selectionne, parti.joueur);
+                switch (adversaire.niveauExp)
+                {
+                    case 1:
+                        // 50xp                        
+                        parti.joueur.equipe[numero_monstre].add_xp(50);
+                        break;
+                    case 2:
+                        // 50xp + 200 $
+                        parti.joueur.equipe[numero_monstre].add_xp(50);
+                        parti.joueur.argent += 200;
+                        break;
+                    case 3:
+                        // 100 xp
+                        parti.joueur.equipe[numero_monstre].add_xp(100);
+                        break;
+                    case 4:
+                        // 100 xp + 500 $
+                        parti.joueur.equipe[numero_monstre].add_xp(100);
+                        parti.joueur.argent += 500;
+                        break;
+                    case 5:
+                        // 100 xp + 1000$
+                        parti.joueur.equipe[numero_monstre].add_xp(100);
+                        parti.joueur.argent += 1000;
+                        break;
+                }
+
+                // Fin du combat
+            }
+
+            else if(adversaire.actuel[0]<=10)
+            {
+                textBox_Console.Text = adversaire.nomMonstre + "s'est enfui ! \nVeuillez revenir plus tard !";
+                image_pokemon_adverse.Source = Monstre.portrait("iconnu.xml");
+                panel_pokemon.Visibility = System.Windows.Visibility.Hidden;
+                disable_button();
+            }
+            else if(adversaire.actuel[0]<=40)
+            {
+                TypeElement element = adversaire.typeMonstre;
+                Habilete supporting = Habilete.habilete_protection_element(element);
+                // Utilise l'habilete
+            }
+            else
+            {
+                attaquer(adversaire, selectionne, adversaire.listeHabilete[0]);
+            }
         }
 
         //Fonction qui  met les barres de vie et de mana à jour
         private void MAJ_barre()
         {
-            double valeur = (selectionne.actuel[0]*100) / selectionne.total[0];
+            int valeur = (selectionne.actuel[0]*100) / selectionne.total[0];
             barre_vie_player.Value = valeur;
 
             valeur = (selectionne.actuel[1]*100) / selectionne.total[1];
             barre_mana_player.Value = valeur;
 
             valeur = (adversaire.actuel[0]*100) / adversaire.total[0];
+            textBox_Console.Text = textBox_Console.Text + " \n Actuel :"+ adversaire.actuel[0]+" Total: "+adversaire.total[0]+ " Valeur :  " + valeur;
             barre_vie_adverse.Value = valeur;
 
             valeur = (adversaire.actuel[1]*100) / adversaire.total[1];
             barre_mana_adverse.Value = valeur;
 
+        }
+
+        //Fonction qui disable les boutons en fin de parti
+        public void disable_button()
+        {
+            button_choix1.IsEnabled = false;
+            button_choix2.IsEnabled = false;
+            button_choix3.IsEnabled = false;
+            button_choix4.IsEnabled = false;
+            button_choix5.IsEnabled = false;
+            button_inventaire.IsEnabled = false;
         }
 
         private void button_habilete_1_Click(object sender, RoutedEventArgs e)
@@ -357,6 +452,7 @@ namespace TP_Pokemon
             if (spell.cible == Cible.ennemi)
             {
                 attaquer(selectionne, adversaire, spell);
+                reponse_adverse();
             }
         }
 
