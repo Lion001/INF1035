@@ -124,19 +124,35 @@ namespace TP_Pokemon
         }
 
         // Ajout de l'experience et modification relié
-        public void add_xp(int xp_add, Aventure parti)
+        public string add_xp(int xp_add, Aventure parti)
         {
-            int reference = parti.joueur.trouver_monstre_listeCapture(this);
-            this.pointExp = this.pointExp + xp_add;
-            parti.joueur.monstreCapture[reference].pointExp = this.pointExp;
-            int x = this.pointExp;
-            if (x==150||x==250||x==400||x==600||x==850||x==1150)
+            if (niveauExp < 5)
             {
-                this.niveauExp++;
-                this.calcul_caract();
-                parti.joueur.monstreCapture[reference].calcul_caract();
+                int reference = parti.joueur.trouver_monstre_listeCapture(this);
+                this.pointExp = this.pointExp + xp_add;
+                parti.joueur.monstreCapture[reference].pointExp = this.pointExp;
+                int x = this.pointExp;
+                if (x == 150 || x == 250 || x == 400 || x == 600 || x == 850 || x == 1150)
+                {
+                    this.niveauExp++;
+                    this.calcul_caract();
+                    parti.joueur.monstreCapture[reference].calcul_caract();
+
+                    // Ajout d'une habilete
+                    Habilete[] liste_possible = Habilete.Charger_Liste_Habilete_Element(typeMonstre);
+
+
+                    // Assigner l'habileter
+                    listeHabilete[niveauExp - 1] = liste_possible[niveauExp - 1];
+
+                    return "\n" + nomMonstre + " a passé au level " + niveauExp + " et \na appris l'habilete " + liste_possible[niveauExp - 1].nom;
+                }
+                return "\nAjout de " + xp_add + " point d'exp. !";
             }
-           
+            else
+            {
+                return "\n" + nomMonstre + " est déja au level maximum !";
+            }
         }
 
         //Retourne le portrait du monstre
@@ -175,5 +191,17 @@ namespace TP_Pokemon
             return comparaison;
         }
 
+        //Retourne une habilete trouvé par le nom dans la liste d'habilete 
+        public Habilete trouver_habilete(string nom)
+        {
+            foreach(Habilete x in listeHabilete)
+            {
+                if (x !=null && x.nom == nom)
+                {
+                    return x;
+                }
+            }
+            return null;
+        }
     }
 }

@@ -295,9 +295,10 @@ namespace TP_Pokemon
 
             comboBox_habilete_1.Items.Clear();
             comboBox_habilete_2.Items.Clear();
-            foreach (Habilete x in monstre.listeHabileteActive)
+            int loop = 0;
+            foreach (Habilete x in monstre.listeHabilete)
             {
-                if (x!=null)
+                if (x!=null && loop<=monstre.niveauExp-1)
                 {
                     ComboBoxItem item = new ComboBoxItem();
                     item.Content = x.nom;
@@ -307,7 +308,9 @@ namespace TP_Pokemon
                     comboBox_habilete_1.Items.Add(item);
                     comboBox_habilete_1.SelectedIndex = 0;
                     comboBox_habilete_2.Items.Add(item2);
+                    comboBox_habilete_2.SelectedIndex = 1;
                 }
+                loop++;
             }
         }
 
@@ -351,6 +354,22 @@ namespace TP_Pokemon
             panel_habilete.Visibility = System.Windows.Visibility.Visible;
             TypeElement element = TypeElement.Eau;
             afficher_habilete(element);
+        }
+
+        private void button_habilete_1_Click(object sender, RoutedEventArgs e)
+        {
+            string nom = comboBox_habilete_1.Text;
+            Habilete  spell = monstre_selectionne.trouver_habilete(nom);
+            int x = parti.joueur.trouver_monstre_listeCapture(monstre_selectionne);
+            parti.joueur.monstreCapture[x].listeHabileteActive[0] = spell;
+        }
+
+        private void button_habilete_2_Click(object sender, RoutedEventArgs e)
+        {
+            string nom = comboBox_habilete_2.Text;
+            Habilete spell = monstre_selectionne.trouver_habilete(nom);
+            int x = parti.joueur.trouver_monstre_listeCapture(monstre_selectionne);
+            parti.joueur.monstreCapture[x].listeHabileteActive[1] = spell;
         }
 
         //###############################################################################
@@ -438,7 +457,6 @@ namespace TP_Pokemon
         {
             panel_habilete.Visibility = System.Windows.Visibility.Hidden;
         }
-
 
     }
 }

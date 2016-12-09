@@ -105,7 +105,7 @@ namespace TP_Pokemon
             switch(item)
             {
                 case "Pokeball":
-                    if(cash>100*nombre)
+                    if(cash >= 100*nombre)
                     {
                         parti.acheter_pokeball(nombre);
                     }
@@ -115,7 +115,7 @@ namespace TP_Pokemon
                     }
                     break;
                 case "Potion de Vie":
-                    if (cash > 200 * nombre)
+                    if (cash >= 200 * nombre)
                     {
                         parti.acheter_potion(nombre, 0, 0);
                     }
@@ -125,7 +125,7 @@ namespace TP_Pokemon
                     }
                     break;
                 case "Potion de Mana":
-                    if (cash > 200 * nombre)
+                    if (cash >= 200 * nombre)
                     {
                         parti.acheter_potion(0,nombre, 0);
                     }
@@ -135,7 +135,7 @@ namespace TP_Pokemon
                     }
                     break;
                 case "Potion Or":
-                    if (cash > 500 * nombre)
+                    if (cash >= 500 * nombre)
                     {
                         parti.acheter_potion(0,0,nombre);
                     }

@@ -45,7 +45,7 @@ namespace TP_Pokemon
             panel_pokemon.Visibility = System.Windows.Visibility.Visible;
             panel_inventaire.Visibility = System.Windows.Visibility.Hidden;
             afficher_pokemon(parti.joueur.equipe[0]);
-            textBox_Console.Text = "\n--------------------------------\n" + parti.joueur.nomJoueur + " envoie " + parti.joueur.equipe[0].nomMonstre + " au combat !";
+            textBox_Console.Text = "--------------------------------\n" + parti.joueur.nomJoueur + " envoie " + parti.joueur.equipe[0].nomMonstre + " au combat !";
             selectionne = parti.joueur.equipe[0];
             barre_vie_player.Value = parti.joueur.equipe[0].actuel[0];
             barre_mana_player.Value = parti.joueur.equipe[0].actuel[1];
@@ -57,7 +57,7 @@ namespace TP_Pokemon
                 panel_pokemon.Visibility = System.Windows.Visibility.Visible;
                 panel_inventaire.Visibility = System.Windows.Visibility.Hidden;
                 afficher_pokemon(parti.joueur.equipe[1]);
-                textBox_Console.Text = "\n--------------------------------\n" + parti.joueur.nomJoueur + " envoie " + parti.joueur.equipe[1].nomMonstre + " au combat !";
+                textBox_Console.Text = "--------------------------------\n" + parti.joueur.nomJoueur + " envoie " + parti.joueur.equipe[1].nomMonstre + " au combat !";
                 selectionne = parti.joueur.equipe[1];
                 barre_vie_player.Value = parti.joueur.equipe[1].actuel[0];
                 barre_mana_player.Value = parti.joueur.equipe[1].actuel[1];
@@ -71,7 +71,7 @@ namespace TP_Pokemon
                 panel_pokemon.Visibility = System.Windows.Visibility.Visible;
                 panel_inventaire.Visibility = System.Windows.Visibility.Hidden;
                 afficher_pokemon(parti.joueur.equipe[2]);
-                textBox_Console.Text = "\n--------------------------------\n" + parti.joueur.nomJoueur + " envoie " + parti.joueur.equipe[2].nomMonstre + " au combat !";
+                textBox_Console.Text = "--------------------------------\n" + parti.joueur.nomJoueur + " envoie " + parti.joueur.equipe[2].nomMonstre + " au combat !";
                 selectionne = parti.joueur.equipe[2];
                 barre_vie_player.Value = parti.joueur.equipe[2].actuel[0];
                 barre_mana_player.Value = parti.joueur.equipe[2].actuel[1];
@@ -84,7 +84,7 @@ namespace TP_Pokemon
                 panel_pokemon.Visibility = System.Windows.Visibility.Visible;
                 panel_inventaire.Visibility = System.Windows.Visibility.Hidden;
                 afficher_pokemon(parti.joueur.equipe[3]);
-                textBox_Console.Text ="\n--------------------------------\n" + parti.joueur.nomJoueur + " envoie " + parti.joueur.equipe[3].nomMonstre + " au combat !";
+                textBox_Console.Text ="--------------------------------\n" + parti.joueur.nomJoueur + " envoie " + parti.joueur.equipe[3].nomMonstre + " au combat !";
                 selectionne = parti.joueur.equipe[3];
                 barre_vie_player.Value = parti.joueur.equipe[3].actuel[0];
                 barre_mana_player.Value = parti.joueur.equipe[3].actuel[1];
@@ -97,7 +97,7 @@ namespace TP_Pokemon
                 panel_pokemon.Visibility = System.Windows.Visibility.Visible;
                 panel_inventaire.Visibility = System.Windows.Visibility.Hidden;
                 afficher_pokemon(parti.joueur.equipe[4]);
-                textBox_Console.Text ="\n--------------------------------\n" + parti.joueur.nomJoueur + " envoie " + parti.joueur.equipe[4].nomMonstre + " au combat !";
+                textBox_Console.Text ="--------------------------------\n" + parti.joueur.nomJoueur + " envoie " + parti.joueur.equipe[4].nomMonstre + " au combat !";
                 selectionne = parti.joueur.equipe[4];
                 barre_vie_player.Value = parti.joueur.equipe[4].actuel[0];
                 barre_mana_player.Value = parti.joueur.equipe[4].actuel[1];
@@ -123,11 +123,8 @@ namespace TP_Pokemon
             {
                 if(x !=null)
                 {
-                    x.actuel[0] = x.total[0];
-                    x.actuel[1] = x.total[1];
-                    x.actuel[2] = x.total[2];
-                    x.actuel[3] = x.total[3];
-                    x.actuel[4] = x.total[4];
+                    x.calcul_caract();
+                    x.renew_caract();
                 }
             }
             Map newMap = new Map(parti);
@@ -148,7 +145,12 @@ namespace TP_Pokemon
         //Bouton qui permet l'utilisation de l'habilete 2
         private void button_habilete_2_Click(object sender, RoutedEventArgs e)
         {
-
+            Habilete spell = selectionne.listeHabileteActive[1];
+            if (spell.cible == Cible.ennemi)
+            {
+                attaquer(selectionne, adversaire, spell);
+                reponse_adverse();
+            }
         }
 
         //###############################################################################
@@ -389,7 +391,7 @@ namespace TP_Pokemon
                 }
 
                 MAJ_barre();
-                textBox_Console.Text = textBox_Console.Text + "\n-------------------------------------------------\n" + attaquant.nomMonstre + " utilise " + spell.nom + " !\n" + cible.nomMonstre + " encaisse " + damageBrute + " de damage !";
+                textBox_Console.AppendText( "\n-------------------------------------------------\n" + attaquant.nomMonstre + " utilise " + spell.nom + " !\n" + cible.nomMonstre + " encaisse " + damageBrute + " de damage !");
 
             }
 
@@ -409,26 +411,26 @@ namespace TP_Pokemon
                 {
                     case 1:
                         // 50xp                        
-                        parti.joueur.equipe[numero_monstre].add_xp(50,parti);
+                        textBox_Console.AppendText(parti.joueur.equipe[numero_monstre].add_xp(50,parti));
                         break;
                     case 2:
                         // 50xp + 200 $
-                        parti.joueur.equipe[numero_monstre].add_xp(50, parti);
-                        parti.joueur.argent += 200;
+                        textBox_Console.AppendText(parti.joueur.equipe[numero_monstre].add_xp(50, parti));
+                        parti.joueur.argent = parti.joueur.argent +  200;
                         break;
                     case 3:
                         // 100 xp
-                        parti.joueur.equipe[numero_monstre].add_xp(100, parti);
+                        textBox_Console.AppendText(parti.joueur.equipe[numero_monstre].add_xp(100, parti));
                         break;
                     case 4:
                         // 100 xp + 500 $
-                        parti.joueur.equipe[numero_monstre].add_xp(100, parti);
-                        parti.joueur.argent += 500;
+                        textBox_Console.AppendText(parti.joueur.equipe[numero_monstre].add_xp(100, parti));
+                        parti.joueur.argent = parti.joueur.argent + 500;
                         break;
                     case 5:
                         // 100 xp + 1000$
-                        parti.joueur.equipe[numero_monstre].add_xp(100, parti);
-                        parti.joueur.argent += 1000;
+                        textBox_Console.AppendText(parti.joueur.equipe[numero_monstre].add_xp(100, parti));
+                        parti.joueur.argent = parti.joueur.argent + 1000;
                         break;
                 }
 
@@ -438,7 +440,7 @@ namespace TP_Pokemon
             // Si la vie de l'adversaire est égal ou plus petit que 10
             else if (adversaire.actuel[0]<=10) 
             {
-                textBox_Console.Text = adversaire.nomMonstre + "s'est enfui ! \nVeuillez revenir plus tard !";
+                textBox_Console.AppendText(adversaire.nomMonstre + "s'est enfui ! \nVeuillez revenir plus tard !");
                 image_pokemon_adverse.Source = Monstre.portrait("iconnu.xml");
                 panel_pokemon.Visibility = System.Windows.Visibility.Hidden;
                 disable_button();
@@ -447,17 +449,17 @@ namespace TP_Pokemon
             // Si l'adversaire a pas assez de mana pour une habilete
             else if (adversaire.actuel[1] < adversaire.listeHabilete[0].cout && adversaire.actuel[1] < adversaire.listeHabilete[1].cout) 
             {
-                textBox_Console.Text = textBox_Console.Text + "\n-------------------------------------------------\n" + adversaire.nomMonstre + " n'a pas assez de mana pour utiliser une habilete ! ";
+                textBox_Console.AppendText( "\n-------------------------------------------------\n" + adversaire.nomMonstre + " n'a pas assez de mana pour utiliser une habilete ! ");
                 Regen_mana();
                 MAJ_barre();
             }
 
             // Si la vie de l'adversaire est plus petit ou égal a 30
-            else if (adversaire.actuel[0]<=30) 
+            else if (adversaire.actuel[0]<=30 || (adversaire.actuel[1] < adversaire.listeHabilete[0].cout && adversaire.actuel[1] > adversaire.listeHabilete[1].cout)) 
             {
                 TypeElement element = adversaire.typeMonstre;
                 Habilete supporting = Habilete.habilete_protection_element(element);
-                textBox_Console.Text = textBox_Console.Text + "\n-------------------------------------------------\n" + adversaire.nomMonstre + " utilise " + supporting.nom + " !";
+                textBox_Console.AppendText( "\n-------------------------------------------------\n" + adversaire.nomMonstre + " utilise " + supporting.nom + " !");
                 // Utilise l'habilete
                 adversaire.actuel[1] = adversaire.actuel[1] - supporting.cout;
                 if (supporting.effet == Effet.regeneration)
@@ -467,12 +469,12 @@ namespace TP_Pokemon
                     {
                         adversaire.actuel[0] = adversaire.total[0];
                     }
-                    textBox_Console.Text = textBox_Console.Text + "\n" + adversaire.nomMonstre + " récupère "+supporting.magnitude+" points de vie !" ;
+                    textBox_Console.AppendText( "\n" + adversaire.nomMonstre + " récupère "+supporting.magnitude+" points de vie !" );
                 }
                 else
                 {
                     adversaire.actuel[4] = adversaire.actuel[4] + supporting.magnitude;
-                    textBox_Console.Text = textBox_Console.Text + "\n" + adversaire.nomMonstre + " augmente ces défenses de " + supporting.magnitude + " points !";
+                    textBox_Console.AppendText( "\n" + adversaire.nomMonstre + " augmente ces défenses de " + supporting.magnitude + " points !");
                 }
                 Regen_mana();
                 MAJ_barre();
@@ -483,7 +485,7 @@ namespace TP_Pokemon
                 attaquer(adversaire, selectionne, adversaire.listeHabilete[0]);
                 if(selectionne.actuel[0]<1)
                 {
-                    textBox_Console.Text = textBox_Console.Text + selectionne.nomMonstre + " est mort !\nVeuillez sélectionner un autre pokemon ou quitter ! ";
+                    textBox_Console.AppendText( "\n" +selectionne.nomMonstre + " est mort !\nVeuillez sélectionner un autre pokemon ou quitter ! ");
                     int x = parti.joueur.trouver_monstre_equipe(selectionne);
                     
                     switch (x)
@@ -534,8 +536,11 @@ namespace TP_Pokemon
         //Fonction qui applique le regen de mana
         private void Regen_mana()
         {
-            barre_mana_player.Value = barre_mana_player.Value + selectionne.actuel[2];
-            barre_mana_adverse.Value = barre_mana_adverse.Value + adversaire.actuel[2];
+            //Ajout de la mana 
+            selectionne.actuel[1] = selectionne.actuel[1] + selectionne.actuel[2];
+            adversaire.actuel[1] = adversaire.actuel[1] + adversaire.actuel[2];
+            //
+            MAJ_barre();
         }
 
         //Fonction qui disable les boutons en fin de parti
@@ -555,39 +560,45 @@ namespace TP_Pokemon
 
         private void button_pokeball_Click(object sender, RoutedEventArgs e)
         {
-            image_pokemon_adverse.Source = image_pokeball.Source;
-            textBox_Console.Text = "-------------------------------------------------\n" + parti.joueur.nomJoueur + " utilise une pokeball !";
-            Task.Delay(3000);
-
-            if(adversaire.actuel[0]<=40)
+            if (parti.joueur.inventaire.pokeball > 0)
             {
-                Random rand = new Random();
-                int random = rand.Next(1, 5);
+                image_pokemon_adverse.Source = image_pokeball.Source;
+                textBox_Console.Text = "-------------------------------------------------\n" + parti.joueur.nomJoueur + " utilise une pokeball !";
+                Task.Delay(3000);
 
-                if (random >= adversaire.niveauExp)
+                if (adversaire.actuel[0] <= 40)
                 {
-                    textBox_Console.Text = textBox_Console.Text + "\n" + adversaire.nomMonstre + " a été capturé !";
+                    Random rand = new Random();
+                    int random = rand.Next(1, 5);
 
-                    // Remis a zéro des stats du monstre
-                    adversaire.calcul_caract();
-                    adversaire.renew_caract();
-                    //Fermeture de l'interface
-                    disable_button();
-                    //Ajout du pokémon dans la liste de capture
-                    parti.joueur.Ajouter_Pokemon_listeTotal(adversaire);
+                    if (random >= adversaire.niveauExp)
+                    {
+                        textBox_Console.AppendText("\n" + adversaire.nomMonstre + " a été capturé !");
+
+                        // Remis a zéro des stats du monstre
+                        adversaire.calcul_caract();
+                        adversaire.renew_caract();
+                        //Fermeture de l'interface
+                        disable_button();
+                        adversaire.pointExp--; 
+                        //Ajout du pokémon dans la liste de capture
+                        parti.joueur.Ajouter_Pokemon_listeTotal(adversaire);
+                    }
+                    else
+                    {
+                        textBox_Console.AppendText("\n" + adversaire.nomMonstre + " résiste à la pokeball !");
+                        image_pokemon_adverse.Source = Monstre.portrait(adversaire.nomMonstre);
+                        reponse_adverse();
+                    }
                 }
                 else
                 {
-                    textBox_Console.Text = textBox_Console.Text + "\n" + adversaire.nomMonstre + " résiste à la pokeball !";
+                    textBox_Console.AppendText("\n" + adversaire.nomMonstre + " résiste à la pokeball !");
                     image_pokemon_adverse.Source = Monstre.portrait(adversaire.nomMonstre);
                     reponse_adverse();
                 }
-            }
-            else
-            {
-                textBox_Console.Text = textBox_Console.Text +"\n"+adversaire.nomMonstre+" résiste à la pokeball !";
-                image_pokemon_adverse.Source = Monstre.portrait(adversaire.nomMonstre);
-                reponse_adverse();
+                parti.joueur.inventaire.pokeball--;
+                label_pokeball.Content = "x " + parti.joueur.inventaire.pokeball;
             }
         }
 

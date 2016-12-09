@@ -136,7 +136,7 @@
                     </LinearGradientBrush>
                 </Button.Background>
             </Button>
-            <Button x:Name="button1_Copy1" Content="Ok" HorizontalAlignment="Left" Margin="589,322,0,0" VerticalAlignment="Top" Width="43" Foreground="#FFF3EEEE" RenderTransformOrigin="-0.387,-1.045">
+            <Button x:Name="button_habilete_1" Content="Ok" HorizontalAlignment="Left" Margin="589,322,0,0" VerticalAlignment="Top" Width="43" Foreground="#FFF3EEEE" RenderTransformOrigin="-0.387,-1.045" Click="button_habilete_1_Click">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                         <GradientStop Color="#FFF3F3F3" Offset="0"/>
@@ -182,7 +182,7 @@
                     </LinearGradientBrush>
                 </ComboBox.Background>
             </ComboBox>
-            <Button x:Name="button1_Copy" Content="Ok" HorizontalAlignment="Left" Margin="589,372,0,0" VerticalAlignment="Top" Width="43" Foreground="#FFF3EEEE" RenderTransformOrigin="-0.387,-1.045">
+            <Button x:Name="button_habilete_2" Content="Ok" HorizontalAlignment="Left" Margin="589,372,0,0" VerticalAlignment="Top" Width="43" Foreground="#FFF3EEEE" RenderTransformOrigin="-0.387,-1.045" Click="button_habilete_2_Click">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                         <GradientStop Color="#FFF3F3F3" Offset="0"/>
