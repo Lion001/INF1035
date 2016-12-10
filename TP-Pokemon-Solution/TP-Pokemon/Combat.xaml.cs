@@ -139,8 +139,30 @@ namespace TP_Pokemon
             if (spell.cible == Cible.ennemi)
             {
                 attaquer(selectionne, adversaire, spell);
-                reponse_adverse();
             }
+            else
+            {
+                TypeElement element = selectionne.typeMonstre;
+                Habilete supporting = Habilete.habilete_protection_element(element);
+                textBox_Console.AppendText("\n-------------------------------------------------\n" + selectionne.nomMonstre + " utilise " + supporting.nom + " !");
+                // Utilise l'habilete
+                selectionne.actuel[1] = selectionne.actuel[1] - supporting.cout;
+                if (supporting.effet == Effet.regeneration)
+                {
+                    selectionne.actuel[0] = selectionne.actuel[0] + supporting.magnitude;
+                    if (selectionne.actuel[0] > selectionne.total[0])
+                    {
+                        selectionne.actuel[0] = selectionne.total[0];
+                    }
+                    textBox_Console.AppendText("\n" + selectionne.nomMonstre + " récupère " + supporting.magnitude + " points de vie !");
+                }
+                else
+                {
+                    selectionne.actuel[4] = selectionne.actuel[4] + supporting.magnitude;
+                    textBox_Console.AppendText("\n" + selectionne.nomMonstre + " augmente ces défenses de " + supporting.magnitude + " points !");
+                }
+            }
+            reponse_adverse();
         }
         //Bouton qui permet l'utilisation de l'habilete 2
         private void button_habilete_2_Click(object sender, RoutedEventArgs e)
@@ -149,8 +171,30 @@ namespace TP_Pokemon
             if (spell.cible == Cible.ennemi)
             {
                 attaquer(selectionne, adversaire, spell);
-                reponse_adverse();
             }
+            else
+            {
+                TypeElement element = selectionne.typeMonstre;
+                Habilete supporting = Habilete.habilete_protection_element(element);
+                textBox_Console.AppendText("\n-------------------------------------------------\n" + selectionne.nomMonstre + " utilise " + supporting.nom + " !");
+                // Utilise l'habilete
+                selectionne.actuel[1] = selectionne.actuel[1] - supporting.cout;
+                if (supporting.effet == Effet.regeneration)
+                {
+                    selectionne.actuel[0] = selectionne.actuel[0] + supporting.magnitude + selectionne.niveauExp;
+                    if (selectionne.actuel[0] > selectionne.total[0])
+                    {
+                        selectionne.actuel[0] = selectionne.total[0];
+                    }
+                    textBox_Console.AppendText("\n" + selectionne.nomMonstre + " récupère " + supporting.magnitude + " points de vie !");
+                }
+                else
+                {
+                    selectionne.actuel[4] = selectionne.actuel[4] + supporting.magnitude;
+                    textBox_Console.AppendText("\n" + selectionne.nomMonstre + " augmente ces défenses de " + supporting.magnitude + " points !");
+                }
+            }
+            reponse_adverse();
         }
 
         //###############################################################################
@@ -440,7 +484,7 @@ namespace TP_Pokemon
             // Si la vie de l'adversaire est égal ou plus petit que 10
             else if (adversaire.actuel[0]<=10) 
             {
-                textBox_Console.AppendText(adversaire.nomMonstre + "s'est enfui ! \nVeuillez revenir plus tard !");
+                textBox_Console.AppendText("\n" + adversaire.nomMonstre + "s'est enfui ! \nVeuillez revenir plus tard !");
                 image_pokemon_adverse.Source = Monstre.portrait("iconnu.xml");
                 panel_pokemon.Visibility = System.Windows.Visibility.Hidden;
                 disable_button();
@@ -451,7 +495,6 @@ namespace TP_Pokemon
             {
                 textBox_Console.AppendText( "\n-------------------------------------------------\n" + adversaire.nomMonstre + " n'a pas assez de mana pour utiliser une habilete ! ");
                 Regen_mana();
-                MAJ_barre();
             }
 
             // Si la vie de l'adversaire est plus petit ou égal a 30
@@ -477,7 +520,6 @@ namespace TP_Pokemon
                     textBox_Console.AppendText( "\n" + adversaire.nomMonstre + " augmente ces défenses de " + supporting.magnitude + " points !");
                 }
                 Regen_mana();
-                MAJ_barre();
             }
 
             else
@@ -511,6 +553,12 @@ namespace TP_Pokemon
                             panel_pokemon.Visibility = System.Windows.Visibility.Hidden;
                             break;
                     }
+                    // Si tout les pokemons sont morts, disable le boutton inventaire ainsi que le panel relié
+                    if(button_choix1.IsEnabled == false && button_choix2.IsEnabled == false && button_choix3.IsEnabled == false && button_choix4.IsEnabled == false && button_choix5.IsEnabled == false)
+                    {
+                        button_inventaire.IsEnabled = false;
+                        panel_inventaire.Visibility = System.Windows.Visibility.Hidden;
+                    }
                 }
                 else
                 {
@@ -523,14 +571,11 @@ namespace TP_Pokemon
         //Fonction qui  met les barres de vie et de mana à jour
         private void MAJ_barre()
         {
-
-            //Actualisation des barres
             barre_vie_player.Value = selectionne.actuel[0];
             barre_mana_player.Value = selectionne.actuel[1];
 
             barre_vie_adverse.Value = adversaire.actuel[0];
             barre_mana_adverse.Value = adversaire.actuel[1];
-
         }
 
         //Fonction qui applique le regen de mana
@@ -606,8 +651,9 @@ namespace TP_Pokemon
         {
             if (parti.joueur.inventaire.potion_vie > 0)
             {
-                textBox_Console.Text = "-------------------------------------------------\n" + parti.joueur.nomJoueur + " utilise une potion de vie !\n" + selectionne.nomMonstre + " récupère 50 points de vie! ";
-                selectionne.actuel[0] = selectionne.actuel[0] + 50;
+                textBox_Console.Text = "-------------------------------------------------\n" + parti.joueur.nomJoueur + " utilise une potion de vie !\n" + selectionne.nomMonstre + " récupère 100 points de vie! ";
+                selectionne.actuel[0] = selectionne.actuel[0] + 100;
+                selectionne.calcul_caract();
                 if (selectionne.actuel[0] > selectionne.total[0])
                 {
                     selectionne.actuel[0] = selectionne.total[0];
@@ -624,8 +670,9 @@ namespace TP_Pokemon
         {
             if (parti.joueur.inventaire.potion_mana > 0)
             {
-                textBox_Console.Text = "-------------------------------------------------\n" + parti.joueur.nomJoueur + " utilise une potion de mana !\n" + selectionne.nomMonstre + " récupère 50 points de mana! ";
-                selectionne.actuel[1] = selectionne.actuel[1] + 50;
+                textBox_Console.Text = "-------------------------------------------------\n" + parti.joueur.nomJoueur + " utilise une potion de mana !\n" + selectionne.nomMonstre + " récupère 100 points de mana! ";
+                selectionne.actuel[1] = selectionne.actuel[1] + 100;
+                selectionne.calcul_caract();
                 if (selectionne.actuel[1] > selectionne.total[1])
                 {
                     selectionne.actuel[1] = selectionne.total[1];
@@ -642,6 +689,7 @@ namespace TP_Pokemon
             if (parti.joueur.inventaire.potion_max > 0)
             {
                 textBox_Console.Text = "-------------------------------------------------\n" + parti.joueur.nomJoueur + " utilise une potion en or !\n" + selectionne.nomMonstre + " récupère toute sa vie et sa mana ! ";
+                selectionne.calcul_caract();
                 selectionne.actuel[0] = selectionne.total[0];
                 selectionne.actuel[1] = selectionne.total[1];
                 MAJ_barre();

@@ -148,6 +148,7 @@ namespace TP_Pokemon
                     break;
             }
             textBox_argent.Text = parti.joueur.argent.ToString();
+            textBox_nombre.Text = "0";
         }
     }
 }

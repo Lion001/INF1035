@@ -43,7 +43,7 @@ namespace TP_Pokemon
             if (potion_max > 0)
             {
                 joueur.inventaire.potion_max += potion_max;
-                joueur.argent = joueur.argent- (200 * potion_max);
+                joueur.argent = joueur.argent- (500 * potion_max);
             }
         }
 
