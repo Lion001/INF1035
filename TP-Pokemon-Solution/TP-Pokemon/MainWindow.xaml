@@ -42,6 +42,16 @@
                 <Image x:Name="image_homme_Copy1" HorizontalAlignment="Left" Height="62" VerticalAlignment="Top" Width="56" Source="Images/squirtle.png" RenderTransformOrigin="-0.815,0.461"/>
             </Button>
         </Grid>
+        <Grid x:Name="panel_enregistrement" HorizontalAlignment="Left" Height="202" Margin="0,162,0,0" VerticalAlignment="Top" Width="307" Visibility="Hidden">
+            <Grid.Background>
+                <ImageBrush ImageSource="Images/background-menu2.jpg"/>
+            </Grid.Background>
+            <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="202" VerticalAlignment="Top" Width="307"/>
+            <TextBox x:Name="textBox_enregistrement" HorizontalAlignment="Left" Height="23" Margin="59,90,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="206"/>
+            <Label x:Name="label_enregistrement" Content="Quel est le nom de votre aventure ?" HorizontalAlignment="Left" Margin="10,25,0,0" VerticalAlignment="Top" Height="65" Width="287" FontSize="16" Foreground="#FFE8DEDE"/>
+            <Button x:Name="button_charger" Content="Charger" HorizontalAlignment="Left" Margin="65,148,0,0" VerticalAlignment="Top" Width="75" Click="button_enregistrer_Click"/>
+            <Button x:Name="button_cancel" Content="Cancel" HorizontalAlignment="Left" Margin="190,148,0,0" VerticalAlignment="Top" Width="75" Click="button_cancel_Click"/>
+        </Grid>
 
     </Grid>
 </Window>

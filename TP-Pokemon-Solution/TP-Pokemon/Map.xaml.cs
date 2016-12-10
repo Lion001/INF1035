@@ -100,10 +100,14 @@ namespace TP_Pokemon
 
         private void icone_enregistrer_Click(object sender, RoutedEventArgs e)
         {
-            Aventure.Sauvegarder_Aventure(parti);
-            label_avertissement.Visibility = System.Windows.Visibility.Visible;
-            System.Threading.Thread.Sleep(2000);
-            label_avertissement.Visibility = System.Windows.Visibility.Hidden;
+            if (panel_enregistrement.Visibility != System.Windows.Visibility.Visible)
+            {
+                panel_enregistrement.Visibility = System.Windows.Visibility.Visible;
+            }
+            else
+            {
+                panel_enregistrement.Visibility = System.Windows.Visibility.Hidden;
+            }
 
         }
 
@@ -458,5 +462,22 @@ namespace TP_Pokemon
             panel_habilete.Visibility = System.Windows.Visibility.Hidden;
         }
 
+        //###############################################################################
+        //#		                   Panel Enregistrer                                    #
+        //###############################################################################
+
+        private void button_enregistrer_Click(object sender, RoutedEventArgs e)
+        {
+            string sauvegarde = textBox_enregistrement.Text;
+            parti.Sauvegarder_Aventure(sauvegarde);
+            panel_enregistrement.Visibility = System.Windows.Visibility.Hidden;
+
+        }
+
+        private void button_cancel_Click(object sender, RoutedEventArgs e)
+        {
+            textBox_enregistrement.Text = "";
+            panel_enregistrement.Visibility = System.Windows.Visibility.Hidden;
+        }
     }
 }

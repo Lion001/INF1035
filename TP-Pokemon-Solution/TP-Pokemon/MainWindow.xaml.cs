@@ -34,9 +34,14 @@ namespace TP_Pokemon
 
         private void bouton_Charger_Click(object sender, RoutedEventArgs e)
         {
-            Map newMap = new Map(Aventure.Charger_Aventure());           
-            newMap.Show();
-            this.Close();
+            if(panel_enregistrement.Visibility == System.Windows.Visibility.Hidden)
+            {
+                panel_enregistrement.Visibility = System.Windows.Visibility.Visible;
+            }
+            else
+            {
+                panel_enregistrement.Visibility = System.Windows.Visibility.Hidden;
+            }
         }
 
         private void bouton_Quitter_Click_1(object sender, RoutedEventArgs e)
@@ -102,6 +107,24 @@ namespace TP_Pokemon
             inconnu.monstreDepart = liste[4];
             inconnu.monstreCapture[0] = liste[4];
             inconnu.equipe[0] = liste[4];
+        }
+
+        //###############################################################################
+        //#			                 Panel Charger                                      #
+        //###############################################################################
+
+        private void button_enregistrer_Click(object sender, RoutedEventArgs e)
+        {
+            string aventure = textBox_enregistrement.Text;
+            Map newMap = new Map(Aventure.Charger_Aventure(aventure));
+            newMap.Show();
+            this.Close();
+        }
+
+        private void button_cancel_Click(object sender, RoutedEventArgs e)
+        {
+            textBox_enregistrement.Text = "";
+            panel_enregistrement.Visibility = System.Windows.Visibility.Hidden;
         }
         //-------------------------------------------------------------------------------
     }

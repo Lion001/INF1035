@@ -206,35 +206,58 @@ namespace TP_Pokemon
         {
             fenetre_difficulty.Visibility = System.Windows.Visibility.Hidden;
             generer_adversaire(1);
+            tirage_sort();
         }
 
         private void button_moyen_Click(object sender, RoutedEventArgs e)
         {
             fenetre_difficulty.Visibility = System.Windows.Visibility.Hidden;
             generer_adversaire(2);
+            tirage_sort();
         }
 
         private void button_Difficile_Click(object sender, RoutedEventArgs e)
         {
             fenetre_difficulty.Visibility = System.Windows.Visibility.Hidden;
             generer_adversaire(3);
+            tirage_sort();
         }
 
         private void button_expert_Click(object sender, RoutedEventArgs e)
         {
             fenetre_difficulty.Visibility = System.Windows.Visibility.Hidden;
             generer_adversaire(4);
+            tirage_sort();
         }
 
         private void button_Legende_Click(object sender, RoutedEventArgs e)
         {
             fenetre_difficulty.Visibility = System.Windows.Visibility.Hidden;
             generer_adversaire(5);
+            tirage_sort();
         }
 
         //###############################################################################
         //#		                    Fonctions associés                                  #
         //###############################################################################
+
+        // Tirage au sort qui détermine qui attaque en premier ( 1 chance sur 2 )
+        private void tirage_sort()
+        {
+            Random rand = new Random();
+            int x = rand.Next(0, 100);
+            if (x <= 50 ) // L'adversaire commence
+            {
+                textBox_Console.AppendText("\nLe tirage au sort à déterminer que " + adversaire.nomMonstre + " attaquait en premier !");
+                reponse_adverse();
+            }
+            else//aussi non le joueur commence
+            {
+                textBox_Console.AppendText("\nLe tirage au sort à déterminer que " + parti.joueur.nomJoueur + " attaquait en premier !");
+            }
+            
+
+        }
 
         // Cette fonction attribut les images au bouton de choix (Fonction identique à afficher_team() dans Map.xaml.cs)
         private void init_interface()
@@ -347,7 +370,7 @@ namespace TP_Pokemon
             barre_mana_adverse.Maximum = ennemi.total[1];
             barre_mana_adverse.Value = ennemi.total[1];
             adversaire = ennemi;
-            textBox_Console.Text = ennemi.nomMonstre + " apparait face à vous !\n Veuillez choisir une action rapidement !";
+            textBox_Console.Text = ennemi.nomMonstre + " apparait face à vous !";
        
         }
 

@@ -47,17 +47,19 @@ namespace TP_Pokemon
             }
         }
 
-        public static void Sauvegarder_Aventure(Aventure aventure)
+        public void Sauvegarder_Aventure(string sauvegarde)
         {
+            sauvegarde = sauvegarde + ".ply";
             BinaryFormatter format = new BinaryFormatter();
-            using (Stream stream = new FileStream(@".\aventure.ply",FileMode.Create, FileAccess.Write, FileShare.None)) format.Serialize(stream, aventure);
+            using (Stream stream = new FileStream(@sauvegarde,FileMode.Create, FileAccess.Write, FileShare.None)) format.Serialize(stream, this);
         }
 
-        public static Aventure Charger_Aventure()
+        public static Aventure Charger_Aventure(string sauvegarde)
         {
             Aventure aventure;
+            sauvegarde = sauvegarde + ".ply";
             BinaryFormatter format = new BinaryFormatter();
-            using (Stream stream = new FileStream(@".\aventure.ply", FileMode.Open, FileAccess.Read, FileShare.None)) aventure = (Aventure)format.Deserialize(stream);
+            using (Stream stream = new FileStream(@sauvegarde, FileMode.Open, FileAccess.Read, FileShare.None)) aventure = (Aventure)format.Deserialize(stream);
             return aventure;
         }
     }
