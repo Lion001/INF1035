@@ -468,6 +468,22 @@ namespace TP_Pokemon
 
         private void button_enregistrer_Click(object sender, RoutedEventArgs e)
         {
+            // Exception sur input
+            try
+            {
+                if (textBox_enregistrement.Text == "")
+                {
+                    throw new Exception("Veuillez entrer un nom d'aventure !");
+                }
+            }
+            catch (Exception lol)
+            {
+                MessageBox.Show(lol.Message);
+                return;
+            }
+
+            // Exception sur l'enregistrement de l'aventure non nécessaire
+
             string sauvegarde = textBox_enregistrement.Text;
             parti.Sauvegarder_Aventure(sauvegarde);
             panel_enregistrement.Visibility = System.Windows.Visibility.Hidden;

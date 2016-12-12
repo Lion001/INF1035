@@ -70,6 +70,29 @@ namespace TP_Pokemon
 
         private void button_creer_Click(object sender, RoutedEventArgs e)
         {
+            // Exception sur input
+            try
+            {
+                if (string.IsNullOrWhiteSpace(textBox_nickname.Text))
+                {
+                    throw new Exception ("Veuillez entrer un nom de joueur !");
+                }
+                if (string.IsNullOrWhiteSpace(textBox_nickname.Text))
+                {
+                    throw new Exception ("Veuillez entrer un surnom de pokémon !");
+                }
+                if(inconnu.equipe[0] == null)
+                {
+                    throw new NoPokemonException();
+                }
+            }
+            catch (Exception lol)
+            {
+                textBox_newName.SelectAll();
+                MessageBox.Show(lol.Message);
+                return;
+            }
+
             Aventure nouveau = creer_aventure();
             Map newMap = new Map(nouveau);
             newMap.Show();
@@ -115,8 +138,35 @@ namespace TP_Pokemon
 
         private void button_enregistrer_Click(object sender, RoutedEventArgs e)
         {
+            // Exception sur input
+            try
+            {
+                if (textBox_enregistrement.Text == "")
+                {
+                    throw new Exception("Veuillez entrer un nom d'aventure !");
+                }
+            }
+            catch (Exception lol)
+            {
+                textBox_newName.SelectAll();
+                MessageBox.Show(lol.Message);
+                return;
+            }
             string aventure = textBox_enregistrement.Text;
-            Map newMap = new Map(Aventure.Charger_Aventure(aventure));
+
+            // Exception sur le chargement de l'aventure
+            Aventure chargement;
+            try
+            {
+               chargement = Aventure.Charger_Aventure(aventure);
+            }
+            catch (Exception lol)
+            {
+                MessageBox.Show(lol.Message + "\nVeuillez entrer un nom d'aventure valide !");
+                return;
+            }
+            
+            Map newMap = new Map(chargement);
             newMap.Show();
             this.Close();
         }
