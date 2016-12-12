@@ -43,7 +43,7 @@ namespace TP_Pokemon
             this.descripMonstre = descripMonstre;
             this.aliasMonstre = aliasMonstre;
             this.typeMonstre = typeMonstre;
-            this.rarete = hasard();
+            this.rarete = hasard(0,101);
             this.niveauExp = 1;//valeur par defaut
             this.pointExp = 100;//valeur par defaut
             //-- Caracteristique --- // Tableau de Int :  [0] = point_vie, [1] point_energie, [2] regen_energie, [3] attaque, [4] defense
@@ -60,10 +60,10 @@ namespace TP_Pokemon
         }
 
         //Fonction qui genere automatiquement la rarete du pokemon
-        public static int hasard()
+        public static int hasard(int x, int z)
         {
             Random rand = new Random();
-            int rarete_1 = rand.Next(0, 101);
+            int rarete_1 = rand.Next(x, z);
 
             return rarete_1;
         }
