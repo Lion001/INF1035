@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media.Imaging;
 using System.Xml.Serialization;
@@ -11,13 +12,12 @@ namespace TP_Pokemon
     /// </summary>
 
     [Serializable, XmlRoot(Namespace="Habilete")]
-    public class Monstre
+    public class Monstre : IRandom
     {
         public enum etat_actif
         {
             Mort,Vivant,Paralysie,Empoisonnement,Faiblesse,Force_Decuple
         }
-
         public int id { get; set;}
         public string nomMonstre { get; set;}
         public string descripMonstre { get; set;}
@@ -32,6 +32,10 @@ namespace TP_Pokemon
         public Habilete[] listeHabileteActive { get; set; }
         public string nom_Image { get; set; }
 
+        public delegate void PokemonEventHandler(Monstre monstre);
+
+        //public event PokemonEventHandler
+
         //Constructeur sans paramètre utilisé dans la Serialization
         public Monstre() { }
 
@@ -43,7 +47,7 @@ namespace TP_Pokemon
             this.descripMonstre = descripMonstre;
             this.aliasMonstre = aliasMonstre;
             this.typeMonstre = typeMonstre;
-            this.rarete = hasard(0,101);
+            this.rarete = getRandomChiffre(0,101);
             this.niveauExp = 1;//valeur par defaut
             this.pointExp = 100;//valeur par defaut
             //-- Caracteristique --- // Tableau de Int :  [0] = point_vie, [1] point_energie, [2] regen_energie, [3] attaque, [4] defense
@@ -57,15 +61,6 @@ namespace TP_Pokemon
             listeHabileteActive = new Habilete[2]; // Cette liste contiendra seulement 2 habilete possible mais ^
             this.nom_Image = nom_Image;
     
-        }
-
-        //Fonction qui genere automatiquement la rarete du pokemon
-        public static int hasard(int x, int z)
-        {
-            Random rand = new Random();
-            int rarete_1 = rand.Next(x, z);
-
-            return rarete_1;
         }
 
         // Fonction qui calcul les caractèristiques totales (Total = Base + prog*lvl)
@@ -132,7 +127,7 @@ namespace TP_Pokemon
                 this.pointExp = this.pointExp + xp_add;
                 parti.joueur.monstreCapture[reference].pointExp = this.pointExp;
                 int x = this.pointExp;
-                if (x == 150 || x == 250 || x == 400 || x == 600 || x == 850 || x == 1150)
+                if (x == 150 || x == 250 || x == 400 || x == 600 || x == 850)
                 {
                     this.niveauExp++;
                     this.calcul_caract();
@@ -146,6 +141,7 @@ namespace TP_Pokemon
                     listeHabilete[niveauExp - 1] = liste_possible[niveauExp - 1];
 
                     return "\n" + nomMonstre + " a passé au level " + niveauExp + " et \na appris l'habilete " + liste_possible[niveauExp - 1].nom;
+
                 }
                 return "\nAjout de " + xp_add + " point d'exp. !";
             }
@@ -202,6 +198,14 @@ namespace TP_Pokemon
                 }
             }
             return null;
+        }
+
+        //Retourne un nombre randomn (Interface IRandom)
+        public int getRandomChiffre(int minimum, int maximum)
+        {
+            Random rand = new Random();
+            int rarete_1 = rand.Next(minimum, maximum);
+            return rarete_1;
         }
     }
 }

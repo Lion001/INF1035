@@ -71,8 +71,8 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Aventure.cs" />
-    <Compile Include="Caracteristique.cs" />
     <Compile Include="Habilete.cs" />
+    <Compile Include="IRandom.cs" />
     <Compile Include="NoPokemonException.cs" />
     <Compile Include="Shop.xaml.cs">
       <DependentUpon>Shop.xaml</DependentUpon>

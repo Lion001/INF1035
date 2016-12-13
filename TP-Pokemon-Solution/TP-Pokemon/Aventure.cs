@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace TP_Pokemon
 {
@@ -15,6 +16,8 @@ namespace TP_Pokemon
         Habilete[] liste_habilete;
         Monstre[] liste_monstre;
 
+        public Aventure() { }
+
         public Aventure(Joueur joueur)
         {
             this.joueur = joueur;
@@ -24,8 +27,8 @@ namespace TP_Pokemon
 
         public void acheter_pokeball(int nombre)
         {
-            joueur.inventaire.pokeball+=nombre;
-            joueur.argent = joueur.argent - (100*nombre);
+            joueur.inventaire.pokeball += nombre;
+            joueur.argent = joueur.argent - (100 * nombre);
         }
 
         public void acheter_potion(int potion_vie, int potion_mana, int potion_max)
@@ -38,12 +41,12 @@ namespace TP_Pokemon
             if (potion_mana > 0)
             {
                 joueur.inventaire.potion_mana += potion_mana;
-                joueur.argent = joueur.argent- (200 * potion_mana);
+                joueur.argent = joueur.argent - (200 * potion_mana);
             }
             if (potion_max > 0)
             {
                 joueur.inventaire.potion_max += potion_max;
-                joueur.argent = joueur.argent- (500 * potion_max);
+                joueur.argent = joueur.argent - (500 * potion_max);
             }
         }
 
@@ -51,7 +54,7 @@ namespace TP_Pokemon
         {
             sauvegarde = sauvegarde + ".ply";
             BinaryFormatter format = new BinaryFormatter();
-            using (Stream stream = new FileStream(@sauvegarde,FileMode.Create, FileAccess.Write, FileShare.None)) format.Serialize(stream, this);
+            using (Stream stream = new FileStream(@sauvegarde, FileMode.Create, FileAccess.Write, FileShare.None)) format.Serialize(stream, this);
         }
 
         public static Aventure Charger_Aventure(string sauvegarde)

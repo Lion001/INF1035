@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace TP_Pokemon
 {
-    class Caracteristique
+    interface IRandom
     {
+        int getRandomChiffre(int minimum, int maximum);
     }
 }
