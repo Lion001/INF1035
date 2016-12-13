@@ -27,11 +27,13 @@ namespace TP_Pokemon
         //#		            	      Menu principal                                    #
         //###############################################################################
 
+        // Affiche le panel permettant la création d'une nouvelle aventure
         private void bouton_New_Click(object sender, RoutedEventArgs e)
         {
             panel_nouveauJoueur.Visibility = System.Windows.Visibility.Visible;
         }
 
+        // Affiche le panel permettant de charger une aventure préalablement sauvegardé
         private void bouton_Charger_Click(object sender, RoutedEventArgs e)
         {
             if(panel_enregistrement.Visibility == System.Windows.Visibility.Hidden)
@@ -43,7 +45,8 @@ namespace TP_Pokemon
                 panel_enregistrement.Visibility = System.Windows.Visibility.Hidden;
             }
         }
-
+        
+        // Exit
         private void bouton_Quitter_Click_1(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
@@ -55,19 +58,7 @@ namespace TP_Pokemon
         //#			                 Panel Nouveau Joueur                               #
         //###############################################################################
 
-        public Aventure creer_aventure()
-        {
-            //Nom
-            inconnu.nomJoueur = textBox_newName.Text;
-            //Sexe
-            if (radioButton_homme.IsChecked == true)    { inconnu.sexe = Sexe.homme; }
-            else { inconnu.sexe = Sexe.homme; }
-            // Nickname du Monstre
-            inconnu.equipe[0].aliasMonstre = textBox_nickname.Text;
-            Aventure nouvelle = new Aventure(inconnu);
-            return nouvelle;
-        }
-
+        // Fait une vérification des entrés de l'utilisateur durant la création du joueur et créer une nouvelle aventure et ouvre une fenetre Map
         private void button_creer_Click(object sender, RoutedEventArgs e)
         {
             // Exception sur input
@@ -99,7 +90,21 @@ namespace TP_Pokemon
             this.Close();
         }
 
-        // Pokemon de Départ
+        // Fonction utilisé dans la fonction ci-dessus pour créer l'aventure en tant que tel
+        public Aventure creer_aventure()
+        {
+            //Nom
+            inconnu.nomJoueur = textBox_newName.Text;
+            //Sexe
+            if (radioButton_homme.IsChecked == true) { inconnu.sexe = Sexe.homme; }
+            else { inconnu.sexe = Sexe.homme; }
+            // Nickname du Monstre
+            inconnu.equipe[0].aliasMonstre = textBox_nickname.Text;
+            Aventure nouvelle = new Aventure(inconnu);
+            return nouvelle;
+        }
+
+        // Créer et attribution du Pokemon de Départ
         private void button_bulbasaur_Click(object sender, RoutedEventArgs e)
         {
             Monstre[] liste = Monstre.Charger_Liste_Monstre();
@@ -135,7 +140,8 @@ namespace TP_Pokemon
         //###############################################################################
         //#			                 Panel Charger                                      #
         //###############################################################################
-
+        
+       // Chargement d'une partie
         private void button_enregistrer_Click(object sender, RoutedEventArgs e)
         {
             // Exception sur input
@@ -171,6 +177,7 @@ namespace TP_Pokemon
             this.Close();
         }
 
+        // Cancel (ferme le panel)
         private void button_cancel_Click(object sender, RoutedEventArgs e)
         {
             textBox_enregistrement.Text = "";

@@ -29,6 +29,7 @@ namespace TP_Pokemon
             parti = aventure;
         }
 
+        //Bouton qui permet d'afficher/cacher le menu principal
         private void button_Click(object sender, RoutedEventArgs e)
         {
              // Fonction en charge d'afficher/cacher le menu déroulant (en haut a gauche)
@@ -46,6 +47,8 @@ namespace TP_Pokemon
         //########################################################################
         //#                     Contenu du menu déroulant                        #
         //########################################################################
+
+        // Affiche le panel profil et cache les autres
         private void bouton_profil_Click(object sender, RoutedEventArgs e)
         {
             if(panel_utilisateur.Visibility != System.Windows.Visibility.Visible)
@@ -53,6 +56,7 @@ namespace TP_Pokemon
                 panel_utilisateur.Visibility = System.Windows.Visibility.Visible;
                 panel_inventaire.Visibility = System.Windows.Visibility.Hidden;
                 panel_pokemons.Visibility = System.Windows.Visibility.Hidden;
+                panel_enregistrement.Visibility = System.Windows.Visibility.Hidden;
                 //Afficher le nom du joueur
                 label_nom_user.Content = parti.joueur.nomJoueur;
             }
@@ -62,6 +66,7 @@ namespace TP_Pokemon
             }
         }
 
+        // Affiche le panel inventaire et cache les autres
         private void bouton_inventaire_Click(object sender, RoutedEventArgs e)
         {
             if (panel_inventaire.Visibility != System.Windows.Visibility.Visible)
@@ -69,6 +74,7 @@ namespace TP_Pokemon
                 panel_inventaire.Visibility = System.Windows.Visibility.Visible;
                 panel_utilisateur.Visibility = System.Windows.Visibility.Hidden;
                 panel_pokemons.Visibility = System.Windows.Visibility.Hidden;
+                panel_enregistrement.Visibility = System.Windows.Visibility.Hidden;
 
                 label_argent.Content = parti.joueur.argent;
                 label_nb_pokeball.Content = parti.joueur.inventaire.pokeball;
@@ -83,6 +89,7 @@ namespace TP_Pokemon
             }
         }
 
+        // Affiche le panel équipe et cache les autres
         private void bouton_pokemon_Click(object sender, RoutedEventArgs e)
         {
             if (panel_pokemons.Visibility != System.Windows.Visibility.Visible)
@@ -90,6 +97,7 @@ namespace TP_Pokemon
                 panel_pokemons.Visibility = System.Windows.Visibility.Visible;
                 panel_utilisateur.Visibility = System.Windows.Visibility.Hidden;
                 panel_inventaire.Visibility = System.Windows.Visibility.Hidden;
+                panel_enregistrement.Visibility = System.Windows.Visibility.Hidden;
                 afficher_team();
             }
             else
@@ -98,11 +106,15 @@ namespace TP_Pokemon
             }
         }
 
+        // Affiche le panel profil et cache les autres
         private void icone_enregistrer_Click(object sender, RoutedEventArgs e)
         {
             if (panel_enregistrement.Visibility != System.Windows.Visibility.Visible)
             {
                 panel_enregistrement.Visibility = System.Windows.Visibility.Visible;
+                panel_utilisateur.Visibility = System.Windows.Visibility.Hidden;
+                panel_inventaire.Visibility = System.Windows.Visibility.Hidden;
+                panel_pokemons.Visibility = System.Windows.Visibility.Hidden;
             }
             else
             {
@@ -111,23 +123,25 @@ namespace TP_Pokemon
 
         }
 
+        // Quitte l'application
         private void icone_quitter_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
         }
 
+        // Permet d'afficher chaque Pokémon de l'équipe ( Choix 1, Choix 2,etc) ainsi que la liste déroulante contenant tout les pokémons attrapés
         public void afficher_team()
         {
             //Choix 1
             string pokemon;
-            if (parti.joueur.equipe[0] != null)
+            if (parti.joueur.equipe[0] != null) // Si choix 1 n'est pas vide, affichage de l'image
             {
                 pokemon = parti.joueur.equipe[0].nomMonstre;
                 image_pokemon_choix_1.Source = Monstre.portrait(pokemon);
             }
             else
             {
-                image_pokemon_choix_1.Source = Monstre.portrait("inconnu");
+                image_pokemon_choix_1.Source = Monstre.portrait("inconnu"); // Sinon, affichage d'une image d'un pokémon inconnu 
             }
 
             //Choix 2
@@ -192,23 +206,6 @@ namespace TP_Pokemon
                 }
                 liste_affiche = true;
             }
-        }
-
-        private void afficher_stat(Monstre monstre)
-        {
-            image_pokemon_afficher.Source = Monstre.portrait(monstre.nomMonstre);
-            label_nom.Content = monstre.nomMonstre;
-            label_level.Content = "Level " + monstre.niveauExp;
-            label_id.Content ="# "+ monstre.id;
-            label_element.Content = monstre.typeMonstre;
-            label_xp.Content = "XP : " + monstre.pointExp;
-            label_vie.Content = "Vie : " + monstre.total[0];
-            label_mana.Content = "Mana : " + monstre.total[1];
-            label_mana_Copy.Content = "Regen : +" + monstre.total[2];
-            label_attaque.Content = "Attaque : " + monstre.total[3];
-            label_défense.Content = "Défense : " + monstre.total[4];
-
-            monstre_selectionne = monstre;
         }
 
         //########################################################################
@@ -282,6 +279,8 @@ namespace TP_Pokemon
         //###############################################################################
         //#		                   Panel Utilisateur                                    #
         //###############################################################################
+
+        // Permet le changement de nom du joueur
         private void button_change_name_Click(object sender, RoutedEventArgs e)
         {
             parti.joueur.nomJoueur = textBox_change_name.Text;
@@ -291,16 +290,18 @@ namespace TP_Pokemon
         //###############################################################################
         //#		                   Panel Equipe (Pokemon)                               #
         //###############################################################################
+
+        // Affiche le pokémon sélectionné
         private void button_afficher_pokemon_Click(object sender, RoutedEventArgs e)
         {
             string nom = comboBox_liste_pokemon.Text;
-            Monstre monstre = parti.joueur.trouver_monstre_parNom(nom);
+            Monstre monstre = parti.joueur.trouver_monstre_parNom(nom); // Recherche l'objet monstre avec le nom du pokémon selectionné
             afficher_stat(monstre);
 
             comboBox_habilete_1.Items.Clear();
             comboBox_habilete_2.Items.Clear();
             int loop = 0;
-            foreach (Habilete x in monstre.listeHabilete)
+            foreach (Habilete x in monstre.listeHabilete) // Affiche les habiletés du pokémon
             {
                 if (x!=null && loop<=monstre.niveauExp-1)
                 {
@@ -318,6 +319,25 @@ namespace TP_Pokemon
             }
         }
 
+        // Affiche les stats du pokémons choisit dans la liste déroulante
+        private void afficher_stat(Monstre monstre)
+        {
+            image_pokemon_afficher.Source = Monstre.portrait(monstre.nomMonstre);
+            label_nom.Content = monstre.nomMonstre;
+            label_level.Content = "Level " + monstre.niveauExp;
+            label_id.Content = "# " + monstre.id;
+            label_element.Content = monstre.typeMonstre;
+            label_xp.Content = "XP : " + monstre.pointExp;
+            label_vie.Content = "Vie : " + monstre.total[0];
+            label_mana.Content = "Mana : " + monstre.total[1];
+            label_mana_Copy.Content = "Regen : +" + monstre.total[2];
+            label_attaque.Content = "Attaque : " + monstre.total[3];
+            label_défense.Content = "Défense : " + monstre.total[4];
+
+            monstre_selectionne = monstre;
+        }
+
+        // Attribution d'une position (choix 1, choix 2, etc) au pokémon selectionné
         private void button_changer_choix_Click(object sender, RoutedEventArgs e)
         {
             string choix = comboBox_choix_equipe.Text;
@@ -353,6 +373,7 @@ namespace TP_Pokemon
             afficher_team();
         }
 
+        // Affiche le panel des habileté (affiche les habiletés de type eau par défaut)
         private void button_help_Click(object sender, RoutedEventArgs e)
         {
             panel_habilete.Visibility = System.Windows.Visibility.Visible;
@@ -360,6 +381,7 @@ namespace TP_Pokemon
             afficher_habilete(element);
         }
 
+        // Attribution du spell sélectionné comme étant l'habileté active #1
         private void button_habilete_1_Click(object sender, RoutedEventArgs e)
         {
             string nom = comboBox_habilete_1.Text;
@@ -368,6 +390,7 @@ namespace TP_Pokemon
             parti.joueur.monstreCapture[x].listeHabileteActive[0] = spell;
         }
 
+        // Attribution du spell sélectionné comme étant l'habileté active #2
         private void button_habilete_2_Click(object sender, RoutedEventArgs e)
         {
             string nom = comboBox_habilete_2.Text;
@@ -379,7 +402,8 @@ namespace TP_Pokemon
         //###############################################################################
         //#		                   Panel Habilete (Pokemon)                             #
         //###############################################################################
-
+        
+        // Affiche la liste habileté en fonction de la sélection du joueur
         private void button_afficher_habilete_Click(object sender, RoutedEventArgs e)
         {
             string choix = comboBox_liste_habilete_element.Text;
@@ -407,6 +431,7 @@ namespace TP_Pokemon
             afficher_habilete(element);
         }
         
+        // Fonction principal d'affichage de la liste des habiletés
         public void afficher_habilete(TypeElement element)
         {
             Habilete[] liste = Habilete.Charger_Liste_Habilete_Element(element);
@@ -457,6 +482,7 @@ namespace TP_Pokemon
             label_duree_h5.Content = "Duree : " + liste[4].duree;
         }
 
+        // Exit
         private void button_quitter_h_Click(object sender, RoutedEventArgs e)
         {
             panel_habilete.Visibility = System.Windows.Visibility.Hidden;
@@ -466,6 +492,7 @@ namespace TP_Pokemon
         //#		                   Panel Enregistrer                                    #
         //###############################################################################
 
+        // Enregistrer l'aventure
         private void button_enregistrer_Click(object sender, RoutedEventArgs e)
         {
             // Exception sur input
@@ -482,7 +509,7 @@ namespace TP_Pokemon
                 return;
             }
 
-            // Exception sur l'enregistrement de l'aventure non nécessaire
+            // Exception sur l'enregistrement de l'aventure non nécessaire car tant que l'utilisateur entre du text, une sauvegarde sera créé
 
             string sauvegarde = textBox_enregistrement.Text;
             parti.Sauvegarder_Aventure(sauvegarde);
@@ -490,6 +517,7 @@ namespace TP_Pokemon
 
         }
 
+        // Cancel
         private void button_cancel_Click(object sender, RoutedEventArgs e)
         {
             textBox_enregistrement.Text = "";

@@ -28,6 +28,11 @@ namespace TP_Pokemon
             this.parti = parti;
         }
 
+        //###############################################################################
+        //#		                   Différents items achetables                          #
+        //###############################################################################
+
+        // Charge l'item pokeball.xml et affiche les caractéristiques
         private void button_pokeball_Click(object sender, RoutedEventArgs e)
         {
             Item item = Item.Charger_Item("pokeball.xml");
@@ -38,6 +43,7 @@ namespace TP_Pokemon
             selectionne = item;
         }
 
+        // Charge l'item potion_vie.xml et affiche les caractéristiques
         private void button_potion_vie_Click(object sender, RoutedEventArgs e)
         {
             Item item = Item.Charger_Item("potion_vie.xml");
@@ -48,6 +54,7 @@ namespace TP_Pokemon
             selectionne = item;
         }
 
+        // Charge l'item potion_mana.xml et affiche les caractéristiques
         private void button_potion_mana_Click(object sender, RoutedEventArgs e)
         {
             Item item = Item.Charger_Item("potion_mana.xml");
@@ -58,6 +65,7 @@ namespace TP_Pokemon
             selectionne = item;
         }
 
+        // Charge l'item potion_max.xml et affiche les caractéristiques
         private void button_potion_max_Click(object sender, RoutedEventArgs e)
         {
             Item item = Item.Charger_Item("potion_max.xml");
@@ -68,6 +76,11 @@ namespace TP_Pokemon
             selectionne = item;
         }
 
+        //###############################################################################
+        //#		               Différents actions possibles                             #
+        //###############################################################################
+
+        // Incrémente la quantité d'item sélectionné que l'utilisateur désire acheter
         private void button_plus_Click(object sender, RoutedEventArgs e)
         {
            int tmp = Int32.Parse(textBox_nombre.Text);
@@ -75,6 +88,7 @@ namespace TP_Pokemon
             textBox_nombre.Text = tmp.ToString();
         }
 
+        // Décrémente la quantité d'item sélectionné que l'utilisateur désire acheter
         private void button_moins_Click(object sender, RoutedEventArgs e)
         {
             int tmp = Int32.Parse(textBox_nombre.Text);
@@ -86,6 +100,7 @@ namespace TP_Pokemon
             textBox_nombre.Text = tmp.ToString();
         }
 
+        // Exit
         private void button_exit_Click(object sender, RoutedEventArgs e)
         {
             Map newMap = new Map(parti);
@@ -93,9 +108,10 @@ namespace TP_Pokemon
             this.Close();
         }
 
+        // Acheter un item
         private void button_buy_Click(object sender, RoutedEventArgs e)
         {
-            if(selectionne == null)
+            if(selectionne == null) // Pokéball est l'item par défaut
             {
                 selectionne = Item.Charger_Item("Pokeball.xml");
             }
@@ -105,11 +121,11 @@ namespace TP_Pokemon
             switch(item)
             {
                 case "Pokeball":
-                    if(cash >= 100*nombre)
+                    if(cash >= 100*nombre) // Si le joueur possède assez d'argent pour faire l'achat
                     {
                         parti.acheter_pokeball(nombre);
                     }
-                    else
+                    else // Sinon message D'erreur
                     {
                         System.Windows.MessageBox.Show("Fond Insuffisant");
                     }
@@ -147,8 +163,8 @@ namespace TP_Pokemon
                 default:
                     break;
             }
-            textBox_argent.Text = parti.joueur.argent.ToString();
-            textBox_nombre.Text = "0";
+            textBox_argent.Text = parti.joueur.argent.ToString(); // Affichage du nouveau solde du compte du joueur
+            textBox_nombre.Text = "0"; // Remise à zero du textbox affichant la quantité d'un item
         }
     }
 }

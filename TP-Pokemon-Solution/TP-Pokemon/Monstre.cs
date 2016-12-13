@@ -7,10 +7,7 @@ using System.Xml.Serialization;
 
 namespace TP_Pokemon
 {
-    /// <summary>
-    /// un enum pour la rareté, un pour la santé, pour l'energie, pour la force, pour monsterShield 
-    /// </summary>
-
+ 
     [Serializable, XmlRoot(Namespace="Habilete")]
     public class Monstre : IRandom
     {
@@ -32,9 +29,6 @@ namespace TP_Pokemon
         public Habilete[] listeHabileteActive { get; set; }
         public string nom_Image { get; set; }
 
-        public delegate void PokemonEventHandler(Monstre monstre);
-
-        //public event PokemonEventHandler
 
         //Constructeur sans paramètre utilisé dans la Serialization
         public Monstre() { }
@@ -121,17 +115,17 @@ namespace TP_Pokemon
         // Ajout de l'experience et modification relié
         public string add_xp(int xp_add, Aventure parti)
         {
-            if (niveauExp < 5)
+            if (niveauExp < 5)  //Si le pokémon n'a pas atteint le level maximal
             {
-                int reference = parti.joueur.trouver_monstre_listeCapture(this);
+                int reference = parti.joueur.trouver_monstre_listeCapture(this); //------> permet de trouver l'index du pokémon qui recoit l'xp
                 this.pointExp = this.pointExp + xp_add;
                 parti.joueur.monstreCapture[reference].pointExp = this.pointExp;
                 int x = this.pointExp;
-                if (x == 150 || x == 250 || x == 400 || x == 600 || x == 850)
+                if (x == 150 || x == 250 || x == 400 || x == 600) // Si le pokémon a assez XP pour passer au level 2, 3, 4 ou 5
                 {
                     this.niveauExp++;
-                    this.calcul_caract();
-                    parti.joueur.monstreCapture[reference].calcul_caract();
+                    this.calcul_caract(); 
+                    parti.joueur.monstreCapture[reference].calcul_caract();// Calculation des nouvelles caractéristiques
 
                     // Ajout d'une habilete
                     Habilete[] liste_possible = Habilete.Charger_Liste_Habilete_Element(typeMonstre);
@@ -180,7 +174,7 @@ namespace TP_Pokemon
         public static bool estIdentique(Monstre monstre1, Monstre monstre2)
         {
             bool comparaison = false;
-            if(monstre1.pointExp == monstre2.pointExp && monstre1.nomMonstre == monstre2.nomMonstre)  // Je compare simplement les points d'exp car durant la génération d'un pokemon aleatoire, j'ajoute 1 point d'exp.
+            if(monstre1.pointExp == monstre2.pointExp && monstre1.nomMonstre == monstre2.nomMonstre)  // Je compare simplement les points d'exp (et le nom) car durant la génération d'un pokemon aleatoire, j'ajoute 1 point d'exp.
             {
                 comparaison = true;
             }

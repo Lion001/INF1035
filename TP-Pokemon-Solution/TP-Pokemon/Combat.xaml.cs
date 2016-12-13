@@ -20,10 +20,10 @@ namespace TP_Pokemon
     /// </summary>
     public partial class Combat : Window, IRandom
     {
-        public Aventure parti;
-        public Monstre selectionne;
-        public Monstre adversaire;
-        public TypeElement element;
+        public Aventure parti;   // Aventure en cours
+        public Monstre selectionne; // Pokemon du joueur
+        public Monstre adversaire;  // Pokemon adverse
+        public TypeElement element; // Element de l'arène 
 
         public Combat(Aventure parti, TypeElement element)
         {
@@ -42,6 +42,7 @@ namespace TP_Pokemon
         //Bouton qui permet de choisir un pokemon parmi la liste des pokemons actif
         private void button_choix1_Click(object sender, RoutedEventArgs e)
         {
+            // Cette fonction affiche le pokemon avec ces stats, le déclare à la console et met les barre de vie et de mana a jour
             panel_pokemon.Visibility = System.Windows.Visibility.Visible;
             panel_inventaire.Visibility = System.Windows.Visibility.Hidden;
             afficher_pokemon(parti.joueur.equipe[0]);
@@ -104,7 +105,7 @@ namespace TP_Pokemon
             }
         }
 
-        //Bouton qui donne accès au panel de l'inventaire
+        //Bouton qui donne accès au panel de l'inventaire et affiche le nb d'items
         private void button_inventaire_Click(object sender, RoutedEventArgs e)
         {
             panel_pokemon.Visibility = System.Windows.Visibility.Hidden;
@@ -116,7 +117,7 @@ namespace TP_Pokemon
             label_potion_or.Content = "x " + parti.joueur.inventaire.potion_max;
         }
 
-        //Bouton pour quitter
+        //Bouton pour quitter et réinitialise les stats des monstres à leurs stats d'origine
         private void button_quitter_Click(object sender, RoutedEventArgs e)
         {
             foreach(Monstre x in parti.joueur.equipe)
@@ -136,18 +137,18 @@ namespace TP_Pokemon
         private void button_habilete_1_Click(object sender, RoutedEventArgs e)
         {
             Habilete spell = selectionne.listeHabileteActive[0];
-            if (spell.cible == Cible.ennemi)
+            if (spell.cible == Cible.ennemi)  // Si la cible est l'ennemi, utilisation de la fonction attaquer()
             {
                 attaquer(selectionne, adversaire, spell);
             }
-            else
+            else // Sinon, il s'agit d'un spell de protection
             {
                 TypeElement element = selectionne.typeMonstre;
                 Habilete supporting = Habilete.habilete_protection_element(element);
                 textBox_Console.AppendText("\n-------------------------------------------------\n" + selectionne.nomMonstre + " utilise " + supporting.nom + " !");
                 // Utilise l'habilete
                 selectionne.actuel[1] = selectionne.actuel[1] - supporting.cout;
-                if (supporting.effet == Effet.regeneration)
+                if (supporting.effet == Effet.regeneration) // Si le spell est de type regeneration
                 {
                     selectionne.actuel[0] = selectionne.actuel[0] + supporting.magnitude;
                     if (selectionne.actuel[0] > selectionne.total[0])
@@ -156,7 +157,7 @@ namespace TP_Pokemon
                     }
                     textBox_Console.AppendText("\n" + selectionne.nomMonstre + " récupère " + supporting.magnitude + " points de vie !");
                 }
-                else
+                else // Sinon il s'agit d'un spell d'augmentation de défense
                 {
                     selectionne.actuel[4] = selectionne.actuel[4] + supporting.magnitude;
                     textBox_Console.AppendText("\n" + selectionne.nomMonstre + " augmente ces défenses de " + supporting.magnitude + " points !");
@@ -241,7 +242,7 @@ namespace TP_Pokemon
         //#		                    Fonctions associés                                  #
         //###############################################################################
 
-        // Cette fonction attribut les images au bouton de choix (Fonction identique à afficher_team() dans Map.xaml.cs)
+        // Cette fonction attribut les images au bouton de choix (choix1,choix2,etc.)  ---- (Fonction identique à afficher_team() dans Map.xaml.cs)
         private void init_interface()
         {
             //Choix 1
@@ -302,9 +303,10 @@ namespace TP_Pokemon
             afficher_pokemon(parti.joueur.equipe[0]);
         }
 
-        // Affiche le pokemon dans le panel de pokemon et l'envoie au Combat
+        // Affiche le pokemon dans le panel de pokemon et l'envoie au Combat (utiliser dans bouton_choiX_Click(); )
         private void afficher_pokemon(Monstre monstre)
         {
+            // Stats
             label_nom.Content = monstre.nomMonstre;
             label_level.Content = "Level " + monstre.niveauExp;
             label_id.Content = "# " + monstre.id;
@@ -315,13 +317,13 @@ namespace TP_Pokemon
             label_défense.Content = "Défense : " + monstre.actuel[4];
             image_pokemon_panel.Source = Monstre.portrait(monstre.nomMonstre);
             image_pokemon_player.Source = Monstre.portrait(monstre.nomMonstre);
-
+            //Barre de vie/mana
             barre_vie_player.Maximum = monstre.total[0];
             barre_vie_player.Value = monstre.actuel[0];
 
             barre_mana_player.Maximum = monstre.total[1];
             barre_mana_player.Value = monstre.actuel[1];
-
+            // Bouton Habilete 1 (et 2 si applicapable)
             button_habilete_1.Content = monstre.listeHabileteActive[0].nom;
             if (monstre.listeHabileteActive[1] != null)
             {
@@ -338,14 +340,16 @@ namespace TP_Pokemon
         {
             Monstre ennemi;
             Monstre[] liste = Monstre.Liste_par_Element(element);
+
             // Ici un concept de generation de niveau de rarete devrait être retravailler
-            Random rand = new Random();
-            int rarete = rand.Next(0, 4);
+            int rarete = getRandomChiffre(0, 4);
             ennemi = liste[rarete];
             //---------------------------------------------------------------------------
-            ennemi.niveauExp = level;
+            ennemi.niveauExp = level; // Selon la difficulté choisi par l'utilisateur
             ennemi.pointExp = ennemi.pointExp + 1; // Cette ligne permettera de différencier les pokémons dans la fonction estIdentique de la classe Monstre
             ennemi.calcul_caract();
+
+            // Affichage des caractéristiques du pokémon généré
             image_pokemon_adverse.Source = Monstre.portrait(ennemi.nomMonstre);
             barre_vie_adverse.Maximum = ennemi.total[0];
             barre_vie_adverse.Value = ennemi.total[0];
@@ -502,7 +506,7 @@ namespace TP_Pokemon
                 Regen_mana();
             }
 
-            // Si la vie de l'adversaire est plus petit ou égal a 30
+            // Si la vie de l'adversaire est plus petit ou égal a 30 et qu'il possède assez de mana pour un habilet de support
             else if (adversaire.actuel[0]<=30 || (adversaire.actuel[1] < adversaire.listeHabilete[0].cout && adversaire.actuel[1] > adversaire.listeHabilete[1].cout)) 
             {
                 TypeElement element = adversaire.typeMonstre;
@@ -604,6 +608,7 @@ namespace TP_Pokemon
             button_inventaire.IsEnabled = false;
         }
 
+        //Fonction qui génère un chiffre aléatoire (IRandom.cs) 
         public int getRandomChiffre(int minimum, int maximum)
         {
             Random rand = new Random();
@@ -625,6 +630,7 @@ namespace TP_Pokemon
         //#		                 Button du Panel Inventaire                             #
         //###############################################################################
 
+        // Utilisation d'une pokéball
         private void button_pokeball_Click(object sender, RoutedEventArgs e)
         {
             if (parti.joueur.inventaire.pokeball > 0)
@@ -633,12 +639,11 @@ namespace TP_Pokemon
                 textBox_Console.Text = "-------------------------------------------------\n" + parti.joueur.nomJoueur + " utilise une pokeball !";
                 Task.Delay(3000);
 
-                if (adversaire.actuel[0] <= 40)
+                if (adversaire.actuel[0] <= 40)  // Si le pokémon à capturer possède moins de 41 points de vie
                 {
-                    Random rand = new Random();
-                    int random = rand.Next(1, 5);
+                    int random = getRandomChiffre(1, 5);
 
-                    if (random >= adversaire.niveauExp)
+                    if (random >= adversaire.niveauExp) // Voir documentation pour plus d'explication
                     {
                         textBox_Console.AppendText("\n" + adversaire.nomMonstre + " a été capturé !");
 
@@ -658,7 +663,7 @@ namespace TP_Pokemon
                         reponse_adverse();
                     }
                 }
-                else
+                else // Donc, la vie du pokémon est plus haut que 40 points, alors celui résiste automatiquement à la pokéball
                 {
                     textBox_Console.AppendText("\n" + adversaire.nomMonstre + " résiste à la pokeball !");
                     image_pokemon_adverse.Source = Monstre.portrait(adversaire.nomMonstre);
@@ -669,18 +674,22 @@ namespace TP_Pokemon
             }
         }
 
+        // Utilisation d'un potion de vie 
         private void button_potion_vie_Click(object sender, RoutedEventArgs e)
         {
             if (parti.joueur.inventaire.potion_vie > 0)
             {
                 textBox_Console.Text = "-------------------------------------------------\n" + parti.joueur.nomJoueur + " utilise une potion de vie !\n" + selectionne.nomMonstre + " récupère 100 points de vie! ";
+                // Attribution de la vie obtenu
                 selectionne.actuel[0] = selectionne.actuel[0] + 100;
                 selectionne.calcul_caract();
+                // Si le bonus de vie additionné a la vie actuel dépasse la vie total possible, on assigne la vie total possible
                 if (selectionne.actuel[0] > selectionne.total[0])
                 {
                     selectionne.actuel[0] = selectionne.total[0];
                 }
                 MAJ_barre();
+                //Mise à jour de l'inventaire et de l'interface graphique
                 parti.joueur.inventaire.potion_vie--;
                 label_potion_mauve.Content = "x " + parti.joueur.inventaire.potion_vie;
                 reponse_adverse();
@@ -688,6 +697,7 @@ namespace TP_Pokemon
 
         }
 
+        // Utilisation d'un potion de mana
         private void button_potion_mana_Click(object sender, RoutedEventArgs e)
         {
             if (parti.joueur.inventaire.potion_mana > 0)
@@ -706,6 +716,7 @@ namespace TP_Pokemon
             }
         }
 
+        // Utilisation d'un potion d'or
         private void button_potion_max_Click(object sender, RoutedEventArgs e)
         {
             if (parti.joueur.inventaire.potion_max > 0)
