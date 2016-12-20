@@ -342,12 +342,14 @@ namespace TP_Pokemon
             Monstre[] liste = Monstre.Liste_par_Element(element);
 
             // Ici un concept de generation de niveau de rarete devrait être retravailler
-            int rarete = getRandomChiffre(0, 4);
-            ennemi = liste[rarete];
+            Random rand = new Random();
+            int x = rand.Next(0, 4);
+            ennemi = liste[x];
             //---------------------------------------------------------------------------
             ennemi.niveauExp = level; // Selon la difficulté choisi par l'utilisateur
             ennemi.pointExp = ennemi.pointExp + 1; // Cette ligne permettera de différencier les pokémons dans la fonction estIdentique de la classe Monstre
             ennemi.calcul_caract();
+            adversaire = ennemi;
 
             // Affichage des caractéristiques du pokémon généré
             image_pokemon_adverse.Source = Monstre.portrait(ennemi.nomMonstre);
@@ -355,7 +357,6 @@ namespace TP_Pokemon
             barre_vie_adverse.Value = ennemi.total[0];
             barre_mana_adverse.Maximum = ennemi.total[1];
             barre_mana_adverse.Value = ennemi.total[1];
-            adversaire = ennemi;
             textBox_Console.Text = ennemi.nomMonstre + " apparait face à vous !";
        
         }
@@ -616,7 +617,7 @@ namespace TP_Pokemon
 
             if (x <= ((maximum + minimum) / 2)) // L'adversaire commence
             {
-                textBox_Console.AppendText("\nLe tirage au sort à déterminer que " + adversaire.nomMonstre + " attaquait en premier !");
+                textBox_Console.AppendText("\nLe tirage au sort à déterminer que l'adversaire attaquait en premier !");
                 reponse_adverse();
             }
             else//aussi non le joueur commence
