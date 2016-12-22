@@ -484,7 +484,6 @@ namespace TP_Pokemon
             {
                 textBox_Console.AppendText("\n" + adversaire.nomMonstre + "s'est enfui !");
                 image_pokemon_adverse.Source = Monstre.portrait("iconnu.xml");
-                panel_pokemon.Visibility = System.Windows.Visibility.Hidden;
                 generer_adversaire(difficulte);
             }
 
@@ -683,11 +682,10 @@ namespace TP_Pokemon
                         // Remis a zéro des stats du monstre
                         adversaire.calcul_caract();
                         adversaire.renew_caract();
-                        //Fermeture de l'interface
-                        disable_button();
                         adversaire.pointExp--; 
                         //Ajout du pokémon dans la liste de capture
                         parti.joueur.Ajouter_Pokemon_listeTotal(adversaire);
+                        generer_adversaire(difficulte);
                     }
                     else
                     {
