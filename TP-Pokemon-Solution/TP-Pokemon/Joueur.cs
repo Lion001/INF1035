@@ -29,7 +29,7 @@ namespace TP_Pokemon
         {
             nomJoueur = nom;
             this.sexe = sexe;
-            argent =100.00;
+            argent =500.00;
             monstreDepart = monstre_dep;
             monstreCapture = new Monstre[25];
             equipe = new Monstre[5];

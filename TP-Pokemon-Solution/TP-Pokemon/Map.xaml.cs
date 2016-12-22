@@ -258,22 +258,8 @@ namespace TP_Pokemon
         //Bouton Cheat (petite icone clé en haut de la map)
         private void bouton_secret_Click(object sender, RoutedEventArgs e)
         {
-            Monstre[] liste = Monstre.Charger_Liste_Monstre();
-            int x = 0;
-            while(parti.joueur.monstreCapture[x]!=null)
-            {
-                x++;
-            }
- 
-            parti.joueur.Ajouter_Pokemon_listeTotal(liste[3]);
- 
-            parti.joueur.Ajouter_Pokemon_listeTotal(liste[9]);
- 
-            parti.joueur.Ajouter_Pokemon_listeTotal(liste[7]);
 
-            parti.joueur.Ajouter_Pokemon_listeTotal(liste[12]);
-
-            parti.joueur.argent += 1000;
+            parti.joueur.argent += 10000;
         }
 
         //###############################################################################
